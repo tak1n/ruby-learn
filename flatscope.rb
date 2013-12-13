@@ -12,6 +12,7 @@ class Klass2
   end
 end
 
+puts "\n"
 
 Module1 = Module.new do
   puts a
@@ -25,6 +26,7 @@ module Module2
   end
 end
 
+puts "\n"
 
 define_method :method1 do
   puts a
@@ -41,5 +43,22 @@ end
 method1
 method2
 
+puts "\n"
+
+class MyClass
+  def initialize
+  	@v = 1
+  end
+end
+
+obj = MyClass.new
+v = 2
+
+obj.instance_eval do
+	puts self
+	puts @v
+	@v = 2
+	puts @v
+end
 # Scope Gates are: class, module, def
 # Flat Scopes use: closures (blocks)
