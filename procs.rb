@@ -3,7 +3,7 @@ def event(&block)
 end
 
 event do
-  print "hi"
+  puts "hi"
 end
 
 puts @event # &block turn a block in a proc
