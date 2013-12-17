@@ -4,10 +4,10 @@ def global
 end
 
 class A
-	#self is Test
-	#current class is Test
+  #self is Test
+  #current class is Test
 
-	#in a class definition current class and self are the same!
+  #in a class definition current class and self are the same!
 end
 
 # B inherits from A
@@ -18,9 +18,9 @@ end
 # Therefore method definitions in class_eval are getting instance methods of class Test
 
 A.class_eval do
-	def method1
-		puts "Instance Method"
-	end
+  def method1
+    puts "Instance Method"
+  end
 end
 
 # instance_eval sets self to the Class Obect BUT "current class" to the eigenclass of Test
@@ -29,9 +29,9 @@ end
 # Eigenclasses are therefore a "virtual class" (one step right and then up for method lookup)
 
 A.instance_eval do
-	def method2
-		puts "Class Method"
-	end
+  def method2
+    puts "Class Method"
+  end
 end
 
 puts A.instance_methods(false)
