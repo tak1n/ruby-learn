@@ -3,31 +3,41 @@
 def global
 end
 
-class Test
+class A
 	#self is Test
 	#current class is Test
 
 	#in a class definition current class and self are the same!
 end
 
+# B inherits from A
+class B < A
+end
+
 # class_eval sets self to the Class Object and the "current class" to Test
 # Therefore method definitions in class_eval are getting instance methods of class Test
 
-Test.class_eval do
+A.class_eval do
 	def method1
+		puts "Instance Method"
 	end
 end
 
 # instance_eval sets self to the Class Obect BUT "current class" to the eigenclass of Test
 # Method definitions in instance_eval are class methods of Test or in general singleton methods of an object
+# Inherited Classes share the same Class methods -> superclass of a eigenclass is the eigenclass of the superclass
+# Eigenclasses are therefore a "virtual class" (one step right and then up for method lookup)
 
-Test.instance_eval do
+A.instance_eval do
 	def method2
+		puts "Class Method"
 	end
 end
 
-puts Test.instance_methods(false)
-puts Test.methods(false)
+puts A.instance_methods(false)
+puts A.methods(false)
+
+B.method2
 
 o = Object.new
 
