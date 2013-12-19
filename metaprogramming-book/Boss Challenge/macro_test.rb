@@ -6,6 +6,7 @@ class Person
     v >= 18
   end
 end;
+
 class TestCheckedAttribute < Test::Unit::TestCase
   def setup
     @bob = Person.new
