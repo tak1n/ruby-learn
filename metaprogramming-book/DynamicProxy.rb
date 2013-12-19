@@ -12,6 +12,7 @@ class Proxy
 
     def target
       @target ||= []
+      #@target || @target = [] (Nil Guard)
     end
 end
 
