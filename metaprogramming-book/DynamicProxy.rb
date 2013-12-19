@@ -16,11 +16,9 @@ class Proxy
 end
 
 proxy = Proxy.new
-proxy.my_awesome_method
-# => "you just called an awesome method!"
-
 puts proxy.class
 # => Array
+# Target Definition static in Proxy Class
 
 
 class MyDynamicProxy
@@ -36,4 +34,5 @@ class MyDynamicProxy
 end
 
 obj = MyDynamicProxy.new({"first" => "first"})
-puts obj.class # => "result: gnirts a"
+puts obj.class
+# Target Definition is dynamic via initialize param
