@@ -1,7 +1,7 @@
 class Object
-	def eigenclass
-		class << self; self; end
-	end
+  def eigenclass
+    class << self; self; end
+  end
 end
 
 class MyClass
