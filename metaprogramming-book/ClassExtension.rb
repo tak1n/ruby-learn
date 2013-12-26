@@ -11,3 +11,4 @@ class MyClass
 end
 
 #This is called a Class Extension
+MyClass.my_method
