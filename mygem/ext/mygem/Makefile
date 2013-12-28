@@ -11,12 +11,12 @@ ECHO = $(ECHO1:0=@echo)
 #### Start of system configuration section. ####
 
 srcdir = .
-topdir = /home/benny/.rvm/rubies/ruby-2.0.0-p353/include/ruby-2.0.0
+topdir = /home/benny/.rvm/rubies/ruby-2.1.0/include/ruby-2.1.0
 hdrdir = $(topdir)
-arch_hdrdir = /home/benny/.rvm/rubies/ruby-2.0.0-p353/include/ruby-2.0.0/x86_64-linux
+arch_hdrdir = /home/benny/.rvm/rubies/ruby-2.1.0/include/ruby-2.1.0/x86_64-linux
 PATH_SEPARATOR = :
 VPATH = $(srcdir):$(arch_hdrdir)/ruby:$(hdrdir)/ruby
-prefix = /home/benny/.rvm/rubies/ruby-2.0.0-p353
+prefix = $(DESTDIR)/home/benny/.rvm/rubies/ruby-2.1.0
 rubysitearchprefix = $(rubylibprefix)/$(sitearch)
 rubyarchprefix = $(rubylibprefix)/$(arch)
 rubylibprefix = $(libdir)/$(RUBY_BASE_NAME)
@@ -49,11 +49,11 @@ dvidir = $(docdir)
 htmldir = $(docdir)
 infodir = $(datarootdir)/info
 docdir = $(datarootdir)/doc/$(PACKAGE)
-oldincludedir = /usr/include
+oldincludedir = $(DESTDIR)/usr/include
 includedir = $(prefix)/include
 localstatedir = $(prefix)/var
 sharedstatedir = $(prefix)/com
-sysconfdir = $(DESTDIR)/etc
+sysconfdir = $(prefix)/etc
 datadir = $(datarootdir)
 datarootdir = $(prefix)/share
 libexecdir = $(exec_prefix)/libexec
@@ -66,8 +66,8 @@ CC = gcc
 CXX = g++
 LIBRUBY = $(LIBRUBY_SO)
 LIBRUBY_A = lib$(RUBY_SO_NAME)-static.a
-LIBRUBYARG_SHARED = '-Wl,-rpath,$${ORIGIN}/../lib' -Wl,-R -Wl,$(libdir) -L$(libdir) -l$(RUBY_SO_NAME)
-LIBRUBYARG_STATIC = '-Wl,-rpath,$${ORIGIN}/../lib' -Wl,-R -Wl,$(libdir) -L$(libdir) -l$(RUBY_SO_NAME)-static
+LIBRUBYARG_SHARED = -Wl,-R -Wl,$(libdir) -L$(libdir) -l$(RUBY_SO_NAME)
+LIBRUBYARG_STATIC = -Wl,-R -Wl,$(libdir) -L$(libdir) -l$(RUBY_SO_NAME)-static
 empty =
 OUTFLAG = -o $(empty)
 COUTFLAG = -o $(empty)
@@ -101,16 +101,16 @@ RUBY_BASE_NAME = ruby
 
 arch = x86_64-linux
 sitearch = $(arch)
-ruby_version = 2.0.0
+ruby_version = 2.1.0
 ruby = $(bindir)/ruby
 RUBY = $(ruby)
-ruby_headers = $(hdrdir)/ruby.h $(hdrdir)/ruby/defines.h $(arch_hdrdir)/ruby/config.h
+ruby_headers = $(hdrdir)/ruby.h $(hdrdir)/ruby/ruby.h $(hdrdir)/ruby/defines.h $(hdrdir)/ruby/missing.h $(hdrdir)/ruby/intern.h $(hdrdir)/ruby/st.h $(hdrdir)/ruby/subst.h $(arch_hdrdir)/ruby/config.h
 
 RM = rm -f
 RM_RF = $(RUBY) -run -e rm -- -rf
 RMDIRS = rmdir --ignore-fail-on-non-empty -p
 MAKEDIRS = /bin/mkdir -p
-INSTALL = /usr/bin/install
+INSTALL = /usr/bin/install -c
 INSTALL_PROG = $(INSTALL) -m 0755
 INSTALL_DATA = $(INSTALL) -m 644
 COPY = cp
@@ -132,8 +132,8 @@ extout =
 extout_prefix = 
 target_prefix = 
 LOCAL_LIBS = 
-LIBS = $(LIBRUBYARG_SHARED)  -lpthread -lrt -ldl -lcrypt -lm   -lc
-ORIG_SRCS = myfirstcext.c
+LIBS = $(LIBRUBYARG_SHARED)  -lpthread -lrt -lgmp -ldl -lcrypt -lm   -lc
+ORIG_SRCS = myfirstcext.cpp
 SRCS = $(ORIG_SRCS) 
 OBJS = myfirstcext.o
 HDRS = 
@@ -144,12 +144,13 @@ DLLIB = $(TARGET).so
 EXTSTATIC = 
 STATIC_LIB = 
 
-BINDIR        = $(DESTDIR)$(bindir)
-RUBYCOMMONDIR = $(DESTDIR)$(sitedir)$(target_prefix)
-RUBYLIBDIR    = $(DESTDIR)$(sitelibdir)$(target_prefix)
-RUBYARCHDIR   = $(DESTDIR)$(sitearchdir)$(target_prefix)
-HDRDIR        = $(DESTDIR)$(rubyhdrdir)/ruby$(target_prefix)
-ARCHHDRDIR    = $(DESTDIR)$(rubyhdrdir)/$(arch)/ruby$(target_prefix)
+TIMESTAMP_DIR = .
+BINDIR        = $(bindir)
+RUBYCOMMONDIR = $(sitedir)$(target_prefix)
+RUBYLIBDIR    = $(sitelibdir)$(target_prefix)
+RUBYARCHDIR   = $(sitearchdir)$(target_prefix)
+HDRDIR        = $(rubyhdrdir)/ruby$(target_prefix)
+ARCHHDRDIR    = $(rubyhdrdir)/$(arch)/ruby$(target_prefix)
 
 TARGET_SO     = $(DLLIB)
 CLEANLIBS     = $(TARGET).so 
@@ -179,7 +180,7 @@ distclean: clean distclean-so distclean-static distclean-rb-default distclean-rb
 realclean: distclean
 install: install-so install-rb
 
-install-so: $(DLLIB) ./.RUBYARCHDIR.time
+install-so: $(DLLIB) $(TIMESTAMP_DIR)/.RUBYARCHDIR.time
 	$(INSTALL_PROG) $(DLLIB) $(RUBYARCHDIR)
 clean-static::
 	-$(Q)$(RM) $(STATIC_LIB)
@@ -189,8 +190,8 @@ pre-install-rb: Makefile
 pre-install-rb-default: Makefile
 pre-install-rb-default:
 	$(ECHO) installing default myfirstcext libraries
-./.RUBYARCHDIR.time:
-	$(Q) $(MAKEDIRS) $(RUBYARCHDIR)
+$(TIMESTAMP_DIR)/.RUBYARCHDIR.time:
+	$(Q) $(MAKEDIRS) $(@D) $(RUBYARCHDIR)
 	$(Q) $(TOUCH) $@
 
 site-install: site-install-so site-install-rb
@@ -230,7 +231,7 @@ site-install-rb: install-rb
 $(DLLIB): $(OBJS) Makefile
 	$(ECHO) linking shared-object $(DLLIB)
 	-$(Q)$(RM) $(@)
-	$(Q) $(LDSHARED) -o $@ $(OBJS) $(LIBPATH) $(DLDFLAGS) $(LOCAL_LIBS) $(LIBS)
+	$(Q) $(LDSHAREDXX) -o $@ $(OBJS) $(LIBPATH) $(DLDFLAGS) $(LOCAL_LIBS) $(LIBS)
 
 
 

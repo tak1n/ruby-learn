@@ -1,6 +1,6 @@
 #include <ruby.h>
 
-VALUE object_second_cext_call(VALUE rb_self) {
+void object_second_cext_call(VALUE rb_self) {
   printf("Second C extension call\n");
 }
  
