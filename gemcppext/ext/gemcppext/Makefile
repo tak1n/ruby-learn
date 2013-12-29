@@ -5,112 +5,94 @@ SHELL = /bin/sh
 V = 0
 Q1 = $(V:1=)
 Q = $(Q1:0=@)
-ECHO1 = $(V:1=@:)
+ECHO1 = $(V:1=@)
 ECHO = $(ECHO1:0=@echo)
 
 #### Start of system configuration section. ####
 
 srcdir = .
-topdir = /home/benny/.rvm/rubies/ruby-2.1.0/include/ruby-2.1.0
+topdir = /home/benny/.rvm/rubies/rbx-2.2.2/vm/include/capi
 hdrdir = $(topdir)
-arch_hdrdir = /home/benny/.rvm/rubies/ruby-2.1.0/include/ruby-2.1.0/x86_64-linux
+arch_hdrdir = /home/benny/.rvm/rubies/rbx-2.2.2/vm/include/capi
 PATH_SEPARATOR = :
 VPATH = $(srcdir):$(arch_hdrdir)/ruby:$(hdrdir)/ruby
-prefix = $(DESTDIR)/home/benny/.rvm/rubies/ruby-2.1.0
-rubysitearchprefix = $(rubylibprefix)/$(sitearch)
-rubyarchprefix = $(rubylibprefix)/$(arch)
-rubylibprefix = $(libdir)/$(RUBY_BASE_NAME)
+prefix = /home/benny/.rvm/rubies/rbx-2.2.2
+install_prefix = 
 exec_prefix = $(prefix)
-vendorarchhdrdir = $(vendorhdrdir)/$(sitearch)
-sitearchhdrdir = $(sitehdrdir)/$(sitearch)
-rubyarchhdrdir = $(rubyhdrdir)/$(arch)
-vendorhdrdir = $(rubyhdrdir)/vendor_ruby
-sitehdrdir = $(rubyhdrdir)/site_ruby
-rubyhdrdir = $(includedir)/$(RUBY_VERSION_NAME)
-vendorarchdir = $(vendorlibdir)/$(sitearch)
-vendorlibdir = $(vendordir)/$(ruby_version)
-vendordir = $(rubylibprefix)/vendor_ruby
-sitearchdir = $(sitelibdir)/$(sitearch)
-sitelibdir = $(sitedir)/$(ruby_version)
-sitedir = $(rubylibprefix)/site_ruby
-rubyarchdir = $(rubylibdir)/$(arch)
-rubylibdir = $(rubylibprefix)/$(ruby_version)
-sitearchincludedir = $(includedir)/$(sitearch)
-archincludedir = $(includedir)/$(arch)
-sitearchlibdir = $(libdir)/$(sitearch)
-archlibdir = $(libdir)/$(arch)
-ridir = $(datarootdir)/$(RI_BASE_NAME)
-mandir = $(datarootdir)/man
-localedir = $(datarootdir)/locale
-libdir = $(exec_prefix)/lib
-psdir = $(docdir)
-pdfdir = $(docdir)
-dvidir = $(docdir)
-htmldir = $(docdir)
-infodir = $(datarootdir)/info
-docdir = $(datarootdir)/doc/$(PACKAGE)
-oldincludedir = $(DESTDIR)/usr/include
-includedir = $(prefix)/include
-localstatedir = $(prefix)/var
-sharedstatedir = $(prefix)/com
-sysconfdir = $(prefix)/etc
-datadir = $(datarootdir)
-datarootdir = $(prefix)/share
-libexecdir = $(exec_prefix)/libexec
+bindir = /home/benny/.rvm/rubies/rbx-2.2.2/bin
 sbindir = $(exec_prefix)/sbin
-bindir = $(exec_prefix)/bin
-archdir = $(rubyarchdir)
+libexecdir = $(exec_prefix)/libexec
+datarootdir = $(prefix)/share
+datadir = $(datarootdir)
+sysconfdir = $(prefix)/etc
+sharedstatedir = $(prefix)/com
+localstatedir = $(prefix)/var
+includedir = $(prefix)/include
+oldincludedir = /usr/include
+docdir = $(datarootdir)/doc/$(PACKAGE)
+infodir = $(datarootdir)/info
+htmldir = $(docdir)
+dvidir = $(docdir)
+pdfdir = $(docdir)
+psdir = $(docdir)
+libdir = $(exec_prefix)/lib
+localedir = $(datarootdir)/locale
+mandir = $(datarootdir)/man
+rubyhdrdir = /home/benny/.rvm/rubies/rbx-2.2.2/vm/include/capi
+sitedir = /home/benny/.rvm/rubies/rbx-2.2.2/site
+sitelibdir = /home/benny/.rvm/rubies/rbx-2.2.2/site
+rubylibdir = /home/benny/.rvm/rubies/rbx-2.2.2/site
+archdir = /home/benny/.rvm/rubies/rbx-2.2.2/site/x86_64-linux-gnu
+sitearchdir = /home/benny/.rvm/rubies/rbx-2.2.2/site/x86_64-linux-gnu
+rubyarchhdrdir = /home/benny/.rvm/rubies/rbx-2.2.2/vm/include/capi
 
 
 CC = gcc
 CXX = g++
 LIBRUBY = $(LIBRUBY_SO)
-LIBRUBY_A = lib$(RUBY_SO_NAME)-static.a
-LIBRUBYARG_SHARED = -Wl,-R -Wl,$(libdir) -L$(libdir) -l$(RUBY_SO_NAME)
-LIBRUBYARG_STATIC = -Wl,-R -Wl,$(libdir) -L$(libdir) -l$(RUBY_SO_NAME)-static
+LIBRUBY_A = 
+LIBRUBYARG_SHARED = 
+LIBRUBYARG_STATIC = 
 empty =
 OUTFLAG = -o $(empty)
 COUTFLAG = -o $(empty)
 
 RUBY_EXTCONF_H = 
-cflags   =  $(optflags) $(debugflags) $(warnflags)
-optflags = -O3 -fno-fast-math
-debugflags = -ggdb3
-warnflags = -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration
-CCDLFLAGS = -fPIC
-CFLAGS   = $(CCDLFLAGS) $(cflags)  -fPIC $(ARCH_FLAG)
+cflags   = 
+optflags = 
+debugflags = 
+warnflags = 
+CCDLFLAGS =  -fPIC
+CFLAGS   = $(CCDLFLAGS) -g -O2 -I/usr/local/include -fPIC $(ARCH_FLAG)
 INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir)
 DEFS     = 
-CPPFLAGS =   $(DEFS) $(cppflags)
-CXXFLAGS = $(CCDLFLAGS) $(cxxflags) $(ARCH_FLAG)
-ldflags  = -L. -fstack-protector -rdynamic -Wl,-export-dynamic
+CPPFLAGS =  
+CXXFLAGS = $(CCDLFLAGS) -g -O2 $(ARCH_FLAG)
+ldflags  =  -L/usr/local/lib -Wl,--export-dynamic -lrt -lcrypt -ldl -lpthread -Wl,-rpath=/usr/local/lib
 dldflags =  
 ARCH_FLAG = 
 DLDFLAGS = $(ldflags) $(dldflags) $(ARCH_FLAG)
-LDSHARED = $(CC) -shared
-LDSHAREDXX = $(CXX) -shared
+LDSHARED = gcc -shared
+LDSHAREDXX = g++ -shared -lstdc++
 AR = ar
 EXEEXT = 
 
-RUBY_INSTALL_NAME = ruby
-RUBY_SO_NAME = ruby
+RUBY_INSTALL_NAME = rbx
+RUBY_SO_NAME = rubinius-2.2.2
 RUBYW_INSTALL_NAME = 
-RUBY_VERSION_NAME = $(RUBY_BASE_NAME)-$(ruby_version)
-RUBYW_BASE_NAME = rubyw
-RUBY_BASE_NAME = ruby
 
-arch = x86_64-linux
-sitearch = $(arch)
-ruby_version = 2.1.0
-ruby = $(bindir)/ruby
+arch = x86_64-linux-gnu
+sitearch = x86_64-linux-gnu
+ruby_version = 2.1
+ruby = $(bindir)/rbx
 RUBY = $(ruby)
-ruby_headers = $(hdrdir)/ruby.h $(hdrdir)/ruby/ruby.h $(hdrdir)/ruby/defines.h $(hdrdir)/ruby/missing.h $(hdrdir)/ruby/intern.h $(hdrdir)/ruby/st.h $(hdrdir)/ruby/subst.h $(arch_hdrdir)/ruby/config.h
+ruby_headers = $(hdrdir)/ruby.h $(hdrdir)/ruby/defines.h $(arch_hdrdir)/ruby/config.h
 
 RM = rm -f
 RM_RF = $(RUBY) -run -e rm -- -rf
-RMDIRS = rmdir --ignore-fail-on-non-empty -p
-MAKEDIRS = /bin/mkdir -p
-INSTALL = /usr/bin/install -c
+RMDIRS = $(RUBY) -run -e rmdir -- -p
+MAKEDIRS = mkdir -p
+INSTALL = /usr/bin/install
 INSTALL_PROG = $(INSTALL) -m 0755
 INSTALL_DATA = $(INSTALL) -m 644
 COPY = cp
@@ -132,7 +114,7 @@ extout =
 extout_prefix = 
 target_prefix = 
 LOCAL_LIBS = 
-LIBS = $(LIBRUBYARG_SHARED)  -lpthread -lrt -lgmp -ldl -lcrypt -lm   -lc
+LIBS = $(LIBRUBYARG_STATIC)   
 ORIG_SRCS = cpppart.cpp
 SRCS = $(ORIG_SRCS) 
 OBJS = cpppart.o
@@ -144,13 +126,12 @@ DLLIB = $(TARGET).so
 EXTSTATIC = 
 STATIC_LIB = 
 
-TIMESTAMP_DIR = .
-BINDIR        = $(bindir)
-RUBYCOMMONDIR = $(sitedir)$(target_prefix)
-RUBYLIBDIR    = $(sitelibdir)$(target_prefix)
-RUBYARCHDIR   = $(sitearchdir)$(target_prefix)
-HDRDIR        = $(rubyhdrdir)/ruby$(target_prefix)
-ARCHHDRDIR    = $(rubyhdrdir)/$(arch)/ruby$(target_prefix)
+BINDIR        = $(DESTDIR)$(bindir)
+RUBYCOMMONDIR = $(DESTDIR)$(sitedir)$(target_prefix)
+RUBYLIBDIR    = $(DESTDIR)$(sitelibdir)$(target_prefix)
+RUBYARCHDIR   = $(DESTDIR)$(sitearchdir)$(target_prefix)
+HDRDIR        = $(DESTDIR)$(rubyhdrdir)/ruby$(target_prefix)
+ARCHHDRDIR    = $(DESTDIR)$(rubyhdrdir)/$(arch)/ruby$(target_prefix)
 
 TARGET_SO     = $(DLLIB)
 CLEANLIBS     = $(TARGET).so 
@@ -180,7 +161,7 @@ distclean: clean distclean-so distclean-static distclean-rb-default distclean-rb
 realclean: distclean
 install: install-so install-rb
 
-install-so: $(DLLIB) $(TIMESTAMP_DIR)/.RUBYARCHDIR.time
+install-so: $(DLLIB) ./.RUBYARCHDIR.time
 	$(INSTALL_PROG) $(DLLIB) $(RUBYARCHDIR)
 clean-static::
 	-$(Q)$(RM) $(STATIC_LIB)
@@ -190,8 +171,8 @@ pre-install-rb: Makefile
 pre-install-rb-default: Makefile
 pre-install-rb-default:
 	$(ECHO) installing default cpppart libraries
-$(TIMESTAMP_DIR)/.RUBYARCHDIR.time:
-	$(Q) $(MAKEDIRS) $(@D) $(RUBYARCHDIR)
+./.RUBYARCHDIR.time:
+	$(Q) $(MAKEDIRS) $(RUBYARCHDIR)
 	$(Q) $(TOUCH) $@
 
 site-install: site-install-so site-install-rb

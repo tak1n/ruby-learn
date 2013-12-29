@@ -3,7 +3,7 @@
 
 typedef VALUE (ruby_method_vararg)(...); // Needed for Conversion of C++ and C Type
 
-void fibonacci() {
+int fibonacci() {
   int n, first = 0, second = 1, next, c;
   printf("Enter the number of terms\n");
   scanf("%d",&n);
@@ -21,6 +21,8 @@ void fibonacci() {
     
     std::cout << next;
   }
+
+  return 0;
 }
 
  
