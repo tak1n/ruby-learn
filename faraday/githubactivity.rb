@@ -10,6 +10,9 @@ end
 response = conn.get '/benny1992.json'     # GET http://sushi.com/nigiri/sake.json
 json = response.body
 
-mydata = JSON.parse(json)
-
+datahash = JSON.parse(json)
+puts "#{datahash["name"]} has following Langauge activities:"
+datahash["usage"]["languages"].each.with_index(1) do |languagehash, index = 1|
+	puts "#{index}: #{languagehash["language"]} - #{languagehash["count"]} commits"
+end
 #conn.post '/nigiri', { :name => 'Maguro' }  # POST "name=maguro" to http://sushi.com/nigiri
