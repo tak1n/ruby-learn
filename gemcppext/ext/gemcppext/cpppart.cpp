@@ -25,9 +25,17 @@ int fibonacci() {
   return 0;
 }
 
- 
+class Class {
+  public:
+    int a;
+    int b;
+};
+
+/** extern "C" "communicates" with ruby - basic programming structure of C++ Extensions (C++ Part -> extern "C" Part -> ruby) */
 extern "C" { // extern C for methods interfacing with Ruby (prevent C++ Name Mangling on overloaded functions)
 	void Init_cpppart() {
+
+    rb_define_class("TestClass", rb_cObject);
 	  // Define method Object#first_cext_call, corresponding to our C function object_first_cext_call; it has 0 argument.
 	  std::cout << "Hello from CPP Land\n";
 	  rb_define_method(rb_cObject, "fibonacci", (ruby_method_vararg *) fibonacci, 0);

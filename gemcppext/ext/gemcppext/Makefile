@@ -11,15 +11,15 @@ ECHO = $(ECHO1:0=@echo)
 #### Start of system configuration section. ####
 
 srcdir = .
-topdir = /home/benny/.rvm/rubies/rbx-2.2.2/vm/include/capi
+topdir = /home/benny/.rvm/rubies/rbx-2.2.3/vm/include/capi
 hdrdir = $(topdir)
-arch_hdrdir = /home/benny/.rvm/rubies/rbx-2.2.2/vm/include/capi
+arch_hdrdir = /home/benny/.rvm/rubies/rbx-2.2.3/vm/include/capi
 PATH_SEPARATOR = :
 VPATH = $(srcdir):$(arch_hdrdir)/ruby:$(hdrdir)/ruby
-prefix = /home/benny/.rvm/rubies/rbx-2.2.2
+prefix = /home/benny/.rvm/rubies/rbx-2.2.3
 install_prefix = 
 exec_prefix = $(prefix)
-bindir = /home/benny/.rvm/rubies/rbx-2.2.2/bin
+bindir = /home/benny/.rvm/rubies/rbx-2.2.3/bin
 sbindir = $(exec_prefix)/sbin
 libexecdir = $(exec_prefix)/libexec
 datarootdir = $(prefix)/share
@@ -38,13 +38,13 @@ psdir = $(docdir)
 libdir = $(exec_prefix)/lib
 localedir = $(datarootdir)/locale
 mandir = $(datarootdir)/man
-rubyhdrdir = /home/benny/.rvm/rubies/rbx-2.2.2/vm/include/capi
-sitedir = /home/benny/.rvm/rubies/rbx-2.2.2/site
-sitelibdir = /home/benny/.rvm/rubies/rbx-2.2.2/site
-rubylibdir = /home/benny/.rvm/rubies/rbx-2.2.2/site
-archdir = /home/benny/.rvm/rubies/rbx-2.2.2/site/x86_64-linux-gnu
-sitearchdir = /home/benny/.rvm/rubies/rbx-2.2.2/site/x86_64-linux-gnu
-rubyarchhdrdir = /home/benny/.rvm/rubies/rbx-2.2.2/vm/include/capi
+rubyhdrdir = /home/benny/.rvm/rubies/rbx-2.2.3/vm/include/capi
+sitedir = /home/benny/.rvm/rubies/rbx-2.2.3/site
+sitelibdir = /home/benny/.rvm/rubies/rbx-2.2.3/site
+rubylibdir = /home/benny/.rvm/rubies/rbx-2.2.3/site
+archdir = /home/benny/.rvm/rubies/rbx-2.2.3/site/x86_64-linux-gnu
+sitearchdir = /home/benny/.rvm/rubies/rbx-2.2.3/site/x86_64-linux-gnu
+rubyarchhdrdir = /home/benny/.rvm/rubies/rbx-2.2.3/vm/include/capi
 
 
 CC = gcc
@@ -78,7 +78,7 @@ AR = ar
 EXEEXT = 
 
 RUBY_INSTALL_NAME = rbx
-RUBY_SO_NAME = rubinius-2.2.2
+RUBY_SO_NAME = rubinius-2.2.3
 RUBYW_INSTALL_NAME = 
 
 arch = x86_64-linux-gnu
