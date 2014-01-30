@@ -1,5 +1,4 @@
 require_relative 'test_helper'
-require_relative 'cash_register'
  
 class TestCashRegister < MiniTest::Unit::TestCase 
   def setup

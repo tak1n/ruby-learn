@@ -1,2 +1,2 @@
-require 'test/unit'
-require "test_notifier/runner/minitest"
+require 'test-unit'
+require "test/unit/notify"
