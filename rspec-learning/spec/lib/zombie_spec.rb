@@ -1,5 +1,8 @@
 require 'spec_helper'
 
-descibe Zombie do
-	it "is named Ash"
+describe Zombie do
+	it "is named Ash" do
+	  zombie = Zombie.new("Ash")
+	  zombie.name.should eq("Asha")
+	end
 end
