@@ -1,6 +1,7 @@
 # Goes in mygem/spec/spec_helper.rb
 require 'rubygems'
 require 'bundler/setup'
+require "test_notifier/runner/rspec" # for notifier
 
 # my gem bootstrap file
 # require bootstrap file relative to spec / test folder
