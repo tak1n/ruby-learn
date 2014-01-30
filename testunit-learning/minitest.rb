@@ -1,4 +1,5 @@
 require 'minitest/autorun'
+require 'minitest/pride'
  
 class TestCashRegister < MiniTest::Unit::TestCase 
   def setup
