@@ -1,3 +1,6 @@
+require 'pry'
+binding.pry
+
 module TimeExtensions
   refine Fixnum do
     def minutes; self * 60; end
