@@ -1,6 +1,3 @@
-require 'minitest/autorun'
-require 'minitest/pride'
-
-require "test_notifier/runner/minitest"
-
+require 'test/unit'
+require 'test/unit/notify'
 require_relative 'cash_register'

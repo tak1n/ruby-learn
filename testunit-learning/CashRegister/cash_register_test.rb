@@ -1,6 +1,6 @@
 require_relative 'test_helper'
  
-class TestCashRegister < MiniTest::Unit::TestCase 
+class TestCashRegister < Test::Unit::TestCase 
   def setup
     @register = CashRegister.new
   end
