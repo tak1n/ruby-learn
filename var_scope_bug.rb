@@ -1,0 +1,1 @@
+Rubinius::VariableScope.new.locals
