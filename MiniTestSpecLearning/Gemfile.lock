@@ -1,0 +1,14 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    minitest (4.7.5)
+    rake (10.1.1)
+    rubysl-test-unit (2.0.3)
+      minitest (~> 4.7)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  rake
+  rubysl-test-unit
