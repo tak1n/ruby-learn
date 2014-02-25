@@ -9,5 +9,7 @@ Learning Repo for MiniSpec && MiniTest
 - Do not test private methods, do not make assertions about their result, do not expect to send them
 - Do not test outgoing query messages
 - Expect to send outgoing command messages
-- Rule 3 can be broken if you deal with a complex private algorithm that you need to TDD. The tests have value early on, but as time passes they prevent people from refactoring/improving your code. So just delete them.
-- Rule 5 can be broken if side effects are stable and cheap (close, not far away).
+
+Rule 3 can be broken if you deal with a complex private algorithm that you need to TDD. The tests have value early on, but as time passes they prevent people from refactoring/improving your code. So just delete them.
+
+Rule 5 can be broken if side effects are stable and cheap (close, not far away).
