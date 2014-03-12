@@ -13,9 +13,8 @@ Gem::Specification.new do |spec|
   spec.homepage      = ""
   spec.license       = "MIT"
 
-  spec.files         = `git ls-files`.split($/)
-  spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
-  spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
+  spec.files         = File.read(File.expand_path('../MANIFEST', __FILE__)).split("\n") # Use MANIFEST file generated from git ls-files
+  # spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) } remove this if gem has no bin file
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency "bundler", "~> 1.3"
