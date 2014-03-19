@@ -23,11 +23,15 @@
 str = "K"
 
 searched = str.index(BEG_REGEXP)
-puts "return value: #{searched}"
-puts "return class: #{searched.class}"
+searched2 = str.index("K")
 
-if searched
-  puts "true or value"
-else
-  raise "String#index broken"
-end
+puts "return value for regex: #{searched}"
+puts "return class for regex: #{searched.class}"
+puts "return value for string: #{searched2}"
+puts "return value for string: #{searched2.class}"
+
+# if searched
+  # puts "true or value"
+# else
+  # raise "String#index broken"
+# end
