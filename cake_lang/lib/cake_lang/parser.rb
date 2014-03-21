@@ -25,46 +25,66 @@ module CakeLang
 ##### State transition tables begin ###
 
 racc_action_table = [
-     4,    11,     5,     7,     8,     9,    10,     6,    13,    14,
-    15,    16,    17 ]
+    17,    18,    17,    18,    17,    18,    17,    18,    17,    18,
+    17,    18,    16,    19,    16,    20,    16,    11,    16,    10,
+    16,     9,    16,    17,    18,    17,    18,    22,    25,    24,
+    23,    26,    27,     7,    14,    16,     6,    16,     5,     4,
+     3 ]
 
 racc_action_check = [
-     0,     8,     0,     4,     5,     6,     7,     1,    10,    12,
-    13,    14,    15 ]
+    27,    27,    26,    26,    25,    25,    24,    24,    14,    14,
+    22,    22,    27,    11,    26,    12,    25,     9,    24,     8,
+    14,     7,    22,    10,    10,    23,    23,    15,    15,    15,
+    15,    15,    15,     5,    10,    10,     4,    23,     3,     1,
+     0 ]
 
 racc_action_pointer = [
-   -11,     7,   nil,   nil,   -10,   -11,     5,    -9,   -13,   nil,
-    -5,   nil,    -5,    -7,    -1,    -1,   nil,   nil ]
+    29,    39,   nil,    24,    36,    17,   nil,     7,     4,    -1,
+    21,    -1,     3,   nil,     6,    23,   nil,   nil,   nil,   nil,
+   nil,   nil,     8,    23,     4,     2,     0,    -2,   nil,   nil,
+   nil,   nil,   nil,   nil ]
 
 racc_action_default = [
-    -8,    -8,    -1,    -2,    -8,    -7,    -8,    -8,    -8,    18,
-    -8,    -6,    -8,    -4,    -8,    -8,    -3,    -5 ]
+   -16,   -16,    -1,   -16,   -16,   -16,    34,    -4,   -16,   -16,
+   -16,   -16,   -16,    -5,   -16,   -16,   -13,   -14,   -15,    -3,
+    -2,    -6,   -16,   -16,   -16,   -16,   -16,   -16,    -7,    -8,
+    -9,   -10,   -11,   -12 ]
 
 racc_goto_table = [
-     1,     2,     3,    12 ]
+    28,    29,    30,    31,    32,    33,    13,    12,     8,     2,
+    21,     1 ]
 
 racc_goto_check = [
-     1,     2,     3,     4 ]
+     6,     6,     6,     6,     6,     6,     5,     4,     3,     2,
+     5,     1 ]
 
 racc_goto_pointer = [
-   nil,     0,     1,     2,    -7 ]
+   nil,    11,     9,     1,    -3,    -4,   -22 ]
 
 racc_goto_default = [
-   nil,   nil,   nil,   nil,   nil ]
+   nil,   nil,   nil,   nil,   nil,   nil,    15 ]
 
 racc_reduce_table = [
   0, 0, :racc_error,
-  1, 19, :_reduce_none,
-  1, 19, :_reduce_none,
-  6, 20, :_reduce_3,
-  1, 22, :_reduce_none,
-  3, 22, :_reduce_5,
-  3, 21, :_reduce_6,
-  1, 21, :_reduce_7 ]
+  1, 20, :_reduce_1,
+  7, 21, :_reduce_2,
+  3, 22, :_reduce_3,
+  0, 22, :_reduce_4,
+  1, 23, :_reduce_5,
+  2, 23, :_reduce_6,
+  3, 24, :_reduce_7,
+  3, 24, :_reduce_8,
+  3, 24, :_reduce_9,
+  3, 24, :_reduce_10,
+  3, 24, :_reduce_11,
+  3, 24, :_reduce_12,
+  1, 25, :_reduce_none,
+  1, 25, :_reduce_14,
+  1, 25, :_reduce_15 ]
 
-racc_reduce_n = 8
+racc_reduce_n = 16
 
-racc_shift_n = 18
+racc_shift_n = 34
 
 racc_token_table = {
   false => 0,
@@ -80,13 +100,14 @@ racc_token_table = {
   :T_EQL => 10,
   :T_KEYWORD_DEF => 11,
   :T_KEYWORD_END => 12,
-  :T_EXPRESSION => 13,
-  :T_RBR => 14,
-  :T_LBR => 15,
-  :T_DQUOTE => 16,
-  :T_COL => 17 }
+  :T_KEYWORD_OUT => 13,
+  :T_LITERAL => 14,
+  :T_RBR => 15,
+  :T_LBR => 16,
+  :T_DQUOTE => 17,
+  :T_COL => 18 }
 
-racc_nt_base = 18
+racc_nt_base = 19
 
 racc_use_result_var = true
 
@@ -120,7 +141,8 @@ Racc_token_to_s_table = [
   "T_EQL",
   "T_KEYWORD_DEF",
   "T_KEYWORD_END",
-  "T_EXPRESSION",
+  "T_KEYWORD_OUT",
+  "T_LITERAL",
   "T_RBR",
   "T_LBR",
   "T_DQUOTE",
@@ -128,8 +150,10 @@ Racc_token_to_s_table = [
   "$start",
   "program",
   "defn",
-  "call",
-  "arglist" ]
+  "arglist",
+  "method_definition",
+  "operation",
+  "var" ]
 
 Racc_debug_parser = false
 
@@ -137,19 +161,19 @@ Racc_debug_parser = false
 
 # reduce 0 omitted
 
-# reduce 1 omitted
-
-# reduce 2 omitted
-
-def _reduce_3(val, _values, result)
- result = [:script, [:defn, val[1], [:arglist, val[3]]]] 
+def _reduce_1(val, _values, result)
+ result = [:program, val[0]] 
     result
 end
 
-# reduce 4 omitted
+def _reduce_2(val, _values, result)
+      result = [:defn, val[1], val[3], val[5]]
+    
+    result
+end
 
-def _reduce_5(val, _values, result)
-      result = []
+def _reduce_3(val, _values, result)
+      result = [:arglist]
       val.each do |value|
         result << value unless value.eql?(',')
       end
@@ -157,13 +181,60 @@ def _reduce_5(val, _values, result)
     result
 end
 
+def _reduce_4(val, _values, result)
+ result = [:arglist, nil] 
+    result
+end
+
+def _reduce_5(val, _values, result)
+ result = [:inner, val[0]] 
+    result
+end
+
 def _reduce_6(val, _values, result)
- result = [:script, [:call, val[0]]] 
+ result = [:inner, val[0], val[1]] 
     result
 end
 
 def _reduce_7(val, _values, result)
- result = [:script, [:call, val[0]]] 
+ result = [:op, val[1].to_sym, val[0], val[2]] 
+    result
+end
+
+def _reduce_8(val, _values, result)
+ result = [:op, val[1].to_sym, val[0], val[2]] 
+    result
+end
+
+def _reduce_9(val, _values, result)
+ result = [:op, val[1].to_sym, val[0], val[2]] 
+    result
+end
+
+def _reduce_10(val, _values, result)
+ result = [:op, val[1].to_sym, val[0], val[2]] 
+    result
+end
+
+def _reduce_11(val, _values, result)
+ result = [:op, val[1].to_sym, val[0], val[2]] 
+    result
+end
+
+def _reduce_12(val, _values, result)
+ result = [:op, val[1].to_sym, val[0], val[2]] 
+    result
+end
+
+# reduce 13 omitted
+
+def _reduce_14(val, _values, result)
+ result = [:int, val[0]] 
+    result
+end
+
+def _reduce_15(val, _values, result)
+ result = [:float, val[0]] 
     result
 end
 

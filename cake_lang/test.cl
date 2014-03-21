@@ -1,2 +1,3 @@
-def ohai(a, b)
-end
+-> ohai()
+  stdout 3234 *  2
+<-

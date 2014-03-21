@@ -18,11 +18,19 @@ File.open(ARGV[0], "r") do |f|
 end
 
 tokens = CakeLang::Lexer.lex(input.strip)
-puts tokens.inspect
+
+puts "Tokenized input:\n"
+puts "#{tokens.inspect}\n\n"
 
 ast = CakeLang::Parser.new.parse(tokens)
-puts ast.inspect
+
+puts "Abstract Syntax Tree:\n"
+puts "#{ast.inspect}\n\n"
 
 code = CakeLang::CodeGenerator::C.compile(ast)
+
+puts "Generated Code:\n"
+puts "#{code.inspect}\n\n"
+
 system("echo '#{code}' > #{filename}.c")
 system("gcc -o #{filename} #{filename}.c")

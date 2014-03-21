@@ -2,23 +2,29 @@ module CakeLang
   module Lexer
     class << self
       TOKENS = {
-        /def/       => :T_KEYWORD_DEF,
-        /end/       => :T_KEYWORD_END,
-        /"/         => :T_DQUOTE,
-        /\w+/       => :T_EXPRESSION,
-        /\+/        => :T_ADD,
-        /\-/        => :T_SUB,
-        /\*/        => :T_MUL,
-        /\//        => :T_DIV,
-        /\%/        => :T_MOD,
-        /\^/        => :T_EXP,
-        /\(/        => :T_LBR,
-        /\)/        => :T_RBR,
-        /\d+\.+\d*/ => :T_FLOAT,
-        /\d+/       => :T_INT,
-        /\=/        => :T_EQ,
-        /\,/        => :T_COL,
-        /\s+/       => nil
+        /->/          => :T_KEYWORD_DEF,
+        /<-/          => :T_KEYWORD_END,
+        /stdout/      => :T_KEYWORD_OUT,
+        /"/           => :T_DQUOTE,
+        /\d+\.+\d*/   => :T_FLOAT,
+        /\d+/         => :T_INT,
+        /\w+/         => :T_LITERAL,
+        /\+/          => :T_ADD,
+        /\-/          => :T_SUB,
+        /\*/          => :T_MUL,
+        /\//          => :T_DIV,
+        /\%/          => :T_MOD,
+        /\^/          => :T_EXP,
+        /\(/          => :T_LBR,
+        /\)/          => :T_RBR,
+        /\=/          => :T_EQ,
+        /\,/          => :T_COL,
+        /\s+/         => nil
+      }
+
+      CONVERSION = {
+        :T_INT => :to_i,
+        :T_FLOAT => :to_f
       }
 
       def lex(source)
@@ -40,6 +46,9 @@ module CakeLang
           found = scanner.scan(pattern)
 
           if found and type
+            if type.eql?(:T_INT) or type.eql?(:T_FLOAT)
+              found = found.send(CONVERSION[type])
+            end
             token = [type, found]
             break
           end
