@@ -1,3 +1,2 @@
-def ohai(a,b)
-  a = "B"
+def ohai(a, b)
 end
