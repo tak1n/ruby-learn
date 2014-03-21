@@ -23,46 +23,30 @@ module CakeLang
 
       def lex(source)
         tokens = []
-        sep = /\s+/
-        source_list = source.split(sep)
-        source_list.each do |source|
-          tokens << get_token(source)
+        scanner = StringScanner.new(source)
+        
+        until scanner.eos?
+          token = next_token(scanner)
+          tokens << token if token
         end
 
         tokens
       end
 
-      def get_token(source)
-        found_tokens = []
-        scanner = StringScanner.new(source)
+      def next_token(scanner)
+        token = nil
+
         TOKENS.each do |pattern, type|
           found = scanner.scan(pattern)
-          puts scanner.rest
+
           if found and type
-            found_tokens << [type, found]
+            token = [type, found]
+            break
           end
         end
 
-        if found_tokens.empty?
-          raise "Unknown Token #{source}"
-        else
-          return found_tokens
-        end
+        token
       end
-      # def next_token(scanner)
-        # token = nil
-
-        # TOKENS.each do |pattern, type|
-          # found = scanner.scan(pattern)
-
-          # if found and type
-            # token = [type, found]
-            # break
-          # end
-        # end
-
-        # token
-      # end
     end
   end
 end
