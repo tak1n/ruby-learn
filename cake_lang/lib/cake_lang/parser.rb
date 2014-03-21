@@ -11,7 +11,7 @@ module CakeLang
 
   def parse(tokens)
     @tokens = tokens
-
+    puts tokens.inspect
     do_parse
   end
 
@@ -20,71 +20,92 @@ module CakeLang
   # @return [Array]
   #
   def next_token
-    @tokens.shift
+    type, value, line = @tokens.shift
+  end
+
+  def on_error(type, value, stack)
+    raise Racc::ParseError, "Dudulo parser error - Error Type: #{type.inspect}\nCurrent Stack: #{stack.inspect}\nInvalid Token: #{value.inspect}"
   end
 ##### State transition tables begin ###
 
 racc_action_table = [
-    17,    18,    17,    18,    17,    18,    17,    18,    17,    18,
-    17,    18,    16,    19,    16,    20,    16,    11,    16,    10,
-    16,     9,    16,    17,    18,    17,    18,    22,    25,    24,
-    23,    26,    27,     7,    14,    16,     6,    16,     5,     4,
-     3 ]
+    11,    12,    11,    12,    11,    12,    37,    11,    12,     6,
+    16,    10,     7,     6,    25,    10,     7,    11,    12,    25,
+    26,    11,    12,    11,    12,    36,     6,    27,    10,     7,
+     6,    38,    10,     7,    15,    25,    11,    12,    11,    12,
+    11,    12,    11,    12,    11,    12,    41,    13,    25,    42,
+    25,    10,     7,   nil,    25,   nil,    25,    17,    20,    19,
+    18,    21,    22,    17,    20,    19,    18,    21,    22 ]
 
 racc_action_check = [
-    27,    27,    26,    26,    25,    25,    24,    24,    14,    14,
-    22,    22,    27,    11,    26,    12,    25,     9,    24,     8,
-    14,     7,    22,    10,    10,    23,    23,    15,    15,    15,
-    15,    15,    15,     5,    10,    10,     4,    23,     3,     1,
-     0 ]
+     0,     0,    22,    22,    39,    39,    35,    21,    21,     0,
+     7,     0,     0,    39,    22,    39,    39,     2,     2,    21,
+    13,    37,    37,    10,    10,    27,     2,    15,     2,     2,
+    37,    36,    37,    37,     6,    10,    20,    20,    18,    18,
+    16,    16,    17,    17,    19,    19,    38,     1,    20,    40,
+    18,    16,    16,   nil,    17,   nil,    19,     8,     8,     8,
+     8,     8,     8,    24,    24,    24,    24,    24,    24 ]
 
 racc_action_pointer = [
-    29,    39,   nil,    24,    36,    17,   nil,     7,     4,    -1,
-    21,    -1,     3,   nil,     6,    23,   nil,   nil,   nil,   nil,
-   nil,   nil,     8,    23,     4,     2,     0,    -2,   nil,   nil,
-   nil,   nil,   nil,   nil ]
+    -2,    47,    15,   nil,   nil,   nil,    20,     0,    53,   nil,
+    21,   nil,   nil,    20,   nil,    11,    38,    40,    36,    42,
+    34,     5,     0,   nil,    59,   nil,   nil,    11,   nil,   nil,
+   nil,   nil,   nil,   nil,   nil,    -9,    13,    19,    32,     2,
+    37,   nil,   nil ]
 
 racc_action_default = [
-   -16,   -16,    -1,   -16,   -16,   -16,    34,    -4,   -16,   -16,
-   -16,   -16,   -16,    -5,   -16,   -16,   -13,   -14,   -15,    -3,
-    -2,    -6,   -16,   -16,   -16,   -16,   -16,   -16,    -7,    -8,
-    -9,   -10,   -11,   -12 ]
+   -23,   -23,    -1,    -2,    -4,    -5,   -23,   -20,   -11,   -12,
+   -23,   -21,   -22,   -23,    -3,   -23,   -23,   -23,   -23,   -23,
+   -23,   -23,   -23,   -13,   -23,   -20,    43,    -9,   -10,   -14,
+   -15,   -16,   -17,   -18,   -19,   -23,   -23,   -23,   -23,    -6,
+   -23,    -8,    -7 ]
 
 racc_goto_table = [
-    28,    29,    30,    31,    32,    33,    13,    12,     8,     2,
-    21,     1 ]
+     2,    14,    24,    40,    28,    35,     1,    23,   nil,    29,
+    30,    31,    32,    33,    34,   nil,   nil,   nil,   nil,   nil,
+   nil,   nil,   nil,   nil,   nil,   nil,   nil,   nil,   nil,   nil,
+   nil,   nil,   nil,   nil,   nil,   nil,   nil,    39,    14 ]
 
 racc_goto_check = [
-     6,     6,     6,     6,     6,     6,     5,     4,     3,     2,
-     5,     1 ]
+     2,     3,     8,     6,     5,     7,     1,     9,   nil,     8,
+     8,     8,     8,     8,     8,   nil,   nil,   nil,   nil,   nil,
+   nil,   nil,   nil,   nil,   nil,   nil,   nil,   nil,   nil,   nil,
+   nil,   nil,   nil,   nil,   nil,   nil,   nil,     2,     3 ]
 
 racc_goto_pointer = [
-   nil,    11,     9,     1,    -3,    -4,   -22 ]
+   nil,     6,     0,    -1,   nil,   -12,   -34,   -22,    -8,    -3 ]
 
 racc_goto_default = [
-   nil,   nil,   nil,   nil,   nil,   nil,    15 ]
+   nil,   nil,   nil,     3,     4,     5,   nil,   nil,     8,     9 ]
 
 racc_reduce_table = [
   0, 0, :racc_error,
   1, 20, :_reduce_1,
-  7, 21, :_reduce_2,
-  3, 22, :_reduce_3,
-  0, 22, :_reduce_4,
-  1, 23, :_reduce_5,
-  2, 23, :_reduce_6,
-  3, 24, :_reduce_7,
-  3, 24, :_reduce_8,
-  3, 24, :_reduce_9,
-  3, 24, :_reduce_10,
-  3, 24, :_reduce_11,
-  3, 24, :_reduce_12,
+  1, 21, :_reduce_none,
+  2, 21, :_reduce_none,
+  1, 22, :_reduce_4,
+  1, 22, :_reduce_5,
   1, 25, :_reduce_none,
-  1, 25, :_reduce_14,
-  1, 25, :_reduce_15 ]
+  7, 23, :_reduce_7,
+  3, 26, :_reduce_8,
+  0, 26, :_reduce_9,
+  3, 24, :_reduce_10,
+  1, 24, :_reduce_none,
+  1, 24, :_reduce_12,
+  2, 24, :_reduce_13,
+  3, 28, :_reduce_14,
+  3, 28, :_reduce_15,
+  3, 28, :_reduce_16,
+  3, 28, :_reduce_17,
+  3, 28, :_reduce_18,
+  3, 28, :_reduce_19,
+  1, 27, :_reduce_20,
+  1, 27, :_reduce_21,
+  1, 27, :_reduce_22 ]
 
-racc_reduce_n = 16
+racc_reduce_n = 23
 
-racc_shift_n = 34
+racc_shift_n = 43
 
 racc_token_table = {
   false => 0,
@@ -97,7 +118,7 @@ racc_token_table = {
   :T_SUB => 7,
   :T_MOD => 8,
   :T_EXP => 9,
-  :T_EQL => 10,
+  :T_EQ => 10,
   :T_KEYWORD_DEF => 11,
   :T_KEYWORD_END => 12,
   :T_KEYWORD_OUT => 13,
@@ -138,7 +159,7 @@ Racc_token_to_s_table = [
   "T_SUB",
   "T_MOD",
   "T_EXP",
-  "T_EQL",
+  "T_EQ",
   "T_KEYWORD_DEF",
   "T_KEYWORD_END",
   "T_KEYWORD_OUT",
@@ -149,11 +170,14 @@ Racc_token_to_s_table = [
   "T_COL",
   "$start",
   "program",
+  "stmts",
+  "stmt",
   "defn",
+  "expr",
+  "block",
   "arglist",
-  "method_definition",
-  "operation",
-  "var" ]
+  "var",
+  "operation" ]
 
 Racc_debug_parser = false
 
@@ -166,13 +190,29 @@ def _reduce_1(val, _values, result)
     result
 end
 
-def _reduce_2(val, _values, result)
+# reduce 2 omitted
+
+# reduce 3 omitted
+
+def _reduce_4(val, _values, result)
+ result = [:stmt, val[0]] 
+    result
+end
+
+def _reduce_5(val, _values, result)
+ result = [:stmt, val[0]] 
+    result
+end
+
+# reduce 6 omitted
+
+def _reduce_7(val, _values, result)
       result = [:defn, val[1], val[3], val[5]]
     
     result
 end
 
-def _reduce_3(val, _values, result)
+def _reduce_8(val, _values, result)
       result = [:arglist]
       val.each do |value|
         result << value unless value.eql?(',')
@@ -181,59 +221,69 @@ def _reduce_3(val, _values, result)
     result
 end
 
-def _reduce_4(val, _values, result)
+def _reduce_9(val, _values, result)
  result = [:arglist, nil] 
     result
 end
 
-def _reduce_5(val, _values, result)
- result = [:inner, val[0]] 
-    result
-end
-
-def _reduce_6(val, _values, result)
- result = [:inner, val[0], val[1]] 
-    result
-end
-
-def _reduce_7(val, _values, result)
- result = [:op, val[1].to_sym, val[0], val[2]] 
-    result
-end
-
-def _reduce_8(val, _values, result)
- result = [:op, val[1].to_sym, val[0], val[2]] 
-    result
-end
-
-def _reduce_9(val, _values, result)
- result = [:op, val[1].to_sym, val[0], val[2]] 
-    result
-end
-
 def _reduce_10(val, _values, result)
- result = [:op, val[1].to_sym, val[0], val[2]] 
+ result = [:equal, val[0], val[2]] 
     result
 end
 
-def _reduce_11(val, _values, result)
- result = [:op, val[1].to_sym, val[0], val[2]] 
-    result
-end
+# reduce 11 omitted
 
 def _reduce_12(val, _values, result)
- result = [:op, val[1].to_sym, val[0], val[2]] 
+ result = [:block, val[0]] 
     result
 end
 
-# reduce 13 omitted
+def _reduce_13(val, _values, result)
+ result = [:block, val[0], val[1]] 
+    result
+end
 
 def _reduce_14(val, _values, result)
- result = [:int, val[0]] 
+ result = [:add, val[0], val[2]] 
     result
 end
 
 def _reduce_15(val, _values, result)
+ result = [:sub, val[0], val[2]] 
+    result
+end
+
+def _reduce_16(val, _values, result)
+ result = [:mul, val[0], val[2]] 
+    result
+end
+
+def _reduce_17(val, _values, result)
+ result = [:div, val[0], val[2]] 
+    result
+end
+
+def _reduce_18(val, _values, result)
+ result = [:mod, val[0], val[2]] 
+    result
+end
+
+def _reduce_19(val, _values, result)
+ result = [:exp, val[0], val[2]] 
+    result
+end
+
+def _reduce_20(val, _values, result)
+ result = [:literal, val[0].to_sym] 
+    result
+end
+
+def _reduce_21(val, _values, result)
+ result = [:int, val[0]] 
+    result
+end
+
+def _reduce_22(val, _values, result)
  result = [:float, val[0]] 
     result
 end

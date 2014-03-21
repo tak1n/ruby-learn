@@ -9,8 +9,11 @@ int
 main (void)
 {
 EOF
-        program_ast = ast[1]
-        compile_nodes(program_ast)
+        ast.each do |node|
+          unless node.eql? :program
+            compile_nodes(node[1])
+          end
+        end
 
 @output += <<-EOF
   return 0;
@@ -18,14 +21,14 @@ EOF
 EOF
       end
 
-      def self.compile_nodes(program_ast)
-        case program_ast.first
+      def self.compile_nodes(node)
+        case node.first
         when :call
-          @output += "#{program_ast[1]}();\n"
+          @output += "#{node[1]}();\n"
         when :defn
           #@output += "void #{program_ast[1]}() {\n"
 
-          @output += compile_inner_method(program_ast[3])
+          @output += compile_inner_method(node[3])
 
           #@output += "}\n"
         else
@@ -34,17 +37,52 @@ EOF
       end
 
       def self.compile_inner_method(method_ast)
-        if method_ast[1].eql?('stdout')
-          outputter= '%d'
-          return "printf(\"#{outputter}\", #{compile_operation(method_ast[2])});\n"
+        if method_ast[1][1].eql?('stdout')
+          outputter= {
+            :int => '%d',
+            :float => '%f'
+          }
+
+          format = method_ast[1][2][1][0]
+          operation = method_ast[1][2]
+
+          return "printf(\"#{outputter[format]}\", #{compile_operation(operation)});\n"
+        elsif method_ast[1].first.eql? :equal
+          return "#{compile_assignment(method_ast[1])};\n"
         else
-          return "#{compile_operation(method_ast[1])}\n"
+          return "#{compile_operation(method_ast[1])};\n"
         end
       end
 
       def self.compile_operation(op_ast)
-        operation = op_ast[1]
-        return op_ast[2][1].send(operation, op_ast[3][1])
+        puts op_ast.inspect
+        operation_table = {
+          :add => :+,
+          :sub => :-,
+          :mul => :*,
+          :div => :/,
+          :exp => :^,
+          :mod => :%
+        }
+
+        operation = operation_table[op_ast[1][0]]
+        op1 = op_ast[1][1][1]
+        op2 = op_ast[1][2][1]
+
+        if operation.eql? :/
+          op1 = op1.to_f
+          op2 = op2.to_f
+        end
+
+        result = op1.send(operation, op2)
+      end
+
+      def self.compile_assignment(ass_ast)
+        type = ass_ast[2][0]
+        identifier = ass_ast[1]
+        value = ass_ast[2][1]
+
+        return "#{type} #{identifier} = #{value}"
       end
     end
   end
