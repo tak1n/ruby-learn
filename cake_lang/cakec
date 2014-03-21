@@ -1,0 +1,28 @@
+#!/usr/bin/env ruby
+
+#require 'racc'
+require 'strscan'
+
+require './lib/cake_lang/lexer'
+require './lib/cake_lang/parser'
+require './lib/cake_lang/code_generator'
+
+filename = ARGV[0].split('.')[0]
+
+input = ""
+input_array = []
+tokens = []
+
+File.open(ARGV[0], "r") do |f|
+  input = f.read
+end
+
+tokens = CakeLang::Lexer.lex(input.strip)
+puts tokens.inspect
+
+ast = CakeLang::Parser.new.parse(tokens)
+puts ast.inspect
+
+code = CakeLang::CodeGenerator::C.compile(ast)
+system("echo '#{code}' > #{filename}.c")
+system("gcc -o #{filename} #{filename}.c")
