@@ -25,42 +25,46 @@ module CakeLang
 ##### State transition tables begin ###
 
 racc_action_table = [
-     4,     6,     5,     7,     8,     9,    10,    11,    12,    13 ]
+     4,    11,     5,     7,     8,     9,    10,     6,    13,    14,
+    15,    16,    17 ]
 
 racc_action_check = [
-     0,     1,     0,     4,     5,     6,     7,     8,    10,    12 ]
+     0,     8,     0,     4,     5,     6,     7,     1,    10,    12,
+    13,    14,    15 ]
 
 racc_action_pointer = [
-   -10,     1,   nil,   nil,    -9,   -10,     5,    -8,    -6,   nil,
-    -5,   nil,    -2,   nil ]
+   -11,     7,   nil,   nil,   -10,   -11,     5,    -9,   -13,   nil,
+    -5,   nil,    -5,    -7,    -1,    -1,   nil,   nil ]
 
 racc_action_default = [
-    -6,    -6,    -1,    -2,    -6,    -5,    -6,    -6,    -6,    14,
-    -6,    -4,    -6,    -3 ]
+    -8,    -8,    -1,    -2,    -8,    -7,    -8,    -8,    -8,    18,
+    -8,    -6,    -8,    -4,    -8,    -8,    -3,    -5 ]
 
 racc_goto_table = [
-     1,     2,     3 ]
+     1,     2,     3,    12 ]
 
 racc_goto_check = [
-     1,     2,     3 ]
+     1,     2,     3,     4 ]
 
 racc_goto_pointer = [
-   nil,     0,     1,     2 ]
+   nil,     0,     1,     2,    -7 ]
 
 racc_goto_default = [
-   nil,   nil,   nil,   nil ]
+   nil,   nil,   nil,   nil,   nil ]
 
 racc_reduce_table = [
   0, 0, :racc_error,
   1, 19, :_reduce_none,
   1, 19, :_reduce_none,
-  5, 20, :_reduce_3,
-  3, 21, :_reduce_4,
-  1, 21, :_reduce_5 ]
+  6, 20, :_reduce_3,
+  1, 22, :_reduce_none,
+  3, 22, :_reduce_5,
+  3, 21, :_reduce_6,
+  1, 21, :_reduce_7 ]
 
-racc_reduce_n = 6
+racc_reduce_n = 8
 
-racc_shift_n = 14
+racc_shift_n = 18
 
 racc_token_table = {
   false => 0,
@@ -73,14 +77,14 @@ racc_token_table = {
   :T_SUB => 7,
   :T_MOD => 8,
   :T_EXP => 9,
-  :T_KEYWORD_DEF => 10,
-  :T_KEYWORD_END => 11,
-  :T_EXPRESSION => 12,
-  :T_RBR => 13,
-  :T_LBR => 14,
-  :T_DQUOTE => 15,
-  :T_COL => 16,
-  :T_EQL => 17 }
+  :T_EQL => 10,
+  :T_KEYWORD_DEF => 11,
+  :T_KEYWORD_END => 12,
+  :T_EXPRESSION => 13,
+  :T_RBR => 14,
+  :T_LBR => 15,
+  :T_DQUOTE => 16,
+  :T_COL => 17 }
 
 racc_nt_base = 18
 
@@ -113,6 +117,7 @@ Racc_token_to_s_table = [
   "T_SUB",
   "T_MOD",
   "T_EXP",
+  "T_EQL",
   "T_KEYWORD_DEF",
   "T_KEYWORD_END",
   "T_EXPRESSION",
@@ -120,11 +125,11 @@ Racc_token_to_s_table = [
   "T_LBR",
   "T_DQUOTE",
   "T_COL",
-  "T_EQL",
   "$start",
   "program",
   "defn",
-  "call" ]
+  "call",
+  "arglist" ]
 
 Racc_debug_parser = false
 
@@ -137,16 +142,27 @@ Racc_debug_parser = false
 # reduce 2 omitted
 
 def _reduce_3(val, _values, result)
- result = [:script, [:defn, val[1]]] 
+ result = [:script, [:defn, val[1], [:arglist, val[3]]]] 
     result
 end
 
-def _reduce_4(val, _values, result)
+# reduce 4 omitted
+
+def _reduce_5(val, _values, result)
+      result = []
+      val.each do |value|
+        result << value unless value.eql?(',')
+      end
+    
+    result
+end
+
+def _reduce_6(val, _values, result)
  result = [:script, [:call, val[0]]] 
     result
 end
 
-def _reduce_5(val, _values, result)
+def _reduce_7(val, _values, result)
  result = [:script, [:call, val[0]]] 
     result
 end
