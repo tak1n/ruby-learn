@@ -36,26 +36,40 @@ EOF
         end
       end
 
-      def self.compile_inner_method(method_ast)
-        if method_ast[1][1].eql?('stdout')
-          outputter= {
-            :int => '%d',
-            :float => '%f'
-          }
+      def self.compile_inner_method(ast)
+        result = []
 
-          format = method_ast[1][2][1][0]
-          operation = method_ast[1][2]
+        ast.each do |block_ast|
+          next if block_ast.eql? :block
+          block_ast.each do |method_ast|
+            if method_ast[1][1].eql?('stdout')
+              outputter= {
+                :int => '%d',
+                :float => '%f'
+              }
 
-          return "printf(\"#{outputter[format]}\", #{compile_operation(operation)});\n"
-        elsif method_ast[1].first.eql? :equal
-          return "#{compile_assignment(method_ast[1])};\n"
-        else
-          return "#{compile_operation(method_ast[1])};\n"
+              format = method_ast[1][2][1][0]
+              operation = method_ast[1][2]
+
+              if operation.first.eql? :div
+                format = :float
+              end
+
+              result << "printf(\"#{outputter[format]}\", #{compile_operation(operation)});\n"
+            elsif method_ast[1].first.eql? :equal
+              result << "#{compile_assignment(method_ast[1])};\n"
+            else
+              operation = method_ast[1][1]
+
+              result << "#{compile_operation(operation)};\n"
+            end
+          end
         end
+
+        result.join
       end
 
       def self.compile_operation(op_ast)
-        puts op_ast.inspect
         operation_table = {
           :add => :+,
           :sub => :-,
@@ -65,9 +79,9 @@ EOF
           :mod => :%
         }
 
-        operation = operation_table[op_ast[1][0]]
-        op1 = op_ast[1][1][1]
-        op2 = op_ast[1][2][1]
+        operation = operation_table[op_ast[0]]
+        op1 = op_ast[1][1]
+        op2 = op_ast[2][1]
 
         if operation.eql? :/
           op1 = op1.to_f
