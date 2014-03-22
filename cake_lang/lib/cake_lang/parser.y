@@ -14,9 +14,11 @@ program
   : stmts { result = [:program, val[0]] }
   ;
 
+# in this rule the recursion is happening via | stmts stmt - this is saying stmts can contain stmts(=stmts + stmt) + stmt
+# this enables the parser to allow multiple lines in block and so on... (method_definition with multiple lines)
 stmts
-  : stmt
-  | stmts stmt
+  : stmt { result = val[0] }
+  | stmts stmt { result = [val[0], val[1]] }
   ;
 
 stmt
@@ -26,7 +28,7 @@ stmt
   ;
 
 block
-  : stmts
+  : stmts { result = [:block, val[0]] }
   ;
 
 defn
@@ -47,8 +49,8 @@ arglist
 expr
   : T_LITERAL T_EQ expr { result = [:equal, val[0], val[2]] }
   | var
-  | operation { result = [:block, val[0]] }
-  | T_KEYWORD_OUT operation { result = [:block, val[0], val[1]] }
+  | operation { result = [:op, val[0]] }
+  | T_KEYWORD_OUT operation { result = [:op, val[0], val[1]] }
   ;
 
 operation
@@ -77,7 +79,7 @@ end
 
   def parse(tokens)
     @tokens = tokens
-    puts tokens.inspect
+
     do_parse
   end
 
@@ -86,7 +88,7 @@ end
   # @return [Array]
   #
   def next_token
-    type, value, line = @tokens.shift
+    @tokens.shift
   end
 
   def on_error(type, value, stack)
