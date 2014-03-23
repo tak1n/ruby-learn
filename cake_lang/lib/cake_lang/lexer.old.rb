@@ -1,6 +1,5 @@
 module CakeLang
-  module Lexer
-    class << self
+  class Lexer
       TOKENS = {
         /->/          => :T_KEYWORD_DEF,
         /<-/          => :T_KEYWORD_END,
@@ -56,6 +55,5 @@ module CakeLang
 
         token
       end
-    end
   end
 end
