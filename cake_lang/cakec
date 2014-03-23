@@ -17,7 +17,7 @@ File.open(ARGV[0], "r") do |f|
   input = f.read
 end
 
-tokens = CakeLang::Lexer.lex(input.strip)
+tokens = CakeLang::Lexer.new.lex(input.strip)
 
 puts "Tokenized input:\n"
 puts "#{tokens.inspect}\n\n"
