@@ -119,12 +119,11 @@ self.test_en_main = 0;
 # line 12 "test.rl"
 
 def run_lexer(data)
-  # data = data.unpack("c*") if(data.is_a?(String))
+  data = data.unpack("c*")
   eof = data.length
-  token_array = []
 
   
-# line 128 "test.rb"
+# line 127 "test.rb"
 begin
 	p ||= 0
 	pe ||= data.length
@@ -134,9 +133,9 @@ begin
 	act = 0
 end
 
-# line 19 "test.rl"
+# line 18 "test.rl"
   
-# line 140 "test.rb"
+# line 139 "test.rb"
 begin
 	_klen, _trans, _keys, _acts, _nacts = nil
 	_goto_level = 0
@@ -166,7 +165,7 @@ begin
 		begin
 ts = p
 		end
-# line 170 "test.rb"
+# line 169 "test.rb"
 		end # from state action switch
 	end
 	if _trigger_goto
@@ -249,7 +248,7 @@ when 5 then
 # line 6 "test.rl"
 		begin
 te = p
-p = p - 1; begin  puts "any: #{data[ts...te]}"  end
+p = p - 1; begin  puts "any: #{data[ts...te].pack("c*")}"  end
 		end
 when 6 then
 # line 1 "NONE"
@@ -260,10 +259,10 @@ when 6 then
  puts '>>>' end
 	when 2 then
 	begin begin p = ((te))-1; end
- puts "any: #{data[ts...te]}" end
+ puts "any: #{data[ts...te].pack("c*")}" end
 end 
 			end
-# line 267 "test.rb"
+# line 266 "test.rb"
 			end # action switch
 		end
 	end
@@ -283,7 +282,7 @@ when 0 then
 # line 1 "NONE"
 		begin
 ts = nil;		end
-# line 287 "test.rb"
+# line 286 "test.rb"
 		end # to state action switch
 	end
 	if _trigger_goto
@@ -310,7 +309,7 @@ end
 	end
 	end
 
-# line 20 "test.rl"
+# line 19 "test.rl"
 end
 
 
