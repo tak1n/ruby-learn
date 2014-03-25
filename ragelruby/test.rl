@@ -3,7 +3,7 @@
 
   main := |*
     '>>>' => { puts '>>>' };
-    any+  => { puts "any: #{data[ts...te].pack("c*")}" };
+    any+  => { puts "any: #{data[ts...te]}" };
   *|;
 
 }%%
@@ -11,7 +11,7 @@
 %% write data;
 
 def run_lexer(data)
-  data = data.unpack("c*")
+  data = data
   eof = data.length
 
   %% write init;

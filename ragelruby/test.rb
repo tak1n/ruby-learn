@@ -119,7 +119,7 @@ self.test_en_main = 0;
 # line 12 "test.rl"
 
 def run_lexer(data)
-  data = data.unpack("c*")
+  data = data
   eof = data.length
 
   
@@ -248,7 +248,7 @@ when 5 then
 # line 6 "test.rl"
 		begin
 te = p
-p = p - 1; begin  puts "any: #{data[ts...te].pack("c*")}"  end
+p = p - 1; begin  puts "any: #{data[ts...te]}"  end
 		end
 when 6 then
 # line 1 "NONE"
@@ -259,7 +259,7 @@ when 6 then
  puts '>>>' end
 	when 2 then
 	begin begin p = ((te))-1; end
- puts "any: #{data[ts...te].pack("c*")}" end
+ puts "any: #{data[ts...te]}" end
 end 
 			end
 # line 266 "test.rb"
