@@ -2,7 +2,7 @@ require 'ffi'
 
 module Hello
   extend FFI::Library
-  ffi_lib "./libhello.so"
+  ffi_lib "./libhellopp.so"
   attach_function :hellomath, [:int, :int], :int
 
   def self.math(a, b)
