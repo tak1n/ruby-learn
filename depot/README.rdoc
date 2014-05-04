@@ -12,5 +12,5 @@ Then start the server with
 
   $ rails server
 
-When requesting ```GET /products``` a list of sample products should be shown.
+When requesting 'GET /products' a list of sample products should be shown.
 
