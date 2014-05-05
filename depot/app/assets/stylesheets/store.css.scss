@@ -23,20 +23,25 @@
       width: 80px;
       margin-right: 5px;
       margin-bottom: 5px;
-      position: absolute;
+      float: left;
+    }
+
+    div.content {
+      float: left;
+      margin-left: 20px;
+      width: 80%;
+      margin-bottom: 20px;
     }
 
     h3 {
       font-size: 120%;
       font-family: sans-serif;
-      margin-left: 100px;
       margin-top: 0;
       margin-bottom: 2px;
       color: #227;
     }
 
     p, div.price_line {
-      margin-left: 100px;
       margin-top: 0.5em; 
       margin-bottom: 0.8em; 
     }
