@@ -24,4 +24,12 @@ class Movie
       result += (days_rented - 3) * 1.5 if days_rented > 3
     end
   end
+
+  def frequent_renter_points(days_rented)
+    if @price_code.eql?(NEW_RELEASE) && days_rented > 1
+      2
+    else
+      1
+    end
+  end
 end
