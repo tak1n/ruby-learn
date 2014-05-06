@@ -41,6 +41,8 @@ class Customer
   # This method was created by Extract Method from Customer#statement
   # https://github.com/Benny1992/RubyApplications/blob/master/refactoring-ruby-edition/chapter1/bad/customer.rb#L18-L30
   #
+  # It was edited by Move Method - moved method logic to Rental Object because method uses Rental's data
+  #
   def amount_for(rental)
     rental.charge
   end
