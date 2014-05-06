@@ -15,7 +15,8 @@ class Customer
     result = "Rental Record for #{@name}\n"
 
     @rentals.each do |rental|
-      this_amount = rental.charge # Call rental.charge directly and don't use Customer#amount_for as delegating method
+      # this_amount = rental.charge # Call rental.charge directly and don't use Customer#amount_for as delegating method
+      # this_amount is no longer needed -> Replace temp with query
 
       # add frequent renter points
       frequent_renter_points += 1
@@ -26,8 +27,8 @@ class Customer
       end
 
       # show figures for this rental
-      result += "\t" + rental.movie.title + "\t" + this_amount.to_s + "\n"
-      total_amount += this_amount
+      result += "\t" + rental.movie.title + "\t" + rental.charge.to_s + "\n"
+      total_amount += rental.charge
     end
 
     # add footer lines
