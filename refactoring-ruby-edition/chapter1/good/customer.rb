@@ -15,7 +15,7 @@ class Customer
     result = "Rental Record for #{@name}\n"
 
     @rentals.each do |rental|
-      this_amount = amount_for(rental)
+      this_amount = rental.charge # Call rental.charge directly and don't use Customer#amount_for as delegating method
 
       # add frequent renter points
       frequent_renter_points += 1
@@ -42,9 +42,10 @@ class Customer
   # https://github.com/Benny1992/RubyApplications/blob/master/refactoring-ruby-edition/chapter1/bad/customer.rb#L18-L30
   #
   # It was edited by Move Method - moved method logic to Rental Object because method uses Rental's data
+  # Also it's no longer needed after Move Method because it's only a delegating method anymore
   #
-  def amount_for(rental)
-    rental.charge
-  end
+  # def amount_for(rental)
+    # rental.charge
+  # end
 end
 
