@@ -42,18 +42,7 @@ class Customer
   # https://github.com/Benny1992/RubyApplications/blob/master/refactoring-ruby-edition/chapter1/bad/customer.rb#L18-L30
   #
   def amount_for(rental)
-    result = 0
-
-    case rental.movie.price_code
-    when Movie::REGULAR
-      result += 2
-      result += (rental.days_rented - 2) * 1.5 if rental.days_rented > 2
-    when Movie::NEW_RELEASE
-      result += rental.days_rented * 3
-    when Movie::CHILDRENS
-      result += 1.5
-      result += (rental.days_rented - 3) * 1.5 if rental.days_rented > 3
-    end
+    rental.charge
   end
 end
 
