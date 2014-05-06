@@ -37,6 +37,10 @@ class Customer
     result
   end
 
+  ##
+  # This method was created by Extract Method from Customer#statement
+  # https://github.com/Benny1992/RubyApplications/blob/master/refactoring-ruby-edition/chapter1/bad/customer.rb#L18-L30
+  #
   def amount_for(element)
     this_amount = 0
 
