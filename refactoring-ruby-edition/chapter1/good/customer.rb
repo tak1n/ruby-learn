@@ -18,13 +18,7 @@ class Customer
       # this_amount = rental.charge # Call rental.charge directly and don't use Customer#amount_for as delegating method
       # this_amount is no longer needed -> Replace temp with query
 
-      # add frequent renter points
-      frequent_renter_points += 1
-
-      # add bonus for a two day new release rental
-      if rental.movie.price_code == Movie::NEW_RELEASE && rental.days_rented > 1
-        frequent_renter_points += 1
-      end
+      frequent_renter_points = rental.frequent_renter_points
 
       # show figures for this rental
       result += "\t" + rental.movie.title + "\t" + rental.charge.to_s + "\n"

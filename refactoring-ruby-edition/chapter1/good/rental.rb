@@ -27,4 +27,13 @@ class Rental
       result += (@days_rented - 3) * 1.5 if @days_rented > 3
     end
   end
+
+  def frequent_renter_points
+    # add bonus for a two day new release rental
+    if @movie.price_code == Movie::NEW_RELEASE && @days_rented > 1
+      2
+    else
+      1
+    end
+  end
 end
