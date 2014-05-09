@@ -15,7 +15,7 @@ TDD Workflow as always:
 - Let it fail
 - Implement it
 - Refactor (this for example means pulling out too much functional proccessing of data into other pure functions whill will be invoked with this data as param)
--
+
 ### Documentation:
 
 In my opinion the documentation and understanding of an lib / app written in functional style is better then in OO style.
