@@ -1,9 +1,7 @@
 require 'spec_helper'
 
 describe Zombie do
-  before do
-    @zombie = Zombie.new
-  end
+  let(:zombie) { Zombie.new }
 
   it 'should be a zombie'
   it 'needs brains to eat'
