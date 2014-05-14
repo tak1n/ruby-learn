@@ -1,3 +1,6 @@
 source 'https://rubygems.org'
+
 gem "rake"
-gem "rubysl-test-unit", :platform => :rbx
+gem 'rspec'
+gem 'minitest'
+
