@@ -1,5 +1,6 @@
 require 'rake'
 require 'rake/testtask'
+require 'rspec/core/rake_task'
 
 namespace :test do
   Rake::TestTask.new(:unit) do |t|
@@ -8,9 +9,11 @@ namespace :test do
     t.verbose = true
   end
 
-  Rake::TestTask.new(:spec) do |t|
+  Rake::TestTask.new(:minispec) do |t|
     t.libs << "minispec" << "bin" << "ext"
     t.test_files = FileList['minispec/**/*_spec.rb']
     t.verbose = true
   end
+
+  RSpec::Core::RakeTask.new('spec')
 end
