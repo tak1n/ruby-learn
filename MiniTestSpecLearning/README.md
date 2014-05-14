@@ -148,5 +148,10 @@ Beware of an API Drift, FakeObjects and RealApp Objects has to impelment the sam
 "Ensure test doubles stay in sync with your API"
 
 Tools to ensure this:
-  -[rspec-fire](https://github.com/xaviershay/rspec-fire)
-  -[minitest-fire](https://github.com/cfcosta/minitest-firemock)
+  - [rspec-fire](https://github.com/xaviershay/rspec-fire)
+  - [minitest-fire](https://github.com/cfcosta/minitest-firemock)
+
+
+## Graphical Summary
+
+![Grid](http://sebastien.saunier.me/images/posts/unit_testing_minimalist_grid.jpg)
