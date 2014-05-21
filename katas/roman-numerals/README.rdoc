@@ -1,3 +1,0 @@
-== Roman Numerals Kata
-
-Description is {here}[http://agilekatas.co.uk/katas/romannumerals-kata.html]
