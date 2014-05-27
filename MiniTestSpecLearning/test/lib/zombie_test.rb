@@ -7,8 +7,9 @@ class ZombieTest < MiniTest::Unit::TestCase
   end
 
   def test_zombie_is_zombie
-    skip
-    assert_instance_of(Zombie, @zombie, "Zombie should be zombie")
+    1_000_000.times do
+      assert_instance_of(Zombie, @zombie, "Zombie should be zombie")
+    end
   end
 
   def test_zombie_needs
