@@ -3,5 +3,7 @@ source 'https://rubygems.org'
 gem "rake"
 gem 'rspec'
 gem 'minitest'
-gem 'minitest-reporters'
+gem 'minitest-libnotify', :path => '/home/benny/Web/ruby/minitest-libnotify'
+gem 'test-unit'
+gem 'test-unit-notify'
 

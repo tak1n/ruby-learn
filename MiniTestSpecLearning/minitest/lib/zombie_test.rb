@@ -1,17 +1,14 @@
 require 'test_helper'
-require 'test/unit'
-require 'test/unit/notify'
 
-class ZombieTest < Test::Unit::TestCase
+class ZombieTest < Minitest::Test
   def setup
     # runs before each test
     @zombie = Zombie.new
   end
 
   def test_zombie_is_zombie
-    # 1_000_000.times do
-      assert_instance_of(Zombie, @zombie, "Zombie should be zombie")
-    # end
+    assert_instance_of(Zombie, @zombie, "Zombie should be zombie")
+    assert_equal('test', 'test')
   end
 
   def test_zombie_needs
