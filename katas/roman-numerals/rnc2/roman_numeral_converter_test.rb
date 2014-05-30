@@ -8,7 +8,7 @@ class RomanNumeralConverterTest < Minitest::Test
     @rnc = RomanNumeralConverter
   end
 
-  def test_roman_numeral_converter
+  def test_roman_numeral_converter_to_roman
     assert_equal('I', @rnc.(1))
     assert_equal('II', @rnc.(2))
     assert_equal('III', @rnc.(3))
@@ -31,5 +31,30 @@ class RomanNumeralConverterTest < Minitest::Test
     assert_equal('MMMCMXCIX', @rnc.(3999))
     assert_equal('', @rnc.(0))
     assert_equal('-I', @rnc.(-1))
+  end
+
+  def test_roman_numeral_converter_to_arabic
+    assert_equal(1, @rnc.('I'))
+    assert_equal(2, @rnc.('II'))
+    assert_equal(3, @rnc.('III'))
+    assert_equal(4, @rnc.('IV'))
+    assert_equal(5, @rnc.('V'))
+    assert_equal(6, @rnc.('VI'))
+    assert_equal(9, @rnc.('IX'))
+    assert_equal(10, @rnc.('X'))
+    assert_equal(20, @rnc.('XX'))
+    assert_equal(40, @rnc.('XL'))
+    assert_equal(50, @rnc.('L'))
+    assert_equal(90, @rnc.('XC'))
+    assert_equal(100, @rnc.('C'))
+    assert_equal(400, @rnc.('CD'))
+    assert_equal(500, @rnc.('D'))
+    assert_equal(900, @rnc.('CM'))
+    assert_equal(1000, @rnc.('M'))
+
+    assert_equal(2014, @rnc.('MMXIV'))
+    assert_equal(3999, @rnc.('MMMCMXCIX'))
+    assert_equal(0, @rnc.(''))
+    assert_equal(-1, @rnc.('-I'))
   end
 end

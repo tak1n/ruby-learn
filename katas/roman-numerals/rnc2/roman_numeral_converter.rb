@@ -43,6 +43,14 @@ private
     end
   end
 
+  def convert_to_arabic(number)
+    if number =~ /-/
+       - convert_to_positive_arabic(number[1..number.length])
+    else
+      convert_to_positive_arabic(number)
+    end
+  end
+
   def convert_to_positive_roman(number)
     result = ''
 
@@ -54,5 +62,26 @@ private
     end
 
     result
+  end
+
+  def convert_to_positive_arabic(number)
+    result = 0
+
+    number.chars.each.with_index do |char, i|
+      value = arabic_value(char)
+      next_value = arabic_value(number[i+1])
+
+      if value < next_value
+        result -= value
+      else
+        result += arabic_value(char)
+      end
+    end
+
+    result
+  end
+
+  def arabic_value(char)
+    ARABIC_VALUES[char] || 0
   end
 end
