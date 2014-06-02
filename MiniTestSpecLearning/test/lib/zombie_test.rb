@@ -9,9 +9,7 @@ class ZombieTest < Test::Unit::TestCase
   end
 
   def test_zombie_is_zombie
-    # 1_000_000.times do
-      assert_instance_of(Zombie, @zombie, "Zombie should be zombie")
-    # end
+    assert_instance_of(Zombie, @zombie, "Zombie should be zombie")
   end
 
   def test_zombie_needs

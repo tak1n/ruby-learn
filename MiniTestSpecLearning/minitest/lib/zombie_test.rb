@@ -8,7 +8,6 @@ class ZombieTest < Minitest::Test
 
   def test_zombie_is_zombie
     assert_instance_of(Zombie, @zombie, "Zombie should be zombie")
-    assert_equal('test', 'test')
   end
 
   def test_zombie_needs
