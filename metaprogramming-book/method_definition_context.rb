@@ -1,13 +1,13 @@
 # In the global context self is main
 # Current class is Object
-def global
+def my_global_method
 end
 
 class A
-  #self is A
-  #current class is A
+  # self is A
+  # current class is A
 
-  #in a class definition current class and self are the same!
+  # in a class definition current class and self are the same!
 end
 
 # B inherits from A
@@ -18,7 +18,7 @@ end
 # Therefore method definitions in class_eval are getting instance methods of class A
 
 A.class_eval do
-  def method1
+  def my_instance_method
     puts "Instance Method"
   end
 end
@@ -29,7 +29,7 @@ end
 # Eigenclasses are therefore a "virtual class" (one step right and then up for method lookup)
 
 A.instance_eval do
-  def method2
+  def my_class_method
     puts "Class Method"
   end
 end
@@ -37,9 +37,10 @@ end
 puts A.instance_methods(false)
 puts A.methods(false)
 
-B.method2
+A.my_class_method
+A.new.my_instance_method
 
 o = Object.new
 
 # global methods are instance methods of class Object
-puts o.method(:global).inspect
+puts method(:my_global_method).owner
