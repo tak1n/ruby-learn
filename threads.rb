@@ -1,14 +1,25 @@
-require 'net/http'
+x = 0
 
-pages = %w( www.rubycentral.org slashdot.org www.google.com )
-
-threads = pages.map do |page_to_fetch|
-  Thread.new(page_to_fetch) do |url|
-    http = Net::HTTP.new(url, 80)
-    print "Fetching: #{url}\n"
-    resp = http.get('/')
-    print "Got #{url}: #{resp.message}\n"
+10.times.map do |i|
+  Thread.new do
+    puts "before (#{ i }): #{ x }"
+    x += 1
+    puts "after (#{ i }): #{ x }"
   end
-end
+end.each(&:join)
 
-threads.each {|thr| thr.join }
+puts "\ntotal: #{ x }"
+
+x, mutex = 0, Mutex.new
+
+10.times.map do |i|
+  Thread.new do
+    mutex.synchronize do
+      puts "before (#{ i }): #{ x }"
+      x += 1
+      puts "after (#{ i }): #{ x }"
+    end
+  end
+end.each(&:join)
+
+puts "\ntotal: #{ x }"
