@@ -3,6 +3,7 @@ GEM
   specs:
     diff-lcs (1.2.5)
     minitest (5.3.4)
+    minitest-stub-const (0.2)
     rake (10.3.2)
     rspec (3.0.0)
       rspec-core (~> 3.0.0)
@@ -25,6 +26,7 @@ PLATFORMS
 
 DEPENDENCIES
   minitest (~> 5)
+  minitest-stub-const
   rake
   rspec
   test-unit
