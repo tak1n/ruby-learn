@@ -1,0 +1,7 @@
+LICENSE.txt
+MANIFEST
+README.md
+gemcext.gemspec
+lib/gemcext.rb
+lib/gemcext/version.rb
+ext/combie.so

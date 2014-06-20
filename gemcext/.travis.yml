@@ -1,0 +1,22 @@
+language: ruby
+cache: bundler
+
+before_install:
+  - gem update --system
+  - gem --version
+  - gem install bundler
+
+rvm:
+  - 2.0.0
+  - 2.1.0
+  - 2.1.1
+  - ruby-head
+  - jruby
+  - rbx
+
+matrix:
+  allow_failures:
+    - rvm: jruby
+    - rvm: ruby-head
+
+script:  "env COVERAGE=true bundle exec rake"

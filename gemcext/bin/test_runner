@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+
+if __FILE__ == $0
+  if ARGV[0].eql?('precompile')
+    Dir.chdir('ext/gemcext') do
+      output = `ruby extconf.rb`
+      raise output unless $? == 0
+
+      output = `make`
+      raise output unless $? == 0
+    end
+  end
+
+  $LOAD_PATH.unshift('lib', 'ext', 'test')
+  fast_tests = `find ./test -name *_test.rb -print | xargs grep -l "test_helper"`
+
+  Dir.glob(fast_tests.split("\n")) { |f| require f }
+end
