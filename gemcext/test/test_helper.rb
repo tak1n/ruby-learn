@@ -23,6 +23,10 @@ end if ENV['COVERAGE']
 # Include your test dependencies here
 require 'minitest/autorun'
 require 'minitest/mock'
+require 'minitest/reporters'
+
+reporter_options = { color: true, slow_count: 5 }
+Minitest::Reporters.use! [Minitest::Reporters::DefaultReporter.new(reporter_options)]
 
 # require 'rack/test'
 # require 'json'
