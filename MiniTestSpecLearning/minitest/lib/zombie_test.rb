@@ -16,6 +16,10 @@ class ZombieTest < Minitest::Test
     assert_equal('brains', @zombie.needs, 'Zombie need brains')
   end
 
+  def test_the_truth
+    assert true
+  end
+
   def teardown
     # runs after each test
   end

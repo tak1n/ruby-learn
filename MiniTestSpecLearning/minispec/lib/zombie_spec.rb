@@ -10,4 +10,8 @@ describe Zombie do
   it 'needs brains to eat' do
     zombie.needs.must_equal('brains')
   end
+
+  it 'checks the truth' do
+    true.must_equal true
+  end
 end
