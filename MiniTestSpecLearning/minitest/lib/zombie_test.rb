@@ -1,5 +1,4 @@
 require 'test_helper'
-require 'shared/shared_test'
 
 class ZombieTest < Minitest::Test
   parallelize_me!
