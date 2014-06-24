@@ -1,5 +1,5 @@
 require 'spec_helper'
 
-SomeExamples = Minitest::SharedExamples.new do
+SharedSpec = Minitest::SharedExamples.new do
   it "does something"
 end
