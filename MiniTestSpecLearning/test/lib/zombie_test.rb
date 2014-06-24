@@ -3,6 +3,8 @@ require 'test/unit'
 require 'test/unit/notify'
 
 class ZombieTest < Test::Unit::TestCase
+  include Shared
+
   def setup
     # runs before each test
     @zombie = Zombie.new
