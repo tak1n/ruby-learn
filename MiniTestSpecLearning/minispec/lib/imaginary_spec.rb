@@ -4,5 +4,5 @@ class ImaginaryTest
 end
 
 describe ImaginaryTest do
-  include SharedSpec
+  include Shared
 end

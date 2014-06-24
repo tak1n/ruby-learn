@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Zombie do
-  include SharedSpec
+  include Shared
 
   let(:zombie) { Zombie.new }
 

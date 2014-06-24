@@ -15,6 +15,5 @@ end
 # -----------------------
 testfolder = File.dirname(__FILE__)
 Dir.glob("#{testfolder}/shared/**/*.rb").each do |f|
-  puts f
   require f
 end
