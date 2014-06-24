@@ -3,7 +3,7 @@ require 'test_helper'
 class ZombieTest < Minitest::Test
   parallelize_me!
 
-  include SharedTest
+  include Shared
 
   def setup
     # runs before each test

@@ -1,6 +1,4 @@
-require 'test_helper'
-
-module SharedTest
+module Shared
   def test_shared_example
     skip
   end
