@@ -1,6 +1,9 @@
 require 'spec_helper'
+require 'shared/shared_spec'
 
 describe Zombie do
+  include SomeExamples
+
   let(:zombie) { Zombie.new }
 
   it 'should be a zombie' do
