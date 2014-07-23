@@ -1,5 +1,3 @@
-require 'json'
-
 class Greeter
   def initialize(name)
     @name = name
