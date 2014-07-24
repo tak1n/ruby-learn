@@ -24,6 +24,7 @@ class Wheel
 
   # ...
 end
+```
 
 Now ```Wheel``` depends on ```Gear``` and ```gear_inches```.
 
