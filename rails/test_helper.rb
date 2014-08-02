@@ -1,4 +1,4 @@
-ENV['RAILS_ENV'] ||= 'test'
+ENV['RAILS_ENV'] = 'test'
 
 require 'simplecov'
 require 'coveralls'
@@ -12,46 +12,34 @@ if ENV['COVERAGE']
   SimpleCov.start 'rails'
 end
 
-require File.expand_path('../../config/environment', __FILE__)
-require 'rails/test_help'
+require File.expand_path("../../config/environment", __FILE__)
+require "rails/test_help"
+require "minitest/rails"
 
-# Minitest
+# To add Capybara feature tests add `gem "minitest-rails-capybara"`
+# to the test group in the Gemfile and uncomment the following:
+require "minitest/rails/capybara"
+
 require 'minitest/reporters'
-require 'capybara/rails'
-
 reporter_options = { color: true, slow_count: 5 }
 Minitest::Reporters.use! [Minitest::Reporters::DefaultReporter.new(reporter_options)]
 
 Dir[Rails.root.join("test/support/**/*.rb")].each { |f| require f }
 
 class ActiveSupport::TestCase
+  ActiveRecord::Migration.check_pending!
+
   fixtures :all
 
+  # include helper modules here
   include MyCustomHelper
 
-  # Make sure to clear ActionMailer deliveries after each testcase
-  # def teardown
-    # ActionMailer::Base.deliveries.clear
-  # end
-end
-
-class ActionDispatch::IntegrationTest
-  include Capybara::DSL
-end
-
-class FeatureJavaScriptTest < ActionDispatch::IntegrationTest
-  Capybara.javascript_driver = :webkit
-
-  def setup
-    Capybara.current_driver = Capybara.javascript_driver
-  end
-
   def teardown
-    Capybara.current_driver = Capybara.default_driver
-    # Make sure to clear ActionMailer deliveries after each testcase
-    # ActionMailer::Base.deliveries.clear
+    ActionMailer::Base.deliveries.clear
   end
 end
+
+Capybara.javascript_driver = :webkit
 
 # Make all database transactions use the same thread
 # needed for feature / integration tests with headless browser (javascript tests) because they are not running in the same thread
