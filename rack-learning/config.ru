@@ -1,14 +1,13 @@
-# require 'rubinius/profiler'
+# Simplest rack application
+# run with rackup
+# run lambda { |env| [200, {"Content-Type" => "text/plain"}, ["Hello from test"]] }
 
-# profiler = Rubinius::Profiler::Instrumenter.new
-# result   = profiler.start
+# Rack apps can also be plain ruby objects
+# run with rackup
+class RackApp
+  def self.call(env)
+    [200, {"Content-Type" => "text/html"}, ["Hello Rack"]]
+  end
+end
 
-run lambda { |env| [200, {"Content-Type" => "text/plain"}, ["Hello from test"]] }
-
-# at_exit do
-  # profiler.stop
-
-  # File.open('/tmp/profile.txt', 'w') do |handle|
-    # profiler.flat(handle)
-  # end
-# end
+run RackApp
