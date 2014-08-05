@@ -25,8 +25,12 @@ private
   end
 
   def execute_controller_action(controller, action)
-    controller.new.send(action)
-  rescue NameError
-    [404, {"Content-Type" => "text/html"}, ["Action not found"]]
+    cobject = controller.new
+
+    if cobject.respond_to?(action)
+      cobject.send(action)
+    else
+      [404, {"Content-Type" => "text/html"}, ["Action not found"]]
+    end
   end
 end
