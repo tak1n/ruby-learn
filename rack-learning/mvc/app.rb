@@ -7,7 +7,7 @@ class App
   end
 
   def call(env)
-    Router.route(env["REQUEST_PATH"])
+    Router.route(env)
   end
 end
 

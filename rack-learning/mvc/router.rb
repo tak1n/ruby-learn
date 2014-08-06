@@ -3,7 +3,8 @@ Dir["controller/*.rb"].each { |file| require file }
 module Router
   extend self
 
-  def route(path)
+  def route(env)
+    path = env["REQUEST_PATH"]
     return RootController.new.show if path == "/"
 
     path_array = path.split("/")
