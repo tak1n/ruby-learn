@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+
+require 'net/http'
+
+class Dammi < Net::HTTPRequest
+  METHOD="DAMMI"
+  REQUEST_HAS_BODY = false
+  RESPONSE_HAS_BODY = true
+end
+
+raise "usage: dammi url page" if ARGV.length != 2
+
+begin
+  http=Net::HTTP.new(ARGV[0], 80)
+  r_a = http.request(Dammi.new(ARGV[1]))
+  puts r_a.body
+rescue => e
+  puts e.message
+end
