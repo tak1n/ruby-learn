@@ -1,0 +1,128 @@
+#!/usr/bin/env ruby
+
+require 'kpeg'
+require 'kpeg/code_generator'
+require 'kpeg/format_parser'
+require 'kpeg/grammar_renderer'
+
+require 'optparse'
+
+options = {}
+OptionParser.new do |o|
+  o.banner = "Usage: kpeg [options]"
+
+  o.on("-t", "--test", "Syntax check the file only") do |v|
+    options[:test] = v
+  end
+
+  o.on("--reformat", "Reformat your grammar and write it back out") do
+    options[:reformat] = true
+  end
+
+  o.on("-o", "--output FILE", "Where the output should go") do |v|
+    options[:output] = v
+  end
+
+  o.on("-n", "--name NAME", "Class name to use for the parser") do |v|
+    options[:name] = v
+  end
+
+  o.on("-f", "--force", "Overwrite the output if it exists") do |v|
+    options[:force] = v
+  end
+
+  o.on("-s", "--stand-alone", "Write the parser to run standalone") do |v|
+    options[:standalone] = v
+  end
+
+  o.on("-v", "--[no-]verbose", "Run verbosely") do |v|
+    options[:verbose] = v
+  end
+
+  o.on("-d", "--debug", "Debug parsing the file") do |v|
+    options[:debug] = v
+  end
+end.parse!
+
+file = ARGV.shift
+
+unless File.exists?(file)
+  puts "File '#{file}' does not exist"
+  exit 1
+end
+
+parser = KPeg::FormatParser.new File.read(file), true
+
+unless m = parser.parse
+  puts "Syntax error in grammar #{file}"
+  parser.show_error
+  exit 1
+end
+
+grammar = parser.grammar
+
+if options[:reformat]
+  if !options[:output]
+    puts "Please specify -o for where to write the new grammar"
+    exit 1
+  end
+
+  output = options[:output]
+  if File.exists?(output) and !options[:force]
+    puts "Output '#{output}' already exists, not overwriting (use -f)"
+    exit 1
+  end
+
+  rend = KPeg::GrammarRenderer.new(parser.grammar)
+
+  File.open output, "w" do |f|
+    rend.render(f)
+  end
+
+  puts "Wrote reformatted output to #{output}"
+
+  exit 0
+end
+
+if !options[:test] and !options[:name]
+  unless name = grammar.variables["name"]
+    puts "Please specify -n"
+    exit 1
+  end
+else
+  name = options[:name]
+end
+
+
+if options[:output]
+  new_path = options[:output]
+else
+  new_path = "#{file}.rb"
+end
+
+if !options[:test] and File.exists?(new_path) and !options[:force]
+  puts "Path #{new_path} already exists, not overwriting\n"
+  exit 1
+end
+
+if options[:test]
+  puts "Syntax ok"
+
+  if options[:debug]
+    gr = KPeg::GrammarRenderer.new(grammar)
+    gr.render(STDOUT)
+  end
+  exit 0
+end
+
+
+cg = KPeg::CodeGenerator.new name, grammar
+cg.standalone = options[:standalone]
+
+output = cg.output
+
+open new_path, "w" do |io|
+  io << output
+end
+
+puts "Wrote #{name} to #{new_path}"

@@ -1,0 +1,35 @@
+=== 0.10 / 2012-04-16
+
+* Minor enhancements
+  * In standalone parsers generation of a default initialize method may be
+    disabled with the custom_initialize variable:
+
+      %% custom_initialize = true
+  * Added a pre-class directive for adding class comments
+  * Generated code is now surrounded by startdoc/stopdoc.
+
+* Bug fixes
+  * Hoe plugin now overwrites generated files
+  * Directives and variables now round-trip through KPeg::GrammarRenderer
+
+=== 0.9 / 2012-04-06
+
+* Minor enhancements
+  * Added arbitrary directives to the kpeg grammar
+
+      %% directive_name { ... }
+
+  * Added header and footer directives to the kpeg code formatter.  These
+    appear above and below all other output, respectively:
+
+      %% header {
+       # coding: UTF-8
+      }
+
+      [... your grammar ...]
+
+      %% footer {
+        require 'some/subclass'
+      }
+  * Switched to minitest
+  * Switched to hoe
