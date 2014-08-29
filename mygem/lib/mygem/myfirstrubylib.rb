@@ -2,11 +2,7 @@ module Mygem
   class Myfirstrubylib
     def first_ruby_call
       puts 'First Ruby call'
-      if RUBY_PLATFORM == 'java'
-
-      else
-        first_cext_call
-      end
+      Myextlib.new.first_ext_call
     end
   end
 end
