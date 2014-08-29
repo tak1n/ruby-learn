@@ -11,10 +11,15 @@ Gem::Specification.new do |spec|
   spec.files = Dir['lib/**/*.rb'] + Dir['bin/*'] + Dir['ext/**/*.c'] + Dir['ext/**/extconf.rb']
   spec.platform = Gem::Platform::RUBY # This is the default
   spec.require_paths = [ 'lib', 'ext' ]
-  spec.extensions = Dir['ext/**/extconf.rb']
+
+  if RUBY_PLATFORM == 'java'
+    spec.files << 'lib/libmygem.jar'
+  else
+    spec.extensions = Dir['ext/c/extconf.rb']
+  end
 
   spec.add_development_dependency "bundler", "~> 1.3"
-  spec.add_development_dependency "rake"
+  spec.add_development_dependency "rake", "~> 10.3.2"
   spec.add_development_dependency "rspec", ">= 2.0.0"
-  spec.add_development_dependency "rake-compiler"
+  spec.add_development_dependency "rake-compiler", "~> 0.9.3"
 end

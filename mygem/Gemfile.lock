@@ -24,6 +24,7 @@ GEM
     rspec-support (3.0.4)
 
 PLATFORMS
+  java
   ruby
 
 DEPENDENCIES

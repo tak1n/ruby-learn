@@ -1,4 +1,4 @@
 #!/bin/env ruby
-require 'mygem/myfirstrubylib'
+require 'mygem'
 
-first_ruby_call
+Mygem::Myfirstrubylib.new.first_ruby_call

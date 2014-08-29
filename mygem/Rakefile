@@ -2,7 +2,24 @@ require "bundler/gem_tasks"
 require 'rake/extensiontask'
 require 'rspec/core/rake_task'
 
-RSpec::Core::RakeTask.new('spec')
-Rake::ExtensionTask.new('mygem')
+GEMSPEC = Gem::Specification.load('mygem.gemspec')
 
+# add your default gem packing task
+Gem::PackageTask.new(GEMSPEC) do |pkg|
+end
+
+
+if RUBY_PLATFORM == 'java'
+  require 'rake/javaextensiontask'
+  Rake::JavaExtensionTask.new('libmygem', GEMSPEC) do |task|
+    task.ext_dir = 'ext/java'
+  end
+else
+  require 'rake/extensiontask'
+  Rake::ExtensionTask.new('libmygem', GEMSPEC) do |task|
+    task.ext_dir = 'ext/c'
+  end
+end
+
+RSpec::Core::RakeTask.new('spec')
 task :default => :spec

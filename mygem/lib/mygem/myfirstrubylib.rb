@@ -1,6 +1,12 @@
-require "mygem/myfirstcext"
+module Mygem
+  class Myfirstrubylib
+    def first_ruby_call
+      puts 'First Ruby call'
+      if RUBY_PLATFORM == 'java'
 
-def first_ruby_call
-  puts 'First Ruby call'
-  first_cext_call
+      else
+        first_cext_call
+      end
+    end
+  end
 end
