@@ -10,4 +10,4 @@ else
   $CFLAGS << ' -O3'
 end
 
-create_makefile('libmygem/libmygem')
+create_makefile('libmygem')
