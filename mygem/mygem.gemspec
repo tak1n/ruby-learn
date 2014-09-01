@@ -8,14 +8,15 @@ Gem::Specification.new do |spec|
   spec.author = 'me'
   spec.bindir = 'bin'
   spec.executable = 'exec.rb'
-  spec.files = Dir['lib/**/*.rb'] + Dir['bin/*'] + Dir['ext/**/*.c'] + Dir['ext/**/extconf.rb']
   spec.platform = Gem::Platform::RUBY # This is the default
   spec.require_paths = [ 'lib', 'ext' ]
 
   if RUBY_PLATFORM == 'java'
     spec.files << 'lib/libmygem.jar'
+    spec.files = Dir['lib/**/*.rb'] + Dir['bin/*']
   else
     spec.extensions = Dir['ext/c/extconf.rb']
+    spec.files = Dir['lib/**/*.rb'] + Dir['bin/*'] + Dir['ext/**/*.c'] + Dir['ext/**/extconf.rb']
   end
 
   spec.add_development_dependency "bundler", "~> 1.3"
