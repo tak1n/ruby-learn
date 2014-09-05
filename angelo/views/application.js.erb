@@ -1,0 +1,36 @@
+var scheme   = '<%= @scheme %>';
+var channel  = 'default';
+function uri(){ return scheme + window.document.location.host + "/" + channel};
+
+var ws;
+
+function createWebsocket() {
+  if (ws != null) {
+    ws.close();
+  }
+
+  ws = new WebSocket(uri());
+
+  ws.onmessage = function(message) {
+    var data = JSON.parse(message.data);
+    $("#stream").append("<div><h1>" + data.handle + " wrote:</h1><p>" + data.text + "</p></div>");
+  };
+
+  ws.onopen = function(event) {
+    $("#chat-button").attr('disabled', false);
+  }
+
+  ws.onclose = function(event) {
+    $("#chat-button").attr('disabled', true);
+  }
+}
+
+$("#input-form").on("submit", function(event) {
+    event.preventDefault();
+    var handle = $("#input-handle").val();
+    var text = $("#input-text").val();
+    ws.send(JSON.stringify({ handle: handle, text: text }));
+    $("#input-text").val('');
+});
+
+createWebsocket();

@@ -1,0 +1,46 @@
+GIT
+  remote: git://github.com/celluloid/reel.git
+  revision: aea3faa7ae26445bbe39e35c6223718eb3138681
+  specs:
+    reel (0.6.0)
+      celluloid (>= 0.15.1)
+      celluloid-io (>= 0.15.0)
+      http (>= 0.6.0.pre)
+      http_parser.rb (>= 0.6.0)
+      websocket_parser (>= 0.1.6)
+
+GIT
+  remote: git://github.com/tarcieri/http.git
+  revision: 23003185bd670630b280eef7bd570cc5d5b2147e
+  specs:
+    http (0.6.1)
+      http_parser.rb (~> 0.6.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    angelo (0.1.21)
+      mime-types
+      reel
+    celluloid (0.16.0)
+      timers (~> 4.0.0)
+    celluloid-io (0.16.0)
+      celluloid (>= 0.16.0)
+      nio4r (>= 1.0.0)
+    hitimes (1.2.2)
+    http_parser.rb (0.6.0)
+    mime-types (2.3)
+    nio4r (1.0.1)
+    tilt (2.0.1)
+    timers (4.0.0)
+      hitimes
+    websocket_parser (0.1.6)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  angelo
+  http!
+  reel!
+  tilt
