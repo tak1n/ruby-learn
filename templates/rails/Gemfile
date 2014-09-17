@@ -1,8 +1,12 @@
+# use postgresql as db
+gem "pg"
+
 gem "bootstrap-sass", "~> 3.2"
 
 gem "puma", :require => false
-# gem "haml-rails / slim-rails" meh not sure.. prefer plain ERB
-gem 'draper', '~> 1.4.0' # Decorators
+
+gem 'draper' # Decorators
+gem 'devise' # user auth
 
 gem "rack-mini-profiler", :require => false
 
