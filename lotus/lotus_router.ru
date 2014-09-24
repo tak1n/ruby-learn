@@ -1,7 +1,14 @@
 require 'lotus/router'
 
-APP = Lotus::Router.new do
-  get '/', to: ->(env) { [200, {}, ['Hello World!']] }
+class FlowersController
+  class Index
+    def call(env)
+      [200, {}, ['Hello World!']]
+    end
+  end
 end
 
-run APP
+router = Lotus::Router.new
+router.get '/', to: 'flowers#index'
+
+run router
