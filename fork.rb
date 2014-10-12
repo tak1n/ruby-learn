@@ -9,6 +9,8 @@ fork do
 
     i += 1
   end
+
+  exit 99
 end
 
 puts "hi"

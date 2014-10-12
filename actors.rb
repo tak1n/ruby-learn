@@ -1,20 +1,21 @@
 require 'rubinius/actor'
-include Rubinius::Actor
 
 pong = nil
 
-ping = Actor.spawn do
+ping = Rubinius::Actor.spawn do
   loop do
-    count = Actor.receive
-    break puts(count) if count > 1000
+    count = Rubinius::Actor.receive
+    # puts count
     pong << (count + 1)
   end
 end
 
-pong = Actor.spawn do
+pong = Rubinius::Actor.spawn do
   loop do
-    count = Actor.receive
-    break puts(count) if count > 1000
+    count = Rubinius::Actor.receive
+    test = mymethod
+    puts test
+    # puts count
     ping << (count + 1)
   end
 end
