@@ -5,12 +5,12 @@ require 'socket'
 def tcp_server_sockets(port)
   # ipv4_socket = TCPServer.new(port)
   # or
-  ipv4_socket = Socket.new(:INET, :STREAM)
+  ipv4_socket = Socket.new(Socket::PF_INET, Socket::SOCK_STREAM)
   addr = Addrinfo.tcp('0.0.0.0', port)
   ipv4_socket.bind(addr)
   ipv4_socket.listen(Socket::SOMAXCONN)
 
-  ipv6_socket = Socket.new(:INET6, :STREAM)
+  ipv6_socket = Socket.new(Socket::PF_INET6, Socket::SOCK_STREAM)
   # somehow IPv4 socket and IPv6 socket are blocking each other Errno::EADDRINUSE => port + 1
   addr = Addrinfo.tcp('::', port + 1)
   ipv6_socket.bind(addr)
