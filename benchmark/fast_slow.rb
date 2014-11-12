@@ -23,3 +23,17 @@ Benchmark.ips do |x|
 
   x.compare!
 end
+
+Benchmark.ips do |x|
+  x.report("block") do
+    names = %w{ant bee cat}
+    result = names.map {|name| name.upcase}
+  end
+
+  x.report("to_proc") do
+    names = %w{ant bee cat}
+    result = names.map(&:upcase)
+  end
+
+  x.compare!
+end
