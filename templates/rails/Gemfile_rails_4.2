@@ -1,5 +1,5 @@
 gem "pg"
-gem "bootstrap-sass", "~> 3.2"
+gem "bootstrap-sass"
 
 gem "puma", :require => false
 
@@ -14,7 +14,7 @@ group :development, :test do
 
   # Access an IRB console on exceptions page and /console in development
   # Stil prefering better_errors
-  # gem 'web-console', '~> 2.0.0.beta2'
+  # gem 'web-console'
 
   gem "better_errors"
   gem "binding_of_caller"
@@ -36,13 +36,6 @@ group :development, :test do
 
   # Rails best practices code metrics tool
   gem "rails_best_practices", :require => false
-
-  # Deployment with capistrano
-  # gem 'capistrano', '~> 3.1.0'
-  # gem 'capistrano-rails', '~> 1.1.0'
-  # gem 'capistrano-bundler'
-  # gem 'capistrano3-puma'
-  # gem 'capistrano-chruby'
 end
 
 group :test do
@@ -55,7 +48,6 @@ group :test do
 
   # Integration / Feature / Acceptance Testing
   gem "minitest-rails-capybara"
-  gem "capybara-webkit", "~> 1.2"
+  gem "capybara-webkit"
   gem "launchy"
 end
-
