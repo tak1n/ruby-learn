@@ -21,8 +21,13 @@ require "minitest/rails"
 require "minitest/rails/capybara"
 
 require 'minitest/reporters'
-reporter_options = { color: true, slow_count: 5 }
-Minitest::Reporters.use! [Minitest::Reporters::DefaultReporter.new(reporter_options)]
+# reporter_options = { color: true, slow_count: 5 }
+# Minitest::Reporters.use! [Minitest::Reporters::DefaultReporter.new(reporter_options)]
+Minitest::Reporters.use!(
+  Minitest::Reporters::SpecReporter.new,
+  ENV,
+  Minitest.backtrace_filter
+)
 
 Dir[Rails.root.join("test/support/**/*.rb")].each { |f| require f }
 
