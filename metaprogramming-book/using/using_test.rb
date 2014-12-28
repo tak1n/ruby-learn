@@ -1,7 +1,7 @@
-require_relative 'using'
-require 'test/unit'
+require 'minitest/autorun'
+require_relative 'using_new'
 
-class TestUsing < Test::Unit::TestCase
+class TestUsing < Minitest::Test
   class Resource
     def dispose
       @disposed = true
@@ -14,18 +14,17 @@ class TestUsing < Test::Unit::TestCase
 
   def test_disposes_of_resources
     r = Resource.new
-    using(r) { }
+    using(r) {}
     assert r.disposed?
   end
 
   def test_disposes_of_resources_in_case_of_exception
     r = Resource.new
-    assert_raises(Exception) do
+    assert_raises(Exception) {
       using(r) {
-        raise Exception 
+        raise Exception
       }
-    end
-
+    }
     assert r.disposed?
   end
 end
