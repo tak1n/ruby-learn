@@ -1,6 +1,6 @@
 module CheckedAttributes
-  def self.included(base)
-    base.extend(ClassMethods)
+  def self.included(klass)
+    klass.extend(ClassMethods)
   end
 
   module ClassMethods

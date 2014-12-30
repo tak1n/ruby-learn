@@ -1,8 +1,8 @@
-require 'test/unit'
+require 'minitest/autorun'
 require_relative 'class_eval.rb'
 
 class Person; end;
-class TestCheckedAttribute < Test::Unit::TestCase
+class TestCheckedAttribute < Minitest::Test
   def setup
     add_checked_attribute(Person, :age)
     @bob = Person.new
@@ -14,13 +14,13 @@ class TestCheckedAttribute < Test::Unit::TestCase
   end
 
   def test_refuses_nil_values
-    assert_raise(RuntimeError, 'Invalid attribute') do
+    assert_raises(RuntimeError, 'Invalid attribute') do
       @bob.age = nil
     end
   end
 
   def test_refuses_false_values
-    assert_raise(RuntimeError, 'Invalid attribute') do
+    assert_raises(RuntimeError, 'Invalid attribute') do
       @bob.age = false
     end
   end

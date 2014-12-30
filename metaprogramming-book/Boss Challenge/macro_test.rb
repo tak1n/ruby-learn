@@ -1,4 +1,4 @@
-require 'test/unit'
+require 'minitest/autorun'
 require_relative 'macro.rb'
 
 class Person
@@ -7,7 +7,7 @@ class Person
   end
 end;
 
-class TestCheckedAttribute < Test::Unit::TestCase
+class TestCheckedAttribute < Minitest::Test
   def setup
     @bob = Person.new
   end
@@ -18,7 +18,7 @@ class TestCheckedAttribute < Test::Unit::TestCase
   end
 
   def test_refuses_invalid_values
-    assert_raise(RuntimeError, 'Invalid attribute') do
+    assert_raises(RuntimeError, 'Invalid attribute') do
       @bob.age = 17
     end
   end

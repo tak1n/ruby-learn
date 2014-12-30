@@ -2,7 +2,7 @@
 def add_checked_attribute(klass, attribute)
   eval "
     class #{klass}
-      def #{attribute}
+      def #{attribute}()
         @#{attribute}
       end
 
@@ -11,5 +11,5 @@ def add_checked_attribute(klass, attribute)
         @#{attribute} = value
       end
     end
-"
+  "
 end

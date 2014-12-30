@@ -1,6 +1,9 @@
 
   def add_checked_attribute(klass, attribute)
     klass.class_eval do
+      # class definition -> current class = klass, self = klass
+      # class_eval -> current class = klass, self = klass
+      # instance_eval -> current class = singleton class of klass, self = klass
       define_method "#{attribute}=" do |value|
         raise 'Invalid attribute' unless value
         instance_variable_set("@#{attribute}", value)
