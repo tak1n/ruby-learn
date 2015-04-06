@@ -36,6 +36,10 @@ group :development, :test do
 
   # Rails best practices code metrics tool
   gem "rails_best_practices", :require => false
+
+  gem 'pry' # IRB alternative. To debug write 'binding.pry' somewhere in the code where you want to interrupt.
+  gem 'pry-rails'
+  gem 'pry-debugger'
 end
 
 group :test do
