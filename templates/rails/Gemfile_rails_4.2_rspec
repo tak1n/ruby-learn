@@ -1,0 +1,51 @@
+gem "pg"
+gem "bootstrap-sass"
+
+gem "puma", :require => false
+
+gem "draper"
+gem "devise"
+
+gem "rack-mini-profiler", :require => false
+
+group :development, :test do
+  # Call 'debugger' anywhere in the code to stop execution and get a debugger console
+  gem 'byebug'
+
+  # Access an IRB console on exceptions page and /console in development
+  # Stil prefering better_errors
+  # gem 'web-console'
+
+  gem "better_errors"
+  gem "binding_of_caller"
+
+  # Chrome Rails dev integration
+  gem "meta_request"
+
+  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'spring'
+
+  # Ruby Style guide metric tool
+  gem "rubocop", :require => false
+
+  # CodeClimate free alternative
+  # gem "rubycritic"
+
+  # Static analysis tool for checking for security vuln.
+  gem 'brakeman', :require => false
+
+  # Rails best practices code metrics tool
+  gem "rails_best_practices", :require => false
+end
+
+group :test do
+  gem "simplecov", :require => false
+  # gem "coveralls" for public code coverage integration -> badge in README
+
+  gem "rspec-rails"
+
+  # Integration / Feature / Acceptance Testing
+  gem "capybara"
+  gem "capybara-webkit"
+  gem "launchy"
+end
