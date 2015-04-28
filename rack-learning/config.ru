@@ -6,7 +6,9 @@
 # run with rackup
 class RackApp
   def self.call(env)
-    [200, {"Content-Type" => "text/html"}, ["Hello Rack"]]
+    require 'pry'
+    binding.pry
+    [200, {"Content-Type" => "text/html"}, [File.read('index.html')]]
   end
 end
 
