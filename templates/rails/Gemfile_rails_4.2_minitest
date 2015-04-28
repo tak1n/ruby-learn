@@ -9,9 +9,6 @@ gem "devise"
 gem "rack-mini-profiler", :require => false
 
 group :development, :test do
-  # Call 'debugger' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
-
   # Access an IRB console on exceptions page and /console in development
   # Stil prefering better_errors
   # gem 'web-console'
@@ -39,17 +36,13 @@ group :development, :test do
 
   gem 'pry' # IRB alternative. To debug write 'binding.pry' somewhere in the code where you want to interrupt.
   gem 'pry-rails'
-  gem 'pry-debugger'
 end
 
 group :test do
   gem "simplecov", :require => false
   # gem "coveralls" for public code coverage integration -> badge in README
 
-  # Use minitest specs instead of rails testing (on top of minitest unit) or rspec
   gem "minitest-reporters"
-
-  # Integration / Feature / Acceptance Testing
   gem "capybara"
   gem "capybara-webkit"
   gem "launchy"
