@@ -5,6 +5,7 @@ gem "puma", :require => false
 
 gem "draper"
 gem "devise"
+gem "interactor"
 
 gem "rack-mini-profiler", :require => false
 
