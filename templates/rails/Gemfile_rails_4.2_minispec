@@ -8,6 +8,7 @@ gem "devise"
 gem "interactor-rails"
 
 gem "rack-mini-profiler", :require => false
+gem 'flamegraph'
 
 group :development, :test do
   # Access an IRB console on exceptions page and /console in development
