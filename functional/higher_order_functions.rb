@@ -2,13 +2,13 @@
 
 # Lists
 # [1..10]
-(1..10).to_a
+p (1..10).to_a
 
 # Calculating first 10 squares
 # Haskel is processing from right to left
 # [ x*x | x <- [1..10] ]
-(1..10).collect { |x| x*x }
-(1..10).map { |x| x*x }
+p (1..10).collect { |x| x*x }
+p (1..10).map { |x| x*x }
 
 ##
 # What are high order functions?
@@ -18,8 +18,8 @@
 # How does this apply to the previous example?
 
 # map (\x -> x*x) [1..10]
-(1..10).map &lambda { |x| x*x }
-(1..10).map &(->(x) { x*x })
+p (1..10).map &lambda { |x| x*x }
+p (1..10).map &(->(x) { x*x })
 
 # In a functional programming language you want to know where your data came from and where is it going ->
 # params passing
@@ -32,4 +32,4 @@
 #
 # Step 1: f(x) = x*x
 # Step 2: g(x) = x+1
-(1..10).collect { |x| x*x }.collect { |x| x + 1 }
+p (1..10).collect { |x| x*x }.collect { |x| x + 1 }
