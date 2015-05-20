@@ -36,6 +36,20 @@ $stdout = STDOUT
 io.rewind
 puts "StringIO contains written string: #{io.read == "hi\n"}"
 
+# IO#reopen or assigning (=) the new IO object can be used to redirect output to a file without having to use the file descriptor
+file = File.new("testfile", "w+")
+
+$stdout = file
+puts "hi"
+$stdout = STDOUT
+
+file.rewind
+puts "testfile contains written string: #{file.read == "hi\n"}"
+
+# reopen vs =
+# reopen creates a new IO/File instance
+# = uses the same IO/File instance 
+# see http://stackoverflow.com/a/6683795
 
 # Read more at
 # http://www.freebsd.org/doc/en/books/design-44bsd/overview-io-system.html
