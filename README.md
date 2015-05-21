@@ -10,12 +10,9 @@
 
 5.) [Know and respect Sandi's Rules](https://www.youtube.com/watch?v=npOGOmkxuio):
 
-  5.1) Classes can be no longer than one hundred lines of code.
-
-  5.2) Methods can be no longer than five lines of code.
-
-  5.3) Pass no more than four parameters into a method. Hash options are parameters.
-
-  5.4) Controllers can instantiate only one object. Therefore, views can only know about one instance variable and views should only send messages to that object
+  - Classes can be no longer than one hundred lines of code.
+  - Methods can be no longer than five lines of code.
+  - Pass no more than four parameters into a method. Hash options are parameters.
+  - Controllers can instantiate only one object. Therefore, views can only know about one instance variable and views should only send messages to that object
 
 6.) [Convenience vs Explicitness](http://solnic.eu/2015/03/04/8-things-i-learned-during-8-years-of-ruby-and-rails.html#6---convenience-has-a-big-price)
