@@ -6,7 +6,7 @@
 ## Value Objects
 
 Value Objects should be immutable (in normal OOP you would define setters for fields of the objects -> attr_writer)
-Just omit attr_writers and remember to always return a new instance of the Value Object with the modified data eg.:
+Just omit attr_writers or any methods which modifies the internal state and remember to always return a new instance of the Value Object with the modified data eg.:
 
 ```ruby
 class Ukulele
@@ -14,6 +14,10 @@ class Ukulele
 
   def initialize(color)
     @color = green
+  end
+
+  def badpaint(color)
+    @color = color
   end
 
   def paint(color)

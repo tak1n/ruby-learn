@@ -1,5 +1,6 @@
 require 'anima'
 require 'adamantium'
+require 'virtus'
 
 class Ukulele # < Struct.new(:color, :tuning)
   include Anima.new(:color, :tuning)
@@ -43,13 +44,25 @@ vu2 = ValueUkulele.new(color: 'green', tuning: [:G, :C, :E, :B])
 
 p vu1 == vu2
 
-vu1.tuning << :F
+# vu1.tuning << :F => can't modify frozen Array (RuntimeError)
 
 # An interesting side effect of immutable objects is that the result of method calls can be cached safely. 
 # This is a technique known as memoization and is built-in to Adamantium.
-class Ukulele
+class ValueUkulele
   def snares
     tuning.count
   end
   memoize :snares
 end
+
+class GeoLocation
+  include Virtus::ValueObject
+
+  attribute :latitude,  Float
+  attribute :longitude, Float
+end
+
+location  = GeoLocation.new(latitude: 10, longitude: 100)
+location2 = GeoLocation.new(latitdue: 10, longitude: 100)
+
+p location == location2
