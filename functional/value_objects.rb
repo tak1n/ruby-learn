@@ -21,8 +21,21 @@ p u1.tuning
 
 
 class ValueUkulele
-  include Anima.new(:color, :tuning)
+  include Anima.new(:color, :tuning), Anima::Update
   include Adamantium
+
+  def tune(string, note)
+    self.class.new(
+      color: color,
+      tuning: tuning.take(string) + [note] + tuning.drop(string+1)
+    )
+  end
+
+  def tune2(string, note)
+    update(
+      tuning: tuning.take(string) + [note] + tuning.drop(string+1)
+    )
+  end
 end
 
 vu1 = ValueUkulele.new(color: 'green', tuning: [:G, :C, :E, :B])
@@ -31,3 +44,12 @@ vu2 = ValueUkulele.new(color: 'green', tuning: [:G, :C, :E, :B])
 p vu1 == vu2
 
 vu1.tuning << :F
+
+# An interesting side effect of immutable objects is that the result of method calls can be cached safely. 
+# This is a technique known as memoization and is built-in to Adamantium.
+class Ukulele
+  def snares
+    tuning.count
+  end
+  memoize :snares
+end
