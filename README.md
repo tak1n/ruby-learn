@@ -16,3 +16,9 @@
   - Controllers can instantiate only one object. Therefore, views can only know about one instance variable and views should only send messages to that object
 
 6.) [Convenience vs Explicitness](http://solnic.eu/2015/03/04/8-things-i-learned-during-8-years-of-ruby-and-rails.html#6---convenience-has-a-big-price)
+
+7.) Relationship
+
+  - "has-a" -> Person has a Car -> Composition
+  - "acts like" -> Mixin
+  - "is-a" -> Inheritance
