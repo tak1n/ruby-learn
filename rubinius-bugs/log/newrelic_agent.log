@@ -1,0 +1,668 @@
+# Logfile created on 2015-05-23 23:24:59 +0200 by logger.rb/v1.2.7
+[05/23/15 23:24:59 +0200 localhost.localdomain (5292)] INFO : Starting the New Relic agent in "development" environment.
+[05/23/15 23:24:59 +0200 localhost.localdomain (5292)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[05/23/15 23:24:59 +0200 localhost.localdomain (5292)] WARN : No configuration file found. Working directory = /home/benny/Development/ruby/learn/rubinius-bugs
+[05/23/15 23:24:59 +0200 localhost.localdomain (5292)] WARN : Looked in these locations (based on defaults): /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/.newrelic/newrelic.yml, /home/benny/newrelic.yml
+[05/23/15 23:24:59 +0200 localhost.localdomain (5292)] INFO : Environment: development
+[05/23/15 23:24:59 +0200 localhost.localdomain (5292)] INFO : No known dispatcher detected.
+[05/23/15 23:24:59 +0200 localhost.localdomain (5292)] INFO : Application: development
+[05/23/15 23:24:59 +0200 localhost.localdomain (5292)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[05/23/15 23:24:59 +0200 localhost.localdomain (5292)] INFO : Installing deferred Rack instrumentation
+[05/23/15 23:24:59 +0200 localhost.localdomain (5292)] INFO : Installing Rack::Builder middleware instrumentation
+[05/23/15 23:24:59 +0200 localhost.localdomain (5292)] INFO : Installing Rainbows instrumentation
+[05/23/15 23:24:59 +0200 localhost.localdomain (5292)] INFO : Detected Rainbows, please see additional documentation: https://newrelic.com/docs/troubleshooting/im-using-unicorn-and-i-dont-see-any-data
+[05/23/15 23:24:59 +0200 localhost.localdomain (5292)] INFO : Installing Sinatra instrumentation
+[05/23/15 23:24:59 +0200 localhost.localdomain (5292)] INFO : Installing Net instrumentation
+[05/23/15 23:24:59 +0200 localhost.localdomain (5292)] INFO : Finished instrumentation
+[05/23/15 23:24:59 +0200 localhost.localdomain (5292)] INFO : Doing deferred dependency-detection before Rack startup
+[05/23/15 23:28:49 +0200 localhost.localdomain (5947)] INFO : Starting the New Relic agent in "development" environment.
+[05/23/15 23:28:49 +0200 localhost.localdomain (5947)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[05/23/15 23:28:49 +0200 localhost.localdomain (5947)] WARN : No configuration file found. Working directory = /home/benny/Development/ruby/learn/rubinius-bugs
+[05/23/15 23:28:49 +0200 localhost.localdomain (5947)] WARN : Looked in these locations (based on defaults): /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/.newrelic/newrelic.yml, /home/benny/newrelic.yml
+[05/23/15 23:28:49 +0200 localhost.localdomain (5947)] INFO : Environment: development
+[05/23/15 23:28:49 +0200 localhost.localdomain (5947)] INFO : No known dispatcher detected.
+[05/23/15 23:28:49 +0200 localhost.localdomain (5947)] INFO : Application: development
+[05/23/15 23:28:49 +0200 localhost.localdomain (5947)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[05/23/15 23:28:49 +0200 localhost.localdomain (5947)] INFO : Installing deferred Rack instrumentation
+[05/23/15 23:28:49 +0200 localhost.localdomain (5947)] INFO : Installing Rack::Builder middleware instrumentation
+[05/23/15 23:28:49 +0200 localhost.localdomain (5947)] INFO : Installing Rainbows instrumentation
+[05/23/15 23:28:49 +0200 localhost.localdomain (5947)] INFO : Detected Rainbows, please see additional documentation: https://newrelic.com/docs/troubleshooting/im-using-unicorn-and-i-dont-see-any-data
+[05/23/15 23:28:49 +0200 localhost.localdomain (5947)] INFO : Installing Sinatra instrumentation
+[05/23/15 23:28:49 +0200 localhost.localdomain (5947)] INFO : Installing Net instrumentation
+[05/23/15 23:28:49 +0200 localhost.localdomain (5947)] INFO : Finished instrumentation
+[05/23/15 23:28:49 +0200 localhost.localdomain (5947)] INFO : Doing deferred dependency-detection before Rack startup
+[05/23/15 23:32:19 +0200 localhost.localdomain (6273)] INFO : Starting the New Relic agent in "development" environment.
+[05/23/15 23:32:19 +0200 localhost.localdomain (6273)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[05/23/15 23:32:19 +0200 localhost.localdomain (6273)] WARN : No configuration file found. Working directory = /home/benny/Development/ruby/learn/rubinius-bugs
+[05/23/15 23:32:19 +0200 localhost.localdomain (6273)] WARN : Looked in these locations (based on defaults): /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/.newrelic/newrelic.yml, /home/benny/newrelic.yml
+[05/23/15 23:32:19 +0200 localhost.localdomain (6273)] INFO : Environment: development
+[05/23/15 23:32:19 +0200 localhost.localdomain (6273)] INFO : No known dispatcher detected.
+[05/23/15 23:32:19 +0200 localhost.localdomain (6273)] INFO : Application: development
+[05/23/15 23:32:19 +0200 localhost.localdomain (6273)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[05/23/15 23:32:19 +0200 localhost.localdomain (6273)] INFO : Installing deferred Rack instrumentation
+[05/23/15 23:32:19 +0200 localhost.localdomain (6273)] INFO : Installing Rack::Builder middleware instrumentation
+[05/23/15 23:32:19 +0200 localhost.localdomain (6273)] INFO : Installing Rainbows instrumentation
+[05/23/15 23:32:19 +0200 localhost.localdomain (6273)] INFO : Detected Rainbows, please see additional documentation: https://newrelic.com/docs/troubleshooting/im-using-unicorn-and-i-dont-see-any-data
+[05/23/15 23:32:19 +0200 localhost.localdomain (6273)] INFO : Installing Sinatra instrumentation
+[05/23/15 23:32:19 +0200 localhost.localdomain (6273)] INFO : Installing Net instrumentation
+[05/23/15 23:32:19 +0200 localhost.localdomain (6273)] INFO : Finished instrumentation
+[05/23/15 23:32:19 +0200 localhost.localdomain (6273)] INFO : Doing deferred dependency-detection before Rack startup
+[05/23/15 23:38:26 +0200 localhost.localdomain (7828)] INFO : Starting the New Relic agent in "development" environment.
+[05/23/15 23:38:26 +0200 localhost.localdomain (7828)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[05/23/15 23:38:26 +0200 localhost.localdomain (7828)] WARN : No configuration file found. Working directory = /home/benny/Development/ruby/learn/rubinius-bugs
+[05/23/15 23:38:26 +0200 localhost.localdomain (7828)] WARN : Looked in these locations (based on defaults): /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/.newrelic/newrelic.yml, /home/benny/newrelic.yml
+[05/23/15 23:38:26 +0200 localhost.localdomain (7828)] INFO : Environment: development
+[05/23/15 23:38:26 +0200 localhost.localdomain (7828)] INFO : No known dispatcher detected.
+[05/23/15 23:38:26 +0200 localhost.localdomain (7828)] INFO : Application: development
+[05/23/15 23:38:26 +0200 localhost.localdomain (7828)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[05/23/15 23:38:26 +0200 localhost.localdomain (7828)] INFO : Installing deferred Rack instrumentation
+[05/23/15 23:38:26 +0200 localhost.localdomain (7828)] INFO : Installing Rack::Builder middleware instrumentation
+[05/23/15 23:38:26 +0200 localhost.localdomain (7828)] INFO : Installing Rainbows instrumentation
+[05/23/15 23:38:26 +0200 localhost.localdomain (7828)] INFO : Detected Rainbows, please see additional documentation: https://newrelic.com/docs/troubleshooting/im-using-unicorn-and-i-dont-see-any-data
+[05/23/15 23:38:26 +0200 localhost.localdomain (7828)] INFO : Installing Sinatra instrumentation
+[05/23/15 23:38:26 +0200 localhost.localdomain (7828)] INFO : Installing Net instrumentation
+[05/23/15 23:38:26 +0200 localhost.localdomain (7828)] INFO : Finished instrumentation
+[05/23/15 23:38:26 +0200 localhost.localdomain (7828)] INFO : Doing deferred dependency-detection before Rack startup
+[05/23/15 23:42:22 +0200 localhost.localdomain (8252)] INFO : Starting the New Relic agent in "development" environment.
+[05/23/15 23:42:22 +0200 localhost.localdomain (8252)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[05/23/15 23:42:22 +0200 localhost.localdomain (8252)] WARN : No configuration file found. Working directory = /home/benny/Development/ruby/learn/rubinius-bugs
+[05/23/15 23:42:22 +0200 localhost.localdomain (8252)] WARN : Looked in these locations (based on defaults): /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/.newrelic/newrelic.yml, /home/benny/newrelic.yml
+[05/23/15 23:42:22 +0200 localhost.localdomain (8252)] INFO : Environment: development
+[05/23/15 23:42:22 +0200 localhost.localdomain (8252)] INFO : No known dispatcher detected.
+[05/23/15 23:42:22 +0200 localhost.localdomain (8252)] INFO : Application: development
+[05/23/15 23:42:22 +0200 localhost.localdomain (8252)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[05/23/15 23:42:41 +0200 localhost.localdomain (8308)] INFO : Starting the New Relic agent in "development" environment.
+[05/23/15 23:42:41 +0200 localhost.localdomain (8308)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[05/23/15 23:42:41 +0200 localhost.localdomain (8308)] WARN : No configuration file found. Working directory = /home/benny/Development/ruby/learn/rubinius-bugs
+[05/23/15 23:42:41 +0200 localhost.localdomain (8308)] WARN : Looked in these locations (based on defaults): /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/.newrelic/newrelic.yml, /home/benny/newrelic.yml
+[05/23/15 23:42:41 +0200 localhost.localdomain (8308)] INFO : Environment: development
+[05/23/15 23:42:41 +0200 localhost.localdomain (8308)] INFO : No known dispatcher detected.
+[05/23/15 23:42:41 +0200 localhost.localdomain (8308)] INFO : Application: development
+[05/23/15 23:42:41 +0200 localhost.localdomain (8308)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[05/23/15 23:42:41 +0200 localhost.localdomain (8308)] INFO : Installing deferred Rack instrumentation
+[05/23/15 23:42:41 +0200 localhost.localdomain (8308)] INFO : Installing Rack::Builder middleware instrumentation
+[05/23/15 23:42:41 +0200 localhost.localdomain (8308)] INFO : Installing Rainbows instrumentation
+[05/23/15 23:42:41 +0200 localhost.localdomain (8308)] INFO : Detected Rainbows, please see additional documentation: https://newrelic.com/docs/troubleshooting/im-using-unicorn-and-i-dont-see-any-data
+[05/23/15 23:42:41 +0200 localhost.localdomain (8308)] INFO : Installing Sinatra instrumentation
+[05/23/15 23:42:41 +0200 localhost.localdomain (8308)] INFO : Installing Net instrumentation
+[05/23/15 23:42:41 +0200 localhost.localdomain (8308)] INFO : Finished instrumentation
+[05/23/15 23:46:02 +0200 localhost.localdomain (9020)] INFO : Starting the New Relic agent in "development" environment.
+[05/23/15 23:46:02 +0200 localhost.localdomain (9020)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[05/23/15 23:46:02 +0200 localhost.localdomain (9020)] WARN : No configuration file found. Working directory = /home/benny/Development/ruby/learn/rubinius-bugs
+[05/23/15 23:46:02 +0200 localhost.localdomain (9020)] WARN : Looked in these locations (based on defaults): /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/.newrelic/newrelic.yml, /home/benny/newrelic.yml
+[05/23/15 23:46:02 +0200 localhost.localdomain (9020)] INFO : Environment: development
+[05/23/15 23:46:02 +0200 localhost.localdomain (9020)] INFO : Dispatcher: rainbows
+[05/23/15 23:46:02 +0200 localhost.localdomain (9020)] INFO : Application: development
+[05/23/15 23:46:02 +0200 localhost.localdomain (9020)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[05/23/15 23:46:02 +0200 localhost.localdomain (9020)] INFO : Installing deferred Rack instrumentation
+[05/23/15 23:46:02 +0200 localhost.localdomain (9020)] INFO : Installing Rack::Builder middleware instrumentation
+[05/23/15 23:46:02 +0200 localhost.localdomain (9020)] INFO : Installing Rainbows instrumentation
+[05/23/15 23:46:02 +0200 localhost.localdomain (9020)] INFO : Detected Rainbows, please see additional documentation: https://newrelic.com/docs/troubleshooting/im-using-unicorn-and-i-dont-see-any-data
+[05/23/15 23:46:02 +0200 localhost.localdomain (9020)] INFO : Installing Sinatra instrumentation
+[05/23/15 23:46:02 +0200 localhost.localdomain (9020)] INFO : Installing Net instrumentation
+[05/23/15 23:46:02 +0200 localhost.localdomain (9020)] INFO : Finished instrumentation
+[05/23/15 23:46:02 +0200 localhost.localdomain (9020)] INFO : Doing deferred dependency-detection before Rack startup
+[05/23/15 23:46:02 +0200 localhost.localdomain (9022)] ERROR : Invalid license key, please contact support@newrelic.com
+[05/23/15 23:46:02 +0200 localhost.localdomain (9022)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[05/23/15 23:46:20 +0200 localhost.localdomain (9034)] INFO : Starting the New Relic agent in "development" environment.
+[05/23/15 23:46:20 +0200 localhost.localdomain (9034)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[05/23/15 23:46:20 +0200 localhost.localdomain (9034)] WARN : No configuration file found. Working directory = /home/benny/Development/ruby/learn/rubinius-bugs
+[05/23/15 23:46:20 +0200 localhost.localdomain (9034)] WARN : Looked in these locations (based on defaults): /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/.newrelic/newrelic.yml, /home/benny/newrelic.yml
+[05/23/15 23:46:20 +0200 localhost.localdomain (9034)] INFO : Environment: development
+[05/23/15 23:46:20 +0200 localhost.localdomain (9034)] INFO : No known dispatcher detected.
+[05/23/15 23:46:20 +0200 localhost.localdomain (9034)] INFO : Application: development
+[05/23/15 23:46:20 +0200 localhost.localdomain (9034)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[05/23/15 23:46:20 +0200 localhost.localdomain (9034)] INFO : Installing deferred Rack instrumentation
+[05/23/15 23:46:20 +0200 localhost.localdomain (9034)] INFO : Installing Rack::Builder middleware instrumentation
+[05/23/15 23:46:20 +0200 localhost.localdomain (9034)] INFO : Installing Rainbows instrumentation
+[05/23/15 23:46:20 +0200 localhost.localdomain (9034)] INFO : Detected Rainbows, please see additional documentation: https://newrelic.com/docs/troubleshooting/im-using-unicorn-and-i-dont-see-any-data
+[05/23/15 23:46:20 +0200 localhost.localdomain (9034)] INFO : Installing Sinatra instrumentation
+[05/23/15 23:46:20 +0200 localhost.localdomain (9034)] INFO : Installing Net instrumentation
+[05/23/15 23:46:20 +0200 localhost.localdomain (9034)] INFO : Finished instrumentation
+[05/23/15 23:46:20 +0200 localhost.localdomain (9034)] INFO : Doing deferred dependency-detection before Rack startup
+[05/23/15 23:47:32 +0200 localhost.localdomain (9430)] INFO : Starting the New Relic agent in "development" environment.
+[05/23/15 23:47:32 +0200 localhost.localdomain (9430)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[05/23/15 23:47:32 +0200 localhost.localdomain (9430)] WARN : No configuration file found. Working directory = /home/benny/Development/ruby/learn/rubinius-bugs
+[05/23/15 23:47:32 +0200 localhost.localdomain (9430)] WARN : Looked in these locations (based on defaults): /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/.newrelic/newrelic.yml, /home/benny/newrelic.yml
+[05/23/15 23:47:32 +0200 localhost.localdomain (9430)] INFO : Environment: development
+[05/23/15 23:47:32 +0200 localhost.localdomain (9430)] INFO : Dispatcher: rainbows
+[05/23/15 23:47:32 +0200 localhost.localdomain (9430)] INFO : Application: development
+[05/23/15 23:47:32 +0200 localhost.localdomain (9430)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[05/23/15 23:47:32 +0200 localhost.localdomain (9430)] INFO : Installing deferred Rack instrumentation
+[05/23/15 23:47:32 +0200 localhost.localdomain (9430)] INFO : Installing Rack::Builder middleware instrumentation
+[05/23/15 23:47:32 +0200 localhost.localdomain (9430)] INFO : Installing Rainbows instrumentation
+[05/23/15 23:47:32 +0200 localhost.localdomain (9430)] INFO : Detected Rainbows, please see additional documentation: https://newrelic.com/docs/troubleshooting/im-using-unicorn-and-i-dont-see-any-data
+[05/23/15 23:47:32 +0200 localhost.localdomain (9430)] INFO : Installing Sinatra instrumentation
+[05/23/15 23:47:32 +0200 localhost.localdomain (9430)] INFO : Installing Net instrumentation
+[05/23/15 23:47:32 +0200 localhost.localdomain (9430)] INFO : Finished instrumentation
+[05/23/15 23:47:32 +0200 localhost.localdomain (9430)] INFO : Doing deferred dependency-detection before Rack startup
+[05/23/15 23:47:32 +0200 localhost.localdomain (9432)] ERROR : Invalid license key, please contact support@newrelic.com
+[05/23/15 23:47:32 +0200 localhost.localdomain (9432)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[05/23/15 23:47:38 +0200 localhost.localdomain (9450)] INFO : Starting the New Relic agent in "development" environment.
+[05/23/15 23:47:38 +0200 localhost.localdomain (9450)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[05/23/15 23:47:38 +0200 localhost.localdomain (9450)] WARN : No configuration file found. Working directory = /home/benny/Development/ruby/learn/rubinius-bugs
+[05/23/15 23:47:38 +0200 localhost.localdomain (9450)] WARN : Looked in these locations (based on defaults): /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/.newrelic/newrelic.yml, /home/benny/newrelic.yml
+[05/23/15 23:47:38 +0200 localhost.localdomain (9450)] INFO : Environment: development
+[05/23/15 23:47:38 +0200 localhost.localdomain (9450)] INFO : Dispatcher: rainbows
+[05/23/15 23:47:38 +0200 localhost.localdomain (9450)] INFO : Application: development
+[05/23/15 23:47:38 +0200 localhost.localdomain (9450)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[05/23/15 23:47:38 +0200 localhost.localdomain (9450)] INFO : Installing deferred Rack instrumentation
+[05/23/15 23:47:38 +0200 localhost.localdomain (9450)] INFO : Installing Rack::Builder middleware instrumentation
+[05/23/15 23:47:38 +0200 localhost.localdomain (9450)] INFO : Installing Rainbows instrumentation
+[05/23/15 23:47:38 +0200 localhost.localdomain (9450)] INFO : Detected Rainbows, please see additional documentation: https://newrelic.com/docs/troubleshooting/im-using-unicorn-and-i-dont-see-any-data
+[05/23/15 23:47:38 +0200 localhost.localdomain (9450)] INFO : Installing Sinatra instrumentation
+[05/23/15 23:47:38 +0200 localhost.localdomain (9450)] INFO : Installing Net instrumentation
+[05/23/15 23:47:38 +0200 localhost.localdomain (9450)] INFO : Finished instrumentation
+[05/23/15 23:47:38 +0200 localhost.localdomain (9450)] INFO : Doing deferred dependency-detection before Rack startup
+[05/23/15 23:47:38 +0200 localhost.localdomain (9452)] ERROR : Invalid license key, please contact support@newrelic.com
+[05/23/15 23:47:38 +0200 localhost.localdomain (9452)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[05/23/15 23:47:42 +0200 localhost.localdomain (9468)] INFO : Starting the New Relic agent in "development" environment.
+[05/23/15 23:47:42 +0200 localhost.localdomain (9468)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[05/23/15 23:47:42 +0200 localhost.localdomain (9468)] WARN : No configuration file found. Working directory = /home/benny/Development/ruby/learn/rubinius-bugs
+[05/23/15 23:47:42 +0200 localhost.localdomain (9468)] WARN : Looked in these locations (based on defaults): /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/.newrelic/newrelic.yml, /home/benny/newrelic.yml
+[05/23/15 23:47:42 +0200 localhost.localdomain (9468)] INFO : Environment: development
+[05/23/15 23:47:42 +0200 localhost.localdomain (9468)] INFO : No known dispatcher detected.
+[05/23/15 23:47:42 +0200 localhost.localdomain (9468)] INFO : Application: development
+[05/23/15 23:47:42 +0200 localhost.localdomain (9468)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[05/23/15 23:47:42 +0200 localhost.localdomain (9468)] INFO : Installing deferred Rack instrumentation
+[05/23/15 23:47:42 +0200 localhost.localdomain (9468)] INFO : Installing Rack::Builder middleware instrumentation
+[05/23/15 23:47:43 +0200 localhost.localdomain (9468)] INFO : Installing Rainbows instrumentation
+[05/23/15 23:47:43 +0200 localhost.localdomain (9468)] INFO : Detected Rainbows, please see additional documentation: https://newrelic.com/docs/troubleshooting/im-using-unicorn-and-i-dont-see-any-data
+[05/23/15 23:50:25 +0200 localhost.localdomain (9643)] INFO : Starting the New Relic agent in "development" environment.
+[05/23/15 23:50:25 +0200 localhost.localdomain (9643)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[05/23/15 23:50:25 +0200 localhost.localdomain (9643)] WARN : No configuration file found. Working directory = /home/benny/Development/ruby/learn/rubinius-bugs
+[05/23/15 23:50:25 +0200 localhost.localdomain (9643)] WARN : Looked in these locations (based on defaults): /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/.newrelic/newrelic.yml, /home/benny/newrelic.yml
+[05/23/15 23:50:25 +0200 localhost.localdomain (9643)] INFO : Environment: development
+[05/23/15 23:50:25 +0200 localhost.localdomain (9643)] INFO : Dispatcher: rainbows
+[05/23/15 23:50:25 +0200 localhost.localdomain (9643)] INFO : Application: development
+[05/23/15 23:50:25 +0200 localhost.localdomain (9643)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[05/23/15 23:50:25 +0200 localhost.localdomain (9643)] INFO : Installing deferred Rack instrumentation
+[05/23/15 23:50:25 +0200 localhost.localdomain (9643)] INFO : Installing Rack::Builder middleware instrumentation
+[05/23/15 23:50:25 +0200 localhost.localdomain (9643)] INFO : Installing Rainbows instrumentation
+[05/23/15 23:50:25 +0200 localhost.localdomain (9643)] INFO : Detected Rainbows, please see additional documentation: https://newrelic.com/docs/troubleshooting/im-using-unicorn-and-i-dont-see-any-data
+[05/23/15 23:50:25 +0200 localhost.localdomain (9643)] INFO : Installing Sinatra instrumentation
+[05/23/15 23:50:25 +0200 localhost.localdomain (9643)] INFO : Installing Net instrumentation
+[05/23/15 23:50:25 +0200 localhost.localdomain (9643)] INFO : Finished instrumentation
+[05/23/15 23:50:25 +0200 localhost.localdomain (9643)] INFO : Doing deferred dependency-detection before Rack startup
+[05/23/15 23:50:26 +0200 localhost.localdomain (9645)] ERROR : Invalid license key, please contact support@newrelic.com
+[05/23/15 23:50:26 +0200 localhost.localdomain (9645)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[05/23/15 23:50:28 +0200 localhost.localdomain (9664)] INFO : Starting the New Relic agent in "development" environment.
+[05/23/15 23:50:28 +0200 localhost.localdomain (9664)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[05/23/15 23:50:28 +0200 localhost.localdomain (9664)] WARN : No configuration file found. Working directory = /home/benny/Development/ruby/learn/rubinius-bugs
+[05/23/15 23:50:28 +0200 localhost.localdomain (9664)] WARN : Looked in these locations (based on defaults): /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/.newrelic/newrelic.yml, /home/benny/newrelic.yml
+[05/23/15 23:50:28 +0200 localhost.localdomain (9664)] INFO : Environment: development
+[05/23/15 23:50:28 +0200 localhost.localdomain (9664)] INFO : Dispatcher: rainbows
+[05/23/15 23:50:28 +0200 localhost.localdomain (9664)] INFO : Application: development
+[05/23/15 23:50:28 +0200 localhost.localdomain (9664)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[05/23/15 23:50:28 +0200 localhost.localdomain (9664)] INFO : Installing deferred Rack instrumentation
+[05/23/15 23:50:28 +0200 localhost.localdomain (9664)] INFO : Installing Rack::Builder middleware instrumentation
+[05/23/15 23:50:28 +0200 localhost.localdomain (9664)] INFO : Installing Rainbows instrumentation
+[05/23/15 23:50:28 +0200 localhost.localdomain (9664)] INFO : Detected Rainbows, please see additional documentation: https://newrelic.com/docs/troubleshooting/im-using-unicorn-and-i-dont-see-any-data
+[05/23/15 23:50:28 +0200 localhost.localdomain (9664)] INFO : Installing Sinatra instrumentation
+[05/23/15 23:50:28 +0200 localhost.localdomain (9664)] INFO : Installing Net instrumentation
+[05/23/15 23:50:28 +0200 localhost.localdomain (9664)] INFO : Finished instrumentation
+[05/23/15 23:50:28 +0200 localhost.localdomain (9664)] INFO : Doing deferred dependency-detection before Rack startup
+[05/23/15 23:50:29 +0200 localhost.localdomain (9666)] ERROR : Invalid license key, please contact support@newrelic.com
+[05/23/15 23:50:29 +0200 localhost.localdomain (9666)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[05/23/15 23:50:33 +0200 localhost.localdomain (9682)] INFO : Starting the New Relic agent in "development" environment.
+[05/23/15 23:50:33 +0200 localhost.localdomain (9682)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[05/23/15 23:50:33 +0200 localhost.localdomain (9682)] WARN : No configuration file found. Working directory = /home/benny/Development/ruby/learn/rubinius-bugs
+[05/23/15 23:50:33 +0200 localhost.localdomain (9682)] WARN : Looked in these locations (based on defaults): /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/.newrelic/newrelic.yml, /home/benny/newrelic.yml
+[05/23/15 23:50:33 +0200 localhost.localdomain (9682)] INFO : Environment: development
+[05/23/15 23:50:33 +0200 localhost.localdomain (9682)] INFO : No known dispatcher detected.
+[05/23/15 23:50:33 +0200 localhost.localdomain (9682)] INFO : Application: development
+[05/23/15 23:50:33 +0200 localhost.localdomain (9682)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[05/23/15 23:50:44 +0200 localhost.localdomain (9682)] INFO : Installing deferred Rack instrumentation
+[05/23/15 23:50:44 +0200 localhost.localdomain (9682)] INFO : Installing Rack::Builder middleware instrumentation
+[05/23/15 23:50:44 +0200 localhost.localdomain (9682)] INFO : Installing Rainbows instrumentation
+[05/23/15 23:50:44 +0200 localhost.localdomain (9682)] INFO : Detected Rainbows, please see additional documentation: https://newrelic.com/docs/troubleshooting/im-using-unicorn-and-i-dont-see-any-data
+[05/23/15 23:50:44 +0200 localhost.localdomain (9682)] INFO : Installing Sinatra instrumentation
+[05/23/15 23:50:44 +0200 localhost.localdomain (9682)] INFO : Installing Net instrumentation
+[05/23/15 23:50:44 +0200 localhost.localdomain (9682)] INFO : Finished instrumentation
+[05/23/15 23:50:44 +0200 localhost.localdomain (9682)] INFO : Doing deferred dependency-detection before Rack startup
+[05/23/15 23:51:18 +0200 localhost.localdomain (10093)] INFO : Starting the New Relic agent in "development" environment.
+[05/23/15 23:51:18 +0200 localhost.localdomain (10093)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[05/23/15 23:51:18 +0200 localhost.localdomain (10093)] WARN : No configuration file found. Working directory = /home/benny/Development/ruby/learn/rubinius-bugs
+[05/23/15 23:51:18 +0200 localhost.localdomain (10093)] WARN : Looked in these locations (based on defaults): /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/.newrelic/newrelic.yml, /home/benny/newrelic.yml
+[05/23/15 23:51:18 +0200 localhost.localdomain (10093)] INFO : Environment: development
+[05/23/15 23:51:18 +0200 localhost.localdomain (10093)] INFO : Dispatcher: rainbows
+[05/23/15 23:51:18 +0200 localhost.localdomain (10093)] INFO : Application: development
+[05/23/15 23:51:18 +0200 localhost.localdomain (10093)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[05/23/15 23:52:07 +0200 localhost.localdomain (10209)] INFO : Starting the New Relic agent in "development" environment.
+[05/23/15 23:52:07 +0200 localhost.localdomain (10209)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[05/23/15 23:52:07 +0200 localhost.localdomain (10209)] WARN : No configuration file found. Working directory = /home/benny/Development/ruby/learn/rubinius-bugs
+[05/23/15 23:52:07 +0200 localhost.localdomain (10209)] WARN : Looked in these locations (based on defaults): /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/.newrelic/newrelic.yml, /home/benny/newrelic.yml
+[05/23/15 23:52:07 +0200 localhost.localdomain (10209)] INFO : Environment: development
+[05/23/15 23:52:07 +0200 localhost.localdomain (10209)] INFO : No known dispatcher detected.
+[05/23/15 23:52:07 +0200 localhost.localdomain (10209)] INFO : Application: development
+[05/23/15 23:52:07 +0200 localhost.localdomain (10209)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[05/23/15 23:52:09 +0200 localhost.localdomain (10231)] INFO : Starting the New Relic agent in "development" environment.
+[05/23/15 23:52:09 +0200 localhost.localdomain (10231)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[05/23/15 23:52:09 +0200 localhost.localdomain (10231)] WARN : No configuration file found. Working directory = /home/benny/Development/ruby/learn/rubinius-bugs
+[05/23/15 23:52:09 +0200 localhost.localdomain (10231)] WARN : Looked in these locations (based on defaults): /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/.newrelic/newrelic.yml, /home/benny/newrelic.yml
+[05/23/15 23:52:09 +0200 localhost.localdomain (10231)] INFO : Environment: development
+[05/23/15 23:52:09 +0200 localhost.localdomain (10231)] INFO : Dispatcher: rainbows
+[05/23/15 23:52:09 +0200 localhost.localdomain (10231)] INFO : Application: development
+[05/23/15 23:52:09 +0200 localhost.localdomain (10231)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[05/23/15 23:52:14 +0200 localhost.localdomain (10231)] INFO : Installing deferred Rack instrumentation
+[05/23/15 23:52:14 +0200 localhost.localdomain (10231)] INFO : Installing Rack::Builder middleware instrumentation
+[05/23/15 23:52:14 +0200 localhost.localdomain (10231)] INFO : Installing Rainbows instrumentation
+[05/23/15 23:52:14 +0200 localhost.localdomain (10231)] INFO : Detected Rainbows, please see additional documentation: https://newrelic.com/docs/troubleshooting/im-using-unicorn-and-i-dont-see-any-data
+[05/23/15 23:52:17 +0200 localhost.localdomain (10209)] INFO : Installing deferred Rack instrumentation
+[05/23/15 23:52:17 +0200 localhost.localdomain (10209)] INFO : Installing Rack::Builder middleware instrumentation
+[05/23/15 23:52:17 +0200 localhost.localdomain (10209)] INFO : Installing Rainbows instrumentation
+[05/23/15 23:52:17 +0200 localhost.localdomain (10209)] INFO : Detected Rainbows, please see additional documentation: https://newrelic.com/docs/troubleshooting/im-using-unicorn-and-i-dont-see-any-data
+[05/23/15 23:53:16 +0200 localhost.localdomain (10209)] INFO : Installing Sinatra instrumentation
+[05/23/15 23:53:16 +0200 localhost.localdomain (10209)] INFO : Installing Net instrumentation
+[05/23/15 23:53:16 +0200 localhost.localdomain (10209)] INFO : Finished instrumentation
+[05/23/15 23:53:16 +0200 localhost.localdomain (10209)] INFO : Doing deferred dependency-detection before Rack startup
+[05/23/15 23:53:20 +0200 localhost.localdomain (10231)] INFO : Installing Sinatra instrumentation
+[05/23/15 23:53:20 +0200 localhost.localdomain (10231)] INFO : Installing Net instrumentation
+[05/23/15 23:53:20 +0200 localhost.localdomain (10231)] INFO : Finished instrumentation
+[05/23/15 23:53:20 +0200 localhost.localdomain (10231)] INFO : Doing deferred dependency-detection before Rack startup
+[05/23/15 23:53:20 +0200 localhost.localdomain (10470)] ERROR : Invalid license key, please contact support@newrelic.com
+[05/23/15 23:53:20 +0200 localhost.localdomain (10470)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[05/24/15 00:02:46 +0200 localhost.localdomain (11063)] INFO : Starting the New Relic agent in "development" environment.
+[05/24/15 00:02:46 +0200 localhost.localdomain (11063)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[05/24/15 00:02:46 +0200 localhost.localdomain (11063)] WARN : No configuration file found. Working directory = /home/benny/Development/ruby/learn/rubinius-bugs
+[05/24/15 00:02:46 +0200 localhost.localdomain (11063)] WARN : Looked in these locations (based on defaults): /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/.newrelic/newrelic.yml, /home/benny/newrelic.yml
+[05/24/15 00:02:46 +0200 localhost.localdomain (11063)] INFO : Environment: development
+[05/24/15 00:02:46 +0200 localhost.localdomain (11063)] INFO : No known dispatcher detected.
+[05/24/15 00:02:46 +0200 localhost.localdomain (11063)] INFO : Application: development
+[05/24/15 00:02:46 +0200 localhost.localdomain (11063)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[05/24/15 00:02:49 +0200 localhost.localdomain (11063)] INFO : Installing deferred Rack instrumentation
+[05/24/15 00:02:49 +0200 localhost.localdomain (11063)] INFO : Installing Rack::Builder middleware instrumentation
+[05/24/15 00:02:49 +0200 localhost.localdomain (11063)] INFO : Installing Rainbows instrumentation
+[05/24/15 00:02:49 +0200 localhost.localdomain (11063)] INFO : Detected Rainbows, please see additional documentation: https://newrelic.com/docs/troubleshooting/im-using-unicorn-and-i-dont-see-any-data
+[05/24/15 00:03:07 +0200 localhost.localdomain (11063)] INFO : Installing Sinatra instrumentation
+[05/24/15 00:03:07 +0200 localhost.localdomain (11063)] INFO : Installing Net instrumentation
+[05/24/15 00:03:07 +0200 localhost.localdomain (11063)] INFO : Finished instrumentation
+[05/24/15 00:03:07 +0200 localhost.localdomain (11063)] INFO : Doing deferred dependency-detection before Rack startup
+[05/24/15 00:04:33 +0200 localhost.localdomain (11473)] INFO : Starting the New Relic agent in "development" environment.
+[05/24/15 00:04:33 +0200 localhost.localdomain (11473)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[05/24/15 00:04:33 +0200 localhost.localdomain (11473)] WARN : No configuration file found. Working directory = /home/benny/Development/ruby/learn/rubinius-bugs
+[05/24/15 00:04:33 +0200 localhost.localdomain (11473)] WARN : Looked in these locations (based on defaults): /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/.newrelic/newrelic.yml, /home/benny/newrelic.yml
+[05/24/15 00:04:33 +0200 localhost.localdomain (11473)] INFO : Environment: development
+[05/24/15 00:04:33 +0200 localhost.localdomain (11473)] INFO : No known dispatcher detected.
+[05/24/15 00:04:33 +0200 localhost.localdomain (11473)] INFO : Application: development
+[05/24/15 00:04:33 +0200 localhost.localdomain (11473)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[05/24/15 00:04:39 +0200 localhost.localdomain (11473)] INFO : Installing deferred Rack instrumentation
+[05/24/15 00:04:39 +0200 localhost.localdomain (11473)] INFO : Installing Rack::Builder middleware instrumentation
+[05/24/15 00:04:39 +0200 localhost.localdomain (11473)] INFO : Installing Rainbows instrumentation
+[05/24/15 00:04:39 +0200 localhost.localdomain (11473)] INFO : Detected Rainbows, please see additional documentation: https://newrelic.com/docs/troubleshooting/im-using-unicorn-and-i-dont-see-any-data
+[05/24/15 00:04:40 +0200 localhost.localdomain (11473)] INFO : Installing Sinatra instrumentation
+[05/24/15 00:04:40 +0200 localhost.localdomain (11473)] INFO : Installing Net instrumentation
+[05/24/15 00:04:40 +0200 localhost.localdomain (11473)] INFO : Finished instrumentation
+[05/24/15 00:04:40 +0200 localhost.localdomain (11473)] INFO : Doing deferred dependency-detection before Rack startup
+[05/24/15 00:04:41 +0200 localhost.localdomain (11508)] ERROR : Invalid license key, please contact support@newrelic.com
+[05/24/15 00:04:41 +0200 localhost.localdomain (11508)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[05/24/15 00:05:25 +0200 localhost.localdomain (11553)] ERROR : Invalid license key, please contact support@newrelic.com
+[05/24/15 00:05:25 +0200 localhost.localdomain (11553)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[05/24/15 00:08:19 +0200 localhost.localdomain (11635)] ERROR : Invalid license key, please contact support@newrelic.com
+[05/24/15 00:08:19 +0200 localhost.localdomain (11635)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[05/24/15 00:08:58 +0200 localhost.localdomain (11717)] INFO : Starting the New Relic agent in "development" environment.
+[05/24/15 00:08:58 +0200 localhost.localdomain (11717)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[05/24/15 00:08:58 +0200 localhost.localdomain (11717)] WARN : No configuration file found. Working directory = /home/benny/Development/ruby/learn/rubinius-bugs
+[05/24/15 00:08:58 +0200 localhost.localdomain (11717)] WARN : Looked in these locations (based on defaults): /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/.newrelic/newrelic.yml, /home/benny/newrelic.yml
+[05/24/15 00:08:58 +0200 localhost.localdomain (11717)] INFO : Environment: development
+[05/24/15 00:08:58 +0200 localhost.localdomain (11717)] INFO : No known dispatcher detected.
+[05/24/15 00:08:58 +0200 localhost.localdomain (11717)] INFO : Application: development
+[05/24/15 00:08:58 +0200 localhost.localdomain (11717)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[05/24/15 00:09:15 +0200 localhost.localdomain (11767)] INFO : Starting the New Relic agent in "development" environment.
+[05/24/15 00:09:15 +0200 localhost.localdomain (11767)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[05/24/15 00:09:15 +0200 localhost.localdomain (11767)] WARN : No configuration file found. Working directory = /home/benny/Development/ruby/learn/rubinius-bugs
+[05/24/15 00:09:15 +0200 localhost.localdomain (11767)] WARN : Looked in these locations (based on defaults): /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/.newrelic/newrelic.yml, /home/benny/newrelic.yml
+[05/24/15 00:09:15 +0200 localhost.localdomain (11767)] INFO : Environment: development
+[05/24/15 00:09:15 +0200 localhost.localdomain (11767)] INFO : No known dispatcher detected.
+[05/24/15 00:09:15 +0200 localhost.localdomain (11767)] INFO : Application: development
+[05/24/15 00:09:15 +0200 localhost.localdomain (11767)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[05/24/15 00:09:15 +0200 localhost.localdomain (11767)] INFO : Installing deferred Rack instrumentation
+[05/24/15 00:09:15 +0200 localhost.localdomain (11767)] INFO : Installing Rack::Builder middleware instrumentation
+[05/24/15 00:09:15 +0200 localhost.localdomain (11767)] INFO : Installing Rainbows instrumentation
+[05/24/15 00:09:15 +0200 localhost.localdomain (11767)] INFO : Detected Rainbows, please see additional documentation: https://newrelic.com/docs/troubleshooting/im-using-unicorn-and-i-dont-see-any-data
+[05/24/15 00:09:15 +0200 localhost.localdomain (11767)] INFO : Installing Sinatra instrumentation
+[05/24/15 00:09:15 +0200 localhost.localdomain (11767)] INFO : Installing Net instrumentation
+[05/24/15 00:09:15 +0200 localhost.localdomain (11767)] INFO : Finished instrumentation
+[05/24/15 00:09:15 +0200 localhost.localdomain (11767)] INFO : Doing deferred dependency-detection before Rack startup
+[05/24/15 00:09:18 +0200 localhost.localdomain (11785)] ERROR : Invalid license key, please contact support@newrelic.com
+[05/24/15 00:09:18 +0200 localhost.localdomain (11785)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[05/24/15 00:10:01 +0200 localhost.localdomain (11871)] ERROR : Invalid license key, please contact support@newrelic.com
+[05/24/15 00:10:01 +0200 localhost.localdomain (11871)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[05/24/15 00:10:05 +0200 localhost.localdomain (11892)] ERROR : Invalid license key, please contact support@newrelic.com
+[05/24/15 00:10:05 +0200 localhost.localdomain (11892)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[05/24/15 00:10:08 +0200 localhost.localdomain (11913)] ERROR : Invalid license key, please contact support@newrelic.com
+[05/24/15 00:10:08 +0200 localhost.localdomain (11913)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[05/24/15 00:11:45 +0200 localhost.localdomain (12394)] INFO : Starting the New Relic agent in "development" environment.
+[05/24/15 00:11:45 +0200 localhost.localdomain (12394)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[05/24/15 00:11:45 +0200 localhost.localdomain (12394)] WARN : No configuration file found. Working directory = /home/benny/Development/ruby/learn/rubinius-bugs
+[05/24/15 00:11:45 +0200 localhost.localdomain (12394)] WARN : Looked in these locations (based on defaults): /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/.newrelic/newrelic.yml, /home/benny/newrelic.yml
+[05/24/15 00:11:45 +0200 localhost.localdomain (12394)] INFO : Environment: development
+[05/24/15 00:11:45 +0200 localhost.localdomain (12394)] INFO : No known dispatcher detected.
+[05/24/15 00:11:45 +0200 localhost.localdomain (12394)] INFO : Application: development
+[05/24/15 00:11:45 +0200 localhost.localdomain (12394)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[05/24/15 00:11:45 +0200 localhost.localdomain (12394)] INFO : Installing deferred Rack instrumentation
+[05/24/15 00:11:45 +0200 localhost.localdomain (12394)] INFO : Installing Rack::Builder middleware instrumentation
+[05/24/15 00:11:45 +0200 localhost.localdomain (12394)] INFO : Installing Rainbows instrumentation
+[05/24/15 00:11:45 +0200 localhost.localdomain (12394)] INFO : Detected Rainbows, please see additional documentation: https://newrelic.com/docs/troubleshooting/im-using-unicorn-and-i-dont-see-any-data
+[05/24/15 00:11:45 +0200 localhost.localdomain (12394)] INFO : Installing Sinatra instrumentation
+[05/24/15 00:11:45 +0200 localhost.localdomain (12394)] INFO : Installing Net instrumentation
+[05/24/15 00:11:45 +0200 localhost.localdomain (12394)] INFO : Finished instrumentation
+[05/24/15 00:11:45 +0200 localhost.localdomain (12394)] INFO : Doing deferred dependency-detection before Rack startup
+[05/24/15 00:11:46 +0200 localhost.localdomain (12402)] ERROR : Invalid license key, please contact support@newrelic.com
+[05/24/15 00:11:46 +0200 localhost.localdomain (12402)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[05/24/15 00:11:54 +0200 localhost.localdomain (12426)] ERROR : Invalid license key, please contact support@newrelic.com
+[05/24/15 00:11:54 +0200 localhost.localdomain (12426)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[05/24/15 00:12:23 +0200 localhost.localdomain (12503)] INFO : Starting the New Relic agent in "development" environment.
+[05/24/15 00:12:23 +0200 localhost.localdomain (12503)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[05/24/15 00:12:23 +0200 localhost.localdomain (12503)] WARN : No configuration file found. Working directory = /home/benny/Development/ruby/learn/rubinius-bugs
+[05/24/15 00:12:23 +0200 localhost.localdomain (12503)] WARN : Looked in these locations (based on defaults): /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/.newrelic/newrelic.yml, /home/benny/newrelic.yml
+[05/24/15 00:12:23 +0200 localhost.localdomain (12503)] INFO : Environment: development
+[05/24/15 00:12:23 +0200 localhost.localdomain (12503)] INFO : No known dispatcher detected.
+[05/24/15 00:12:23 +0200 localhost.localdomain (12503)] INFO : Application: development
+[05/24/15 00:12:23 +0200 localhost.localdomain (12503)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[05/24/15 00:12:23 +0200 localhost.localdomain (12503)] INFO : Installing deferred Rack instrumentation
+[05/24/15 00:12:23 +0200 localhost.localdomain (12503)] INFO : Installing Rack::Builder middleware instrumentation
+[05/24/15 00:12:23 +0200 localhost.localdomain (12503)] INFO : Installing Rainbows instrumentation
+[05/24/15 00:12:23 +0200 localhost.localdomain (12503)] INFO : Detected Rainbows, please see additional documentation: https://newrelic.com/docs/troubleshooting/im-using-unicorn-and-i-dont-see-any-data
+[05/24/15 00:12:23 +0200 localhost.localdomain (12503)] INFO : Installing Sinatra instrumentation
+[05/24/15 00:12:23 +0200 localhost.localdomain (12503)] INFO : Installing Net instrumentation
+[05/24/15 00:12:23 +0200 localhost.localdomain (12503)] INFO : Finished instrumentation
+[05/24/15 00:12:23 +0200 localhost.localdomain (12503)] INFO : Doing deferred dependency-detection before Rack startup
+[05/24/15 00:12:35 +0200 localhost.localdomain (13288)] INFO : Starting the New Relic agent in "development" environment.
+[05/24/15 00:12:35 +0200 localhost.localdomain (13288)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[05/24/15 00:12:35 +0200 localhost.localdomain (13288)] WARN : No configuration file found. Working directory = /home/benny/Development/ruby/learn/rubinius-bugs
+[05/24/15 00:12:35 +0200 localhost.localdomain (13288)] WARN : Looked in these locations (based on defaults): /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/.newrelic/newrelic.yml, /home/benny/newrelic.yml
+[05/24/15 00:12:35 +0200 localhost.localdomain (13288)] INFO : Environment: development
+[05/24/15 00:12:35 +0200 localhost.localdomain (13288)] INFO : No known dispatcher detected.
+[05/24/15 00:12:35 +0200 localhost.localdomain (13288)] INFO : Application: development
+[05/24/15 00:12:35 +0200 localhost.localdomain (13288)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[05/24/15 00:12:35 +0200 localhost.localdomain (13288)] INFO : Installing deferred Rack instrumentation
+[05/24/15 00:12:35 +0200 localhost.localdomain (13288)] INFO : Installing Rack::Builder middleware instrumentation
+[05/24/15 00:12:35 +0200 localhost.localdomain (13288)] INFO : Installing Rainbows instrumentation
+[05/24/15 00:12:35 +0200 localhost.localdomain (13288)] INFO : Detected Rainbows, please see additional documentation: https://newrelic.com/docs/troubleshooting/im-using-unicorn-and-i-dont-see-any-data
+[05/24/15 00:12:35 +0200 localhost.localdomain (13288)] INFO : Installing Sinatra instrumentation
+[05/24/15 00:12:35 +0200 localhost.localdomain (13288)] INFO : Installing Net instrumentation
+[05/24/15 00:12:35 +0200 localhost.localdomain (13288)] INFO : Finished instrumentation
+[05/24/15 00:12:35 +0200 localhost.localdomain (13288)] INFO : Doing deferred dependency-detection before Rack startup
+[05/24/15 00:12:36 +0200 localhost.localdomain (13296)] ERROR : Invalid license key, please contact support@newrelic.com
+[05/24/15 00:12:36 +0200 localhost.localdomain (13296)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[05/24/15 00:12:55 +0200 localhost.localdomain (13328)] ERROR : Invalid license key, please contact support@newrelic.com
+[05/24/15 00:12:55 +0200 localhost.localdomain (13328)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[05/24/15 00:15:40 +0200 localhost.localdomain (13516)] INFO : Starting the New Relic agent in "development" environment.
+[05/24/15 00:15:40 +0200 localhost.localdomain (13516)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[05/24/15 00:15:40 +0200 localhost.localdomain (13516)] WARN : No configuration file found. Working directory = /home/benny/Development/ruby/learn/rubinius-bugs
+[05/24/15 00:15:40 +0200 localhost.localdomain (13516)] WARN : Looked in these locations (based on defaults): /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/.newrelic/newrelic.yml, /home/benny/newrelic.yml
+[05/24/15 00:15:40 +0200 localhost.localdomain (13516)] INFO : Environment: development
+[05/24/15 00:15:40 +0200 localhost.localdomain (13516)] INFO : No known dispatcher detected.
+[05/24/15 00:15:40 +0200 localhost.localdomain (13516)] INFO : Application: development
+[05/24/15 00:15:40 +0200 localhost.localdomain (13516)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[05/24/15 00:15:40 +0200 localhost.localdomain (13516)] INFO : Installing deferred Rack instrumentation
+[05/24/15 00:15:40 +0200 localhost.localdomain (13516)] INFO : Installing Rack::Builder middleware instrumentation
+[05/24/15 00:15:40 +0200 localhost.localdomain (13516)] INFO : Installing Rainbows instrumentation
+[05/24/15 00:15:40 +0200 localhost.localdomain (13516)] INFO : Detected Rainbows, please see additional documentation: https://newrelic.com/docs/troubleshooting/im-using-unicorn-and-i-dont-see-any-data
+[05/24/15 00:15:40 +0200 localhost.localdomain (13516)] INFO : Installing Sinatra instrumentation
+[05/24/15 00:15:40 +0200 localhost.localdomain (13516)] INFO : Installing Net instrumentation
+[05/24/15 00:15:40 +0200 localhost.localdomain (13516)] INFO : Finished instrumentation
+[05/24/15 00:15:40 +0200 localhost.localdomain (13516)] INFO : Doing deferred dependency-detection before Rack startup
+[05/24/15 00:15:41 +0200 localhost.localdomain (13524)] ERROR : Invalid license key, please contact support@newrelic.com
+[05/24/15 00:15:41 +0200 localhost.localdomain (13524)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[05/24/15 00:16:11 +0200 localhost.localdomain (13577)] ERROR : Invalid license key, please contact support@newrelic.com
+[05/24/15 00:16:11 +0200 localhost.localdomain (13577)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[05/24/15 00:16:14 +0200 localhost.localdomain (13599)] ERROR : Invalid license key, please contact support@newrelic.com
+[05/24/15 00:16:14 +0200 localhost.localdomain (13599)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[05/24/15 00:18:17 +0200 localhost.localdomain (13763)] INFO : Starting the New Relic agent in "development" environment.
+[05/24/15 00:18:17 +0200 localhost.localdomain (13763)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[05/24/15 00:18:17 +0200 localhost.localdomain (13763)] WARN : No configuration file found. Working directory = /home/benny/Development/ruby/learn/rubinius-bugs
+[05/24/15 00:18:17 +0200 localhost.localdomain (13763)] WARN : Looked in these locations (based on defaults): /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/.newrelic/newrelic.yml, /home/benny/newrelic.yml
+[05/24/15 00:18:17 +0200 localhost.localdomain (13763)] INFO : Environment: development
+[05/24/15 00:18:17 +0200 localhost.localdomain (13763)] INFO : No known dispatcher detected.
+[05/24/15 00:18:17 +0200 localhost.localdomain (13763)] INFO : Application: development
+[05/24/15 00:18:17 +0200 localhost.localdomain (13763)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[05/24/15 00:18:17 +0200 localhost.localdomain (13763)] INFO : Installing deferred Rack instrumentation
+[05/24/15 00:18:17 +0200 localhost.localdomain (13763)] INFO : Installing Rack::Builder middleware instrumentation
+[05/24/15 00:18:17 +0200 localhost.localdomain (13763)] INFO : Installing Rainbows instrumentation
+[05/24/15 00:18:17 +0200 localhost.localdomain (13763)] INFO : Detected Rainbows, please see additional documentation: https://newrelic.com/docs/troubleshooting/im-using-unicorn-and-i-dont-see-any-data
+[05/24/15 00:18:17 +0200 localhost.localdomain (13763)] INFO : Installing Sinatra instrumentation
+[05/24/15 00:18:17 +0200 localhost.localdomain (13763)] INFO : Installing Net instrumentation
+[05/24/15 00:18:17 +0200 localhost.localdomain (13763)] INFO : Finished instrumentation
+[05/24/15 00:18:17 +0200 localhost.localdomain (13763)] INFO : Doing deferred dependency-detection before Rack startup
+[05/24/15 00:18:19 +0200 localhost.localdomain (13783)] ERROR : Invalid license key, please contact support@newrelic.com
+[05/24/15 00:18:19 +0200 localhost.localdomain (13783)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[05/24/15 00:21:15 +0200 localhost.localdomain (13945)] ERROR : Invalid license key, please contact support@newrelic.com
+[05/24/15 00:21:15 +0200 localhost.localdomain (13945)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[05/24/15 00:23:50 +0200 localhost.localdomain (14169)] INFO : Starting the New Relic agent in "development" environment.
+[05/24/15 00:23:50 +0200 localhost.localdomain (14169)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[05/24/15 00:23:50 +0200 localhost.localdomain (14169)] WARN : No configuration file found. Working directory = /home/benny/Development/ruby/learn/rubinius-bugs
+[05/24/15 00:23:50 +0200 localhost.localdomain (14169)] WARN : Looked in these locations (based on defaults): /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/.newrelic/newrelic.yml, /home/benny/newrelic.yml
+[05/24/15 00:23:50 +0200 localhost.localdomain (14169)] INFO : Environment: development
+[05/24/15 00:23:50 +0200 localhost.localdomain (14169)] INFO : No known dispatcher detected.
+[05/24/15 00:23:50 +0200 localhost.localdomain (14169)] INFO : Application: development
+[05/24/15 00:23:50 +0200 localhost.localdomain (14169)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[05/24/15 00:23:50 +0200 localhost.localdomain (14169)] INFO : Installing deferred Rack instrumentation
+[05/24/15 00:23:50 +0200 localhost.localdomain (14169)] INFO : Installing Rack::Builder middleware instrumentation
+[05/24/15 00:23:50 +0200 localhost.localdomain (14169)] INFO : Installing Rainbows instrumentation
+[05/24/15 00:23:50 +0200 localhost.localdomain (14169)] INFO : Detected Rainbows, please see additional documentation: https://newrelic.com/docs/troubleshooting/im-using-unicorn-and-i-dont-see-any-data
+[05/24/15 00:23:50 +0200 localhost.localdomain (14169)] INFO : Installing Sinatra instrumentation
+[05/24/15 00:23:50 +0200 localhost.localdomain (14169)] INFO : Installing Net instrumentation
+[05/24/15 00:23:50 +0200 localhost.localdomain (14169)] INFO : Finished instrumentation
+[05/24/15 00:23:50 +0200 localhost.localdomain (14169)] INFO : Doing deferred dependency-detection before Rack startup
+[05/24/15 00:23:52 +0200 localhost.localdomain (14188)] ERROR : Invalid license key, please contact support@newrelic.com
+[05/24/15 00:23:52 +0200 localhost.localdomain (14188)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[05/24/15 00:23:55 +0200 localhost.localdomain (14252)] ERROR : Invalid license key, please contact support@newrelic.com
+[05/24/15 00:23:55 +0200 localhost.localdomain (14252)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[05/24/15 00:24:03 +0200 localhost.localdomain (14294)] INFO : Starting the New Relic agent in "development" environment.
+[05/24/15 00:24:03 +0200 localhost.localdomain (14294)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[05/24/15 00:24:03 +0200 localhost.localdomain (14294)] WARN : No configuration file found. Working directory = /home/benny/Development/ruby/learn/rubinius-bugs
+[05/24/15 00:24:03 +0200 localhost.localdomain (14294)] WARN : Looked in these locations (based on defaults): /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/.newrelic/newrelic.yml, /home/benny/newrelic.yml
+[05/24/15 00:24:03 +0200 localhost.localdomain (14294)] INFO : Environment: development
+[05/24/15 00:24:03 +0200 localhost.localdomain (14294)] INFO : No known dispatcher detected.
+[05/24/15 00:24:03 +0200 localhost.localdomain (14294)] INFO : Application: development
+[05/24/15 00:24:03 +0200 localhost.localdomain (14294)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[05/24/15 00:24:03 +0200 localhost.localdomain (14294)] INFO : Installing deferred Rack instrumentation
+[05/24/15 00:24:03 +0200 localhost.localdomain (14294)] INFO : Installing Rack::Builder middleware instrumentation
+[05/24/15 00:24:03 +0200 localhost.localdomain (14294)] INFO : Installing Rainbows instrumentation
+[05/24/15 00:24:03 +0200 localhost.localdomain (14294)] INFO : Detected Rainbows, please see additional documentation: https://newrelic.com/docs/troubleshooting/im-using-unicorn-and-i-dont-see-any-data
+[05/24/15 00:24:03 +0200 localhost.localdomain (14294)] INFO : Installing Sinatra instrumentation
+[05/24/15 00:24:03 +0200 localhost.localdomain (14294)] INFO : Installing Net instrumentation
+[05/24/15 00:24:03 +0200 localhost.localdomain (14294)] INFO : Finished instrumentation
+[05/24/15 00:24:03 +0200 localhost.localdomain (14294)] INFO : Doing deferred dependency-detection before Rack startup
+[05/24/15 00:24:04 +0200 localhost.localdomain (14302)] ERROR : Invalid license key, please contact support@newrelic.com
+[05/24/15 00:24:04 +0200 localhost.localdomain (14302)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[05/24/15 00:28:00 +0200 localhost.localdomain (14420)] ERROR : Invalid license key, please contact support@newrelic.com
+[05/24/15 00:28:00 +0200 localhost.localdomain (14420)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[05/24/15 00:28:02 +0200 localhost.localdomain (14441)] ERROR : Invalid license key, please contact support@newrelic.com
+[05/24/15 00:28:02 +0200 localhost.localdomain (14441)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[05/24/15 00:28:30 +0200 localhost.localdomain (14549)] INFO : Starting the New Relic agent in "development" environment.
+[05/24/15 00:28:30 +0200 localhost.localdomain (14549)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[05/24/15 00:28:30 +0200 localhost.localdomain (14549)] WARN : No configuration file found. Working directory = /home/benny/Development/ruby/learn/rubinius-bugs
+[05/24/15 00:28:30 +0200 localhost.localdomain (14549)] WARN : Looked in these locations (based on defaults): /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/.newrelic/newrelic.yml, /home/benny/newrelic.yml
+[05/24/15 00:28:30 +0200 localhost.localdomain (14549)] INFO : Environment: development
+[05/24/15 00:28:30 +0200 localhost.localdomain (14549)] INFO : Dispatcher: rainbows
+[05/24/15 00:28:30 +0200 localhost.localdomain (14549)] INFO : Application: development
+[05/24/15 00:28:30 +0200 localhost.localdomain (14549)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[05/24/15 00:28:35 +0200 localhost.localdomain (14549)] INFO : Installing deferred Rack instrumentation
+[05/24/15 00:28:35 +0200 localhost.localdomain (14549)] INFO : Installing Rack::Builder middleware instrumentation
+[05/24/15 00:28:35 +0200 localhost.localdomain (14549)] INFO : Installing Rainbows instrumentation
+[05/24/15 00:28:35 +0200 localhost.localdomain (14549)] INFO : Detected Rainbows, please see additional documentation: https://newrelic.com/docs/troubleshooting/im-using-unicorn-and-i-dont-see-any-data
+[05/24/15 00:28:37 +0200 localhost.localdomain (14549)] INFO : Installing Sinatra instrumentation
+[05/24/15 00:28:37 +0200 localhost.localdomain (14549)] INFO : Installing Net instrumentation
+[05/24/15 00:28:37 +0200 localhost.localdomain (14549)] INFO : Finished instrumentation
+[05/24/15 00:28:37 +0200 localhost.localdomain (14549)] INFO : Doing deferred dependency-detection before Rack startup
+[05/24/15 00:28:37 +0200 localhost.localdomain (14553)] ERROR : Invalid license key, please contact support@newrelic.com
+[05/24/15 00:28:37 +0200 localhost.localdomain (14553)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[05/24/15 00:29:11 +0200 localhost.localdomain (14609)] INFO : Starting the New Relic agent in "development" environment.
+[05/24/15 00:29:11 +0200 localhost.localdomain (14609)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[05/24/15 00:29:11 +0200 localhost.localdomain (14609)] WARN : No configuration file found. Working directory = /home/benny/Development/ruby/learn/rubinius-bugs
+[05/24/15 00:29:11 +0200 localhost.localdomain (14609)] WARN : Looked in these locations (based on defaults): /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/.newrelic/newrelic.yml, /home/benny/newrelic.yml
+[05/24/15 00:29:11 +0200 localhost.localdomain (14609)] INFO : Environment: development
+[05/24/15 00:29:11 +0200 localhost.localdomain (14609)] INFO : Dispatcher: rainbows
+[05/24/15 00:29:11 +0200 localhost.localdomain (14609)] INFO : Application: development
+[05/24/15 00:29:11 +0200 localhost.localdomain (14609)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[05/24/15 00:29:11 +0200 localhost.localdomain (14609)] INFO : Installing deferred Rack instrumentation
+[05/24/15 00:29:11 +0200 localhost.localdomain (14609)] INFO : Installing Rack::Builder middleware instrumentation
+[05/24/15 00:29:11 +0200 localhost.localdomain (14609)] INFO : Installing Rainbows instrumentation
+[05/24/15 00:29:11 +0200 localhost.localdomain (14609)] INFO : Detected Rainbows, please see additional documentation: https://newrelic.com/docs/troubleshooting/im-using-unicorn-and-i-dont-see-any-data
+[05/24/15 00:29:11 +0200 localhost.localdomain (14609)] INFO : Installing Sinatra instrumentation
+[05/24/15 00:29:11 +0200 localhost.localdomain (14609)] INFO : Installing Net instrumentation
+[05/24/15 00:29:11 +0200 localhost.localdomain (14609)] INFO : Finished instrumentation
+[05/24/15 00:29:11 +0200 localhost.localdomain (14609)] INFO : Doing deferred dependency-detection before Rack startup
+[05/24/15 00:29:11 +0200 localhost.localdomain (14612)] ERROR : Invalid license key, please contact support@newrelic.com
+[05/24/15 00:29:11 +0200 localhost.localdomain (14612)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[05/24/15 00:31:49 +0200 localhost.localdomain (14912)] INFO : Starting the New Relic agent in "development" environment.
+[05/24/15 00:31:49 +0200 localhost.localdomain (14912)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[05/24/15 00:31:49 +0200 localhost.localdomain (14912)] WARN : No configuration file found. Working directory = /home/benny/Development/ruby/learn/rubinius-bugs
+[05/24/15 00:31:49 +0200 localhost.localdomain (14912)] WARN : Looked in these locations (based on defaults): /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/.newrelic/newrelic.yml, /home/benny/newrelic.yml
+[05/24/15 00:31:49 +0200 localhost.localdomain (14912)] INFO : Environment: development
+[05/24/15 00:31:49 +0200 localhost.localdomain (14912)] INFO : No known dispatcher detected.
+[05/24/15 00:31:49 +0200 localhost.localdomain (14912)] INFO : Application: development
+[05/24/15 00:31:49 +0200 localhost.localdomain (14912)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[05/24/15 00:31:49 +0200 localhost.localdomain (14912)] INFO : Installing deferred Rack instrumentation
+[05/24/15 00:31:49 +0200 localhost.localdomain (14912)] INFO : Installing Rack::Builder middleware instrumentation
+[05/24/15 00:31:49 +0200 localhost.localdomain (14912)] INFO : Installing Rainbows instrumentation
+[05/24/15 00:31:49 +0200 localhost.localdomain (14912)] INFO : Detected Rainbows, please see additional documentation: https://newrelic.com/docs/troubleshooting/im-using-unicorn-and-i-dont-see-any-data
+[05/24/15 00:31:49 +0200 localhost.localdomain (14912)] INFO : Installing Sinatra instrumentation
+[05/24/15 00:31:49 +0200 localhost.localdomain (14912)] INFO : Installing Net instrumentation
+[05/24/15 00:31:49 +0200 localhost.localdomain (14912)] INFO : Finished instrumentation
+[05/24/15 00:31:49 +0200 localhost.localdomain (14912)] INFO : Doing deferred dependency-detection before Rack startup
+[05/24/15 00:31:50 +0200 localhost.localdomain (14921)] ERROR : Invalid license key, please contact support@newrelic.com
+[05/24/15 00:31:50 +0200 localhost.localdomain (14921)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[05/24/15 00:33:36 +0200 localhost.localdomain (15024)] ERROR : Invalid license key, please contact support@newrelic.com
+[05/24/15 00:33:36 +0200 localhost.localdomain (15024)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[05/24/15 00:33:53 +0200 localhost.localdomain (15061)] ERROR : Invalid license key, please contact support@newrelic.com
+[05/24/15 00:33:53 +0200 localhost.localdomain (15061)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[05/24/15 00:34:12 +0200 localhost.localdomain (15163)] INFO : Starting the New Relic agent in "development" environment.
+[05/24/15 00:34:12 +0200 localhost.localdomain (15163)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[05/24/15 00:34:12 +0200 localhost.localdomain (15163)] WARN : No configuration file found. Working directory = /home/benny/Development/ruby/learn/rubinius-bugs
+[05/24/15 00:34:12 +0200 localhost.localdomain (15163)] WARN : Looked in these locations (based on defaults): /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/.newrelic/newrelic.yml, /home/benny/newrelic.yml
+[05/24/15 00:34:12 +0200 localhost.localdomain (15163)] INFO : Environment: development
+[05/24/15 00:34:12 +0200 localhost.localdomain (15163)] INFO : No known dispatcher detected.
+[05/24/15 00:34:12 +0200 localhost.localdomain (15163)] INFO : Application: development
+[05/24/15 00:34:12 +0200 localhost.localdomain (15163)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[05/24/15 00:34:12 +0200 localhost.localdomain (15163)] INFO : Installing deferred Rack instrumentation
+[05/24/15 00:34:12 +0200 localhost.localdomain (15163)] INFO : Installing Rack::Builder middleware instrumentation
+[05/24/15 00:34:12 +0200 localhost.localdomain (15163)] INFO : Installing Rainbows instrumentation
+[05/24/15 00:34:12 +0200 localhost.localdomain (15163)] INFO : Detected Rainbows, please see additional documentation: https://newrelic.com/docs/troubleshooting/im-using-unicorn-and-i-dont-see-any-data
+[05/24/15 00:34:12 +0200 localhost.localdomain (15163)] INFO : Installing Sinatra instrumentation
+[05/24/15 00:34:12 +0200 localhost.localdomain (15163)] INFO : Installing Net instrumentation
+[05/24/15 00:34:12 +0200 localhost.localdomain (15163)] INFO : Finished instrumentation
+[05/24/15 00:34:12 +0200 localhost.localdomain (15163)] INFO : Doing deferred dependency-detection before Rack startup
+[05/24/15 00:34:13 +0200 localhost.localdomain (15171)] ERROR : Invalid license key, please contact support@newrelic.com
+[05/24/15 00:34:13 +0200 localhost.localdomain (15171)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[05/24/15 00:34:38 +0200 localhost.localdomain (15291)] ERROR : Invalid license key, please contact support@newrelic.com
+[05/24/15 00:34:38 +0200 localhost.localdomain (15291)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[05/24/15 00:34:43 +0200 localhost.localdomain (15314)] ERROR : Invalid license key, please contact support@newrelic.com
+[05/24/15 00:34:43 +0200 localhost.localdomain (15314)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[05/24/15 00:36:51 +0200 localhost.localdomain (17219)] INFO : Starting the New Relic agent in "development" environment.
+[05/24/15 00:36:51 +0200 localhost.localdomain (17219)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[05/24/15 00:36:51 +0200 localhost.localdomain (17219)] WARN : No configuration file found. Working directory = /home/benny/Development/ruby/learn/rubinius-bugs
+[05/24/15 00:36:51 +0200 localhost.localdomain (17219)] WARN : Looked in these locations (based on defaults): /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/.newrelic/newrelic.yml, /home/benny/newrelic.yml
+[05/24/15 00:36:51 +0200 localhost.localdomain (17219)] INFO : Environment: development
+[05/24/15 00:36:51 +0200 localhost.localdomain (17219)] INFO : No known dispatcher detected.
+[05/24/15 00:36:51 +0200 localhost.localdomain (17219)] INFO : Application: development
+[05/24/15 00:36:51 +0200 localhost.localdomain (17219)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[05/24/15 00:36:51 +0200 localhost.localdomain (17219)] INFO : Installing deferred Rack instrumentation
+[05/24/15 00:36:51 +0200 localhost.localdomain (17219)] INFO : Installing Rack::Builder middleware instrumentation
+[05/24/15 00:36:51 +0200 localhost.localdomain (17219)] INFO : Installing Rainbows instrumentation
+[05/24/15 00:36:51 +0200 localhost.localdomain (17219)] INFO : Detected Rainbows, please see additional documentation: https://newrelic.com/docs/troubleshooting/im-using-unicorn-and-i-dont-see-any-data
+[05/24/15 00:36:51 +0200 localhost.localdomain (17219)] INFO : Installing Sinatra instrumentation
+[05/24/15 00:36:51 +0200 localhost.localdomain (17219)] INFO : Installing Net instrumentation
+[05/24/15 00:36:51 +0200 localhost.localdomain (17219)] INFO : Finished instrumentation
+[05/24/15 00:36:51 +0200 localhost.localdomain (17219)] INFO : Doing deferred dependency-detection before Rack startup
+[05/24/15 00:36:52 +0200 localhost.localdomain (17227)] ERROR : Invalid license key, please contact support@newrelic.com
+[05/24/15 00:36:52 +0200 localhost.localdomain (17227)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[05/24/15 00:56:47 +0200 localhost.localdomain (17729)] ERROR : Invalid license key, please contact support@newrelic.com
+[05/24/15 00:56:47 +0200 localhost.localdomain (17729)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[05/24/15 01:02:19 +0200 localhost.localdomain (17925)] INFO : Starting the New Relic agent in "development" environment.
+[05/24/15 01:02:19 +0200 localhost.localdomain (17925)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[05/24/15 01:02:19 +0200 localhost.localdomain (17925)] WARN : No configuration file found. Working directory = /home/benny/Development/ruby/learn/rubinius-bugs
+[05/24/15 01:02:19 +0200 localhost.localdomain (17925)] WARN : Looked in these locations (based on defaults): /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/.newrelic/newrelic.yml, /home/benny/newrelic.yml
+[05/24/15 01:02:19 +0200 localhost.localdomain (17925)] INFO : Environment: development
+[05/24/15 01:02:19 +0200 localhost.localdomain (17925)] INFO : No known dispatcher detected.
+[05/24/15 01:02:19 +0200 localhost.localdomain (17925)] INFO : Application: development
+[05/24/15 01:02:19 +0200 localhost.localdomain (17925)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[05/24/15 01:02:19 +0200 localhost.localdomain (17925)] INFO : Installing deferred Rack instrumentation
+[05/24/15 01:02:19 +0200 localhost.localdomain (17925)] INFO : Installing Rack::Builder middleware instrumentation
+[05/24/15 01:02:19 +0200 localhost.localdomain (17925)] INFO : Installing Rainbows instrumentation
+[05/24/15 01:02:19 +0200 localhost.localdomain (17925)] INFO : Detected Rainbows, please see additional documentation: https://newrelic.com/docs/troubleshooting/im-using-unicorn-and-i-dont-see-any-data
+[05/24/15 01:02:19 +0200 localhost.localdomain (17925)] INFO : Installing Sinatra instrumentation
+[05/24/15 01:02:19 +0200 localhost.localdomain (17925)] INFO : Installing Net instrumentation
+[05/24/15 01:02:19 +0200 localhost.localdomain (17925)] INFO : Finished instrumentation
+[05/24/15 01:02:19 +0200 localhost.localdomain (17925)] INFO : Doing deferred dependency-detection before Rack startup
+[05/24/15 01:02:19 +0200 localhost.localdomain (17933)] ERROR : Invalid license key, please contact support@newrelic.com
+[05/24/15 01:02:19 +0200 localhost.localdomain (17933)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[05/24/15 01:19:16 +0200 localhost.localdomain (20284)] ERROR : Invalid license key, please contact support@newrelic.com
+[05/24/15 01:19:16 +0200 localhost.localdomain (20284)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[05/24/15 01:19:19 +0200 localhost.localdomain (20311)] ERROR : Invalid license key, please contact support@newrelic.com
+[05/24/15 01:19:19 +0200 localhost.localdomain (20311)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[05/24/15 09:47:58 +0200 localhost.localdomain (5888)] INFO : Starting the New Relic agent in "development" environment.
+[05/24/15 09:47:58 +0200 localhost.localdomain (5888)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[05/24/15 09:47:58 +0200 localhost.localdomain (5888)] WARN : No configuration file found. Working directory = /home/benny/Development/ruby/learn/rubinius-bugs
+[05/24/15 09:47:58 +0200 localhost.localdomain (5888)] WARN : Looked in these locations (based on defaults): /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/.newrelic/newrelic.yml, /home/benny/newrelic.yml
+[05/24/15 09:47:58 +0200 localhost.localdomain (5888)] INFO : Environment: development
+[05/24/15 09:47:58 +0200 localhost.localdomain (5888)] INFO : No known dispatcher detected.
+[05/24/15 09:47:58 +0200 localhost.localdomain (5888)] INFO : Application: development
+[05/24/15 09:47:58 +0200 localhost.localdomain (5888)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[05/24/15 09:47:59 +0200 localhost.localdomain (5888)] INFO : Installing deferred Rack instrumentation
+[05/24/15 09:47:59 +0200 localhost.localdomain (5888)] INFO : Installing Rack::Builder middleware instrumentation
+[05/24/15 09:47:59 +0200 localhost.localdomain (5888)] INFO : Installing Rainbows instrumentation
+[05/24/15 09:47:59 +0200 localhost.localdomain (5888)] INFO : Detected Rainbows, please see additional documentation: https://newrelic.com/docs/troubleshooting/im-using-unicorn-and-i-dont-see-any-data
+[05/24/15 09:47:59 +0200 localhost.localdomain (5888)] INFO : Installing Sinatra instrumentation
+[05/24/15 09:47:59 +0200 localhost.localdomain (5888)] INFO : Installing Net instrumentation
+[05/24/15 09:47:59 +0200 localhost.localdomain (5888)] INFO : Finished instrumentation
+[05/24/15 09:47:59 +0200 localhost.localdomain (5888)] INFO : Doing deferred dependency-detection before Rack startup
+[05/24/15 09:48:00 +0200 localhost.localdomain (5896)] ERROR : Invalid license key, please contact support@newrelic.com
+[05/24/15 09:48:00 +0200 localhost.localdomain (5896)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[05/24/15 09:49:07 +0200 localhost.localdomain (8322)] INFO : Starting the New Relic agent in "development" environment.
+[05/24/15 09:49:07 +0200 localhost.localdomain (8322)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[05/24/15 09:49:07 +0200 localhost.localdomain (8322)] WARN : No configuration file found. Working directory = /home/benny/Development/ruby/learn/rubinius-bugs
+[05/24/15 09:49:07 +0200 localhost.localdomain (8322)] WARN : Looked in these locations (based on defaults): /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/.newrelic/newrelic.yml, /home/benny/newrelic.yml
+[05/24/15 09:49:07 +0200 localhost.localdomain (8322)] INFO : Environment: development
+[05/24/15 09:49:07 +0200 localhost.localdomain (8322)] INFO : No known dispatcher detected.
+[05/24/15 09:49:07 +0200 localhost.localdomain (8322)] INFO : Application: development
+[05/24/15 09:49:07 +0200 localhost.localdomain (8322)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[05/24/15 09:49:07 +0200 localhost.localdomain (8322)] INFO : Installing deferred Rack instrumentation
+[05/24/15 09:49:07 +0200 localhost.localdomain (8322)] INFO : Installing Rack::Builder middleware instrumentation
+[05/24/15 09:49:07 +0200 localhost.localdomain (8322)] INFO : Installing Rainbows instrumentation
+[05/24/15 09:49:07 +0200 localhost.localdomain (8322)] INFO : Detected Rainbows, please see additional documentation: https://newrelic.com/docs/troubleshooting/im-using-unicorn-and-i-dont-see-any-data
+[05/24/15 09:49:07 +0200 localhost.localdomain (8322)] INFO : Installing Sinatra instrumentation
+[05/24/15 09:49:07 +0200 localhost.localdomain (8322)] INFO : Installing Net instrumentation
+[05/24/15 09:49:07 +0200 localhost.localdomain (8322)] INFO : Finished instrumentation
+[05/24/15 09:49:07 +0200 localhost.localdomain (8322)] INFO : Doing deferred dependency-detection before Rack startup
+[05/24/15 09:49:08 +0200 localhost.localdomain (8332)] ERROR : Invalid license key, please contact support@newrelic.com
+[05/24/15 09:49:08 +0200 localhost.localdomain (8332)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[05/24/15 09:49:42 +0200 localhost.localdomain (8407)] INFO : Starting the New Relic agent in "development" environment.
+[05/24/15 09:49:42 +0200 localhost.localdomain (8407)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[05/24/15 09:49:42 +0200 localhost.localdomain (8407)] WARN : No configuration file found. Working directory = /home/benny/Development/ruby/learn/rubinius-bugs
+[05/24/15 09:49:42 +0200 localhost.localdomain (8407)] WARN : Looked in these locations (based on defaults): /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/.newrelic/newrelic.yml, /home/benny/newrelic.yml
+[05/24/15 09:49:42 +0200 localhost.localdomain (8407)] INFO : Environment: development
+[05/24/15 09:49:42 +0200 localhost.localdomain (8407)] INFO : No known dispatcher detected.
+[05/24/15 09:49:42 +0200 localhost.localdomain (8407)] INFO : Application: development
+[05/24/15 09:49:42 +0200 localhost.localdomain (8407)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[05/24/15 09:49:42 +0200 localhost.localdomain (8407)] INFO : Installing deferred Rack instrumentation
+[05/24/15 09:49:42 +0200 localhost.localdomain (8407)] INFO : Installing Rack::Builder middleware instrumentation
+[05/24/15 09:49:42 +0200 localhost.localdomain (8407)] INFO : Installing Rainbows instrumentation
+[05/24/15 09:49:42 +0200 localhost.localdomain (8407)] INFO : Detected Rainbows, please see additional documentation: https://newrelic.com/docs/troubleshooting/im-using-unicorn-and-i-dont-see-any-data
+[05/24/15 09:49:42 +0200 localhost.localdomain (8407)] INFO : Installing Sinatra instrumentation
+[05/24/15 09:49:42 +0200 localhost.localdomain (8407)] INFO : Installing Net instrumentation
+[05/24/15 09:49:42 +0200 localhost.localdomain (8407)] INFO : Finished instrumentation
+[05/24/15 09:49:42 +0200 localhost.localdomain (8407)] INFO : Doing deferred dependency-detection before Rack startup
+[05/24/15 09:49:43 +0200 localhost.localdomain (8415)] ERROR : Invalid license key, please contact support@newrelic.com
+[05/24/15 09:49:43 +0200 localhost.localdomain (8415)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[05/24/15 09:49:53 +0200 localhost.localdomain (8456)] INFO : Starting the New Relic agent in "development" environment.
+[05/24/15 09:49:53 +0200 localhost.localdomain (8456)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[05/24/15 09:49:53 +0200 localhost.localdomain (8456)] WARN : No configuration file found. Working directory = /home/benny/Development/ruby/learn/rubinius-bugs
+[05/24/15 09:49:53 +0200 localhost.localdomain (8456)] WARN : Looked in these locations (based on defaults): /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/config/newrelic.yml, /home/benny/Development/ruby/learn/rubinius-bugs/newrelic.yml, /home/benny/.newrelic/newrelic.yml, /home/benny/newrelic.yml
+[05/24/15 09:49:53 +0200 localhost.localdomain (8456)] INFO : Environment: development
+[05/24/15 09:49:53 +0200 localhost.localdomain (8456)] INFO : No known dispatcher detected.
+[05/24/15 09:49:53 +0200 localhost.localdomain (8456)] INFO : Application: development
+[05/24/15 09:49:53 +0200 localhost.localdomain (8456)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[05/24/15 09:49:53 +0200 localhost.localdomain (8456)] INFO : Installing deferred Rack instrumentation
+[05/24/15 09:49:53 +0200 localhost.localdomain (8456)] INFO : Installing Rack::Builder middleware instrumentation
+[05/24/15 09:49:53 +0200 localhost.localdomain (8456)] INFO : Installing Rainbows instrumentation
+[05/24/15 09:49:53 +0200 localhost.localdomain (8456)] INFO : Detected Rainbows, please see additional documentation: https://newrelic.com/docs/troubleshooting/im-using-unicorn-and-i-dont-see-any-data
+[05/24/15 09:49:53 +0200 localhost.localdomain (8456)] INFO : Installing Sinatra instrumentation
+[05/24/15 09:49:53 +0200 localhost.localdomain (8456)] INFO : Installing Net instrumentation
+[05/24/15 09:49:53 +0200 localhost.localdomain (8456)] INFO : Finished instrumentation
+[05/24/15 09:49:53 +0200 localhost.localdomain (8456)] INFO : Doing deferred dependency-detection before Rack startup
+[05/24/15 09:49:54 +0200 localhost.localdomain (8464)] ERROR : Invalid license key, please contact support@newrelic.com
+[05/24/15 09:49:54 +0200 localhost.localdomain (8464)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
