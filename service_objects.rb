@@ -8,7 +8,15 @@ class ActivateAccount
     @user.active = true
     @user.save
 
+    do_something_complex(@user)
+
     @notifier.send_mail(@user.email)
+  end
+
+  private
+
+  def do_something_complex(user)
+    # complex stuff here and there
   end
 end
 
