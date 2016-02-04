@@ -13,5 +13,5 @@ end
 futures.each(&:wait!)
 time2 = Time.now
 time_elapsed = time2 - time
-p time_elapsed
+p time_elapsed # => about 1 second (waiting 1 second in each thread / future)
 
