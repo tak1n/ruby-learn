@@ -7,7 +7,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     diff-lcs (1.2.5)
-    rake (10.1.0)
+    rake (12.3.3)
     rake-compiler (0.9.3)
       rake
     rspec (3.0.0)
@@ -30,6 +30,6 @@ PLATFORMS
 DEPENDENCIES
   bundler (~> 1.3)
   mygem!
-  rake
-  rake-compiler
+  rake (~> 12.3.3)
+  rake-compiler (~> 0.9.3)
   rspec (>= 2.0.0)
