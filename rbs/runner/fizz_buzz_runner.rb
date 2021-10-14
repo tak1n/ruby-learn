@@ -8,5 +8,5 @@ Retryable.retryable() do
   puts results
 end
 
-Person.new('Alice')
+person = Person.new('Alice')
 person.hello
