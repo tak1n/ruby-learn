@@ -1,0 +1,12 @@
+# TypeProf 0.20.0
+
+# Classes
+class FizzBuzz
+  def self.run: (Integer n) -> Array[String]
+end
+
+class Person
+  @name: String
+
+  def initialize: (String name) -> void
+end
