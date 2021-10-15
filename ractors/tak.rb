@@ -13,7 +13,16 @@ Benchmark.bm do |x|
       Ractor.new { tarai(14, 7, 0) }
     end.each(&:take)
   }
+
+  # threaded version
+  x.report('threads'){
+    8.times.map do
+      Thread.new { tarai(14, 7, 0) }
+    end.each(&:join)
+  }
 end
-       # user     system      total        real
-# seq 123.281671   0.000000 123.281671 (123.284889)
-# par 244.643257   0.015671 244.658928 ( 31.286156)
+
+#                user     system    total       real
+# seq         135.949443 0.003992 135.953435 (135.976772)
+# par         287.926185 0.104037 288.030222 ( 38.530438)
+# threads     135.636022 0.016013 135.652035 (135.610998) ruby code can't run in multiple threads due to the GVL/GIL
