@@ -1,5 +1,5 @@
 class TodosController < ApplicationController
-  before_action :set_todo, only: [:show, :update, :delete]
+  before_action :set_todo, only: [:show, :update, :destroy]
 
   def index
     @todos = Todo.all
@@ -29,7 +29,7 @@ class TodosController < ApplicationController
     end
   end
 
-  def delete
+  def destroy
     @todo.destroy
 
     head :no_content
