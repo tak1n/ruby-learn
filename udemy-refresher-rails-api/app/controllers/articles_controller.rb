@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
   before_action :set_article, only: [:show]
 
   def index
-    paginated = paginate(Article.recent) 
+    paginated = paginate(Article.recent)
 
     render_collection(paginated)
   end
