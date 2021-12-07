@@ -6,13 +6,11 @@ class ArticlesController < ApplicationController
   def index
     paginated = paginate(Article.recent) 
 
-    options = { meta: paginated.meta.to_h, links: paginated.links.to_h }
-
-    render json: serializer.new(paginated.items, options)
+    render_collection(paginated)
   end
 
   def show
-    render json: @article
+    render json: serializer.new(@article)
   end
 
   private

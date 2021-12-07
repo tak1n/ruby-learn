@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "Articles API", type: :request do
-  describe "GET /index" do
+  describe "GET /articles" do
     it "returns a success response" do
       get "/articles"
 
@@ -17,7 +17,7 @@ RSpec.describe "Articles API", type: :request do
       expected = json_data.first
       aggregate_failures do
         expect(expected[:id]).to eq(article.id.to_s)
-        expect(expected[:type]).to eq("articles")
+        expect(expected[:type]).to eq("article")
         expect(expected[:attributes]).to eq(
           title: article.title,
           content: article.content,
@@ -54,6 +54,30 @@ RSpec.describe "Articles API", type: :request do
       expect(json[:links].keys).to contain_exactly(
         :first, :prev, :next, :last, :self
       )
+    end
+  end
+
+  describe "GET /articles/:id" do
+    let(:article) { create(:article) }
+
+    subject { get "/articles/#{article.id}"}
+
+    before { subject }
+
+    it "returns a success response" do
+      expect(response).to have_http_status(:ok)
+    end
+
+    it "returns an article" do
+      aggregate_failures do
+        expect(json_data[:id]).to eq(article.id.to_s)
+        expect(json_data[:type]).to eq('article')
+        expect(json_data[:attributes]).to eq(
+          title: article.title,
+          content: article.content,
+          slug: article.slug         
+        )
+      end
     end
   end
 end
