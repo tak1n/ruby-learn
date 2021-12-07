@@ -84,4 +84,4 @@ test:
 #
 production:
   <<: *default
-  database: udemy_refresher_rails_api_production
+  database: <%= ENV["DATABASE_NAME"] || "udemy_refresher_rails_api_production" %>
