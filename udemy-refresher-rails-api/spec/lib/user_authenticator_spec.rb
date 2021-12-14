@@ -54,6 +54,11 @@ describe UserAuthenticator do
           expect(authenticator.user.id).to eq(user.id)
         end
       end
+
+      it "creates and set users access token" do
+        expect { authenticator.perform }.to change(AccessToken, :count).by(1)
+        expect(authenticator.access_token).to be_present
+      end
     end
   end
 end
