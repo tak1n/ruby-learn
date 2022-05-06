@@ -146,9 +146,8 @@ GEM
     minitest (5.14.4)
     msgpack (1.4.2)
     multipart-post (2.1.1)
-    netrc (0.11.0)
     nio4r (2.5.8)
-    nokogiri (1.12.5-x86_64-linux)
+    nokogiri (1.13.5-x86_64-linux)
       racc (~> 1.4)
     octokit (4.21.0)
       faraday (>= 0.9)
@@ -239,7 +238,6 @@ DEPENDENCIES
   jsonapi-serializer (~> 2.2)
   jsonapi_errors_handler
   listen (~> 3.3)
-  netrc
   octokit (~> 4.0)
   pg (~> 1.1)
   puma (~> 5.0)
